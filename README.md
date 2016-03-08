@@ -21,54 +21,53 @@ organizacije, rada, rasporeda i smanjenja ljudskih resursa, odnosno manjeg utros
 
 ##Funkcionalnosti sistema:
 
-- mogucnost odredjivanja kapaciteta (popunjenosti) sale, u cilju rezervacije mjesta u kino sali;
+- mogucnost odreÄ‘ivanja kapaciteta (popunjenosti) sale, u cilju rezervacije mjesta u kino sali;
 - mogucnost rezervacije i kupovine karata, odnosno mogucnost zauzimanja odredjenog mjesta u kino sali
- (što pored standardne kupovine karata ukljucuje i specijalne slucajeve poput rezervacija cijelih kino sala i sl)
-- mogucnost upravljanja programskim sadrajem (dodavanje filma/serije u odreğeno vrijeme, mijenjanje termina, i sl.)
-- mogucnost upravljanja sadrajem i cijenom hrane/pica
-- mogucnost dodavanja specijalnih ponuda u vidu smanjenja cijene ulaznica (studentskih, školskih,
- penzionerskih popusta, uclanjivanje u kino klub i sl.)
+ (Å¡to pored standardne kupovine karata ukljucuje i specijalne slucajeve poput rezervacija cijelih kino sala i sl)
+- mogucnost upravljanja programskim sadrÅ¾ajem (dodavanje filma/serije u odreÄ‘eno vrijeme, mijenjanje termina, i sl.)
+- mogucnost upravljanja sadrÅ¾ajem i cijenom hrane/pica
+- mogucnost dodavanja specijalnih ponuda u vidu smanjenja cijene ulaznica (studentskih, Å¡kolskih,
+ penzionerskih popusta, uÄlanjivanja u kino klub i sl.)
 
 ##Procesi:
 
 - Kreiranje i izmjena projekcija
-Menader kina je ujedno i menader sistema. 
+MenadÅ¾er kina je ujedno i menadÅ¾er sistema. 
 Ima potpunu kontrolu nad programom i svim parametrima neke projekcije. 
-Moe kreirati nove projekcije, podešavati vrijeme i salu emitovanja, te cijenu projekcija.
- Takodjer, moe poništiti neke od trenutno postojecih projekcija, pomjeriti vrijeme emitovanja, 
+MoÅ¾e kreirati nove projekcije, podeÅ¡avati vrijeme i salu emitovanja, te cijenu projekcija.
+ Takodjer, moÅ¾e poniÅ¡titi neke od trenutno postojecih projekcija, pomjeriti vrijeme emitovanja, 
 promijeniti salu i/ili cijenu.
 
 - Prodaja karata
-Klijent po dolasku u kino na kasi kupuje kartu za neku od ponudjenih projekcija, te rezerviše salu i mjesto sjedenja.
- Ukoliko klijent ispunjava uslove (clan Kino Kluba, student, penzioner,..) za neke od ponuğenih posebnih pogodnosti 
-, blagajnik mu uraèunava procenat popusta. Rezervacije ovakvih usluga se primaju najviše 7 dana unaprijed.
+Klijent po dolasku u kino na kasi kupuje kartu za neku od ponudjenih projekcija, te rezerviÅ¡e salu i mjesto sjedenja.
+ Ukoliko klijent ispunjava uslove (clan Kino Kluba, student, penzioner,..) za neke od ponuÄ‘enih posebnih pogodnosti 
+, blagajnik mu uraÄunava procenat popusta. Rezervacije ovakvih usluga se primaju najviÅ¡e 7 dana unaprijed.
 
-- Odravanje inventara hrane i piæa
-U sluèaju da je kolièina hrane i/ili piæa pri isteku, sistem automatski šalje upozorenje menaderu,
- koji ima moguænost potvrde nove narudbe (kao i odreğivanje njene kolièine).
+- OdrÅ¾avanje inventara hrane i piÄ‡a
+U sluÄaju da je koliÄina hrane i/ili piÄ‡a pri isteku, sistem automatski Å¡alje upozorenje menadÅ¾eru,
+ koji ima moguÄ‡nost potvrde nove narudÅ¾be (kao i odreÄ‘ivanje njene koliÄine). MenadÅ¾er svoju odluku prosljeÄ‘uje odgovarajuÄ‡em uposleniku (onome u Äijem je opisu posla da dobavlja zalihe, ako je to potrebno).
 
-- Organizacija specijalnih dogağaja u kinu
-Kino nudi moguænost iznajmljivanja cijele sale za posebne prigode (roğendani i sl.), pri èemu je rezervaciju
+- Organizacija specijalnih dogaÄ‘aja u kinu
+Kino nudi moguÄ‡nost iznajmljivanja cijele sale za posebne prigode (roÄ‘endani i sl.), pri Äemu je rezervaciju
  neophodno obaviti bar 7 dana unaprijed.
 
-- Uèlanjenje u Kino Klub
-Sistem nudi i moguænost dodavanja novih èlanova u Kino Klub, koji se obavezuju time na godišnju pretplatu 
-kinu i ostvaruju posebne pogodnosti. Osim moguènosti dodavanja novih èlanova, sistem dozvoljava i izmjenu 
-podataka o postojeæim èlanovima, kao i uklanjanju nekog èlana iz Kino Kluba (na zahtjev èlana). 
-Pri tome, upravljanje ovim informacijama vrši menader i/ili vlasnik kina.
+- UÄlanjenje u Kino Klub
+Sistem nudi i moguÄ‡nost dodavanja novih Älanova u Kino Klub, koji se obavezuju time na godiÅ¡nju pretplatu 
+kinu i ostvaruju posebne pogodnosti. Osim moguÄnosti dodavanja novih Älanova, sistem dozvoljava i izmjenu 
+podataka o postojeÄ‡im Älanovima, kao i uklanjanju nekog Älana iz Kino Kluba (na zahtjev Älana). 
+Pri tome, upravljanje ovim informacijama vrÅ¡i menadÅ¾er i/ili vlasnik kina.
 
-- Podnošenje dnevnog izvještaja rada u kinu
-Svakog dana na kraju radnog vremena, sistem automatski proslijeğuje izvještaj o dnevnom radu,
- sa svim specifikacijama o pruenim uslugama i bilo kakvim internim promjenama unutar sistema. 
-Izvještaj se podnosi menaderu i vlasniku kina. 
+- PodnoÅ¡enje dnevnog izvjeÅ¡taja rada u kinu
+Svakog dana na kraju radnog vremena, sistem automatski proslijeÄ‘uje izvjeÅ¡taj o dnevnom radu,
+ sa svim specifikacijama o pruÅ¾enim uslugama i bilo kakvim internim promjenama unutar sistema. 
+IzvjeÅ¡taj se podnosi menadÅ¾eru i vlasniku kina. 
 
 
 
 ##Akteri:
 
-- Manager
-- Osoba zaduzena za kasu
-- Posjetitelj
-- Osoba zaduzena za projekcije
-- Dobavljac
-- Sistem za odobravanje placanja karticom (eksterni sistem)
+- Posjetitelj, odnosno korisnik usluga, je osoba koja ima moguÄ‡nost kupovine karata, kupovine hrane/piÄ‡a, i koriÅ¡tenja razliÄitih pogodnosti koje ovaj sistem nudi, ukoliko zadovoljava kriterije koriÅ¡tenja tih pogodnosti;
+- 
+- Uposlenici (grupa ljudi koja obavlja razliÄite procese u cilju funkcionisanja sistema): osoba zaduÅ¾ena za prodaju hrane/piÄ‡a i karata, koja prima zahtjeve Posjetitelja, procesuira ih, i (ne)zadovoljava, zavisno od moguÄ‡nosti (sluÄaja); osoba zaduÅ¾ena za dobavljanje i dostavljanje hrane/piÄ‡a, i za kontrolisanje zaliha; osoba zaduÅ¾ena za projekciju, itd...
+
+- MenadÅ¾er (supervizor, onaj koji nadgleda i kontroliÅ¡e proces), osoba zaduÅ¾ena za praÄ‡enje procesa i eventualne optimizacije i popravke na bilo koji naÄin vezane za procese.
