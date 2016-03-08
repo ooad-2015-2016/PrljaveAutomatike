@@ -28,35 +28,36 @@ organizacije, rada, rasporeda i smanjenja ljudskih resursa, odnosno manjeg utros
 - mogucnost upravljanja sadržajem i cijenom hrane/pica
 - mogucnost dodavanja specijalnih ponuda u vidu smanjenja cijene ulaznica (studentskih, školskih,
  penzionerskih popusta, uclanjivanje u kino klub i sl.)
+
 ##Procesi:
 
--Kreiranje i izmjena projekcija
+- Kreiranje i izmjena projekcija
 Menadžer kina je ujedno i menadžer sistema. 
 Ima potpunu kontrolu nad programom i svim parametrima neke projekcije. 
 Može kreirati nove projekcije, podešavati vrijeme i salu emitovanja, te cijenu projekcija.
  Takodjer, može poništiti neke od trenutno postojecih projekcija, pomjeriti vrijeme emitovanja, 
 promijeniti salu i/ili cijenu.
 
--Prodaja karata
+- Prodaja karata
 Klijent po dolasku u kino na kasi kupuje kartu za neku od ponudjenih projekcija, te rezerviše salu i mjesto sjedenja.
  Ukoliko klijent ispunjava uslove (clan Kino Kluba, student, penzioner,..) za neke od ponuðenih posebnih pogodnosti 
 , blagajnik mu uraèunava procenat popusta. Rezervacije ovakvih usluga se primaju najviše 7 dana unaprijed.
 
--Održavanje inventara hrane i piæa
+- Održavanje inventara hrane i piæa
 U sluèaju da je kolièina hrane i/ili piæa pri isteku, sistem automatski šalje upozorenje menadžeru,
  koji ima moguænost potvrde nove narudžbe (kao i odreðivanje njene kolièine).
 
--Organizacija specijalnih dogaðaja u kinu
+- Organizacija specijalnih dogaðaja u kinu
 Kino nudi moguænost iznajmljivanja cijele sale za posebne prigode (roðendani i sl.), pri èemu je rezervaciju
  neophodno obaviti bar 7 dana unaprijed.
 
--Uèlanjenje u Kino Klub
+- Uèlanjenje u Kino Klub
 Sistem nudi i moguænost dodavanja novih èlanova u Kino Klub, koji se obavezuju time na godišnju pretplatu 
 kinu i ostvaruju posebne pogodnosti. Osim moguènosti dodavanja novih èlanova, sistem dozvoljava i izmjenu 
 podataka o postojeæim èlanovima, kao i uklanjanju nekog èlana iz Kino Kluba (na zahtjev èlana). 
 Pri tome, upravljanje ovim informacijama vrši menadžer i/ili vlasnik kina.
 
--Podnošenje dnevnog izvještaja rada u kinu
+- Podnošenje dnevnog izvještaja rada u kinu
 Svakog dana na kraju radnog vremena, sistem automatski proslijeðuje izvještaj o dnevnom radu,
  sa svim specifikacijama o pruženim uslugama i bilo kakvim internim promjenama unutar sistema. 
 Izvještaj se podnosi menadžeru i vlasniku kina. 
