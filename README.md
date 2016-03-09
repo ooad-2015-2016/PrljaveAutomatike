@@ -30,6 +30,7 @@ organizacije, rada, rasporeda i smanjenja ljudskih resursa, odnosno manjeg utro�
 ##Procesi
 
 **Kreiranje i izmjena projekcija**
+
 Menadžer kina je ujedno i menadžer sistema. 
 Ima potpunu kontrolu nad programom i svim parametrima neke projekcije. 
 Može kreirati nove projekcije, podešavati vrijeme i salu emitovanja, te cijenu projekcija.
@@ -37,25 +38,30 @@ Može kreirati nove projekcije, podešavati vrijeme i salu emitovanja, te cijenu
 promijeniti salu i/ili cijenu.
 
 **Prodaja karata**
+
 Klijent po dolasku u kino na kasi kupuje kartu za neku od ponuđenih projekcija, te rezerviše salu i mjesto sjedenja.
  Ukoliko klijent ispunjava uslove (član Kino Kluba, student, penzioner,..) za neke od ponuđenih posebnih pogodnosti 
 , blagajnik mu uračunava procenat popusta. Rezervacije ovakvih usluga se primaju najviše 7 dana unaprijed.
 
 **Održavanje inventara hrane i pića**
+
 U slučaju da je količina hrane i/ili pića pri isteku, sistem automatski šalje upozorenje menadžeru,
  koji ima mogućnost potvrde nove narudžbe (kao i određivanje njene količine). Menadžer svoju odluku prosljeđuje odgovarajućem uposleniku (onome u čijem je opisu posla da dobavlja zalihe, ako je to potrebno).
 
 **Organizacija specijalnih događaja u kinu**
+
 Kino nudi mogućnost iznajmljivanja cijele sale za posebne prigode (rođendani i sl.), pri čemu je rezervaciju
  neophodno obaviti bar 7 dana unaprijed.
 
 **Učlanjenje u Kino Klub**
+
 Sistem nudi i mogućnost dodavanja novih članova u Kino Klub, koji se obavezuju time na godišnju pretplatu 
 kinu i ostvaruju posebne pogodnosti. Osim mogućnosti dodavanja novih članova, sistem dozvoljava i izmjenu 
 podataka o postojećim članovima, kao i uklanjanju nekog člana iz Kino Kluba (na zahtjev člana). 
 Pri tome, upravljanje ovim informacijama vrši menadžer i/ili vlasnik kina.
 
 **Podnošenje dnevnog izvještaja rada u kinu**
+
 Svakog dana na kraju radnog vremena, sistem automatski prosljeđuje izvještaj o dnevnom radu,
  sa svim specifikacijama o pruženim uslugama i bilo kakvim internim promjenama unutar sistema. 
 Izvještaj se podnosi menadžeru i vlasniku kina. 
