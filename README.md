@@ -62,8 +62,8 @@ Izvještaj se podnosi menadžeru i vlasniku kina.
 
 ##Akteri
 
-1.  Posjetitelj, odnosno korisnik usluga (klijent), je osoba koja ima mogućnost kupovine karata, kupovine hrane/pića, i korištenja različitih pogodnosti koje ovaj sistem nudi, ukoliko zadovoljava kriterije korištenja tih pogodnosti.
+- Posjetitelj, odnosno korisnik usluga (klijent), je osoba koja ima mogućnost kupovine karata, kupovine hrane/pića, i korištenja različitih pogodnosti koje ovaj sistem nudi, ukoliko zadovoljava kriterije korištenja tih pogodnosti.
 
-2.  Uposlenici (grupa ljudi koja obavlja različite procese u cilju funkcionisanja sistema): osoba zadužena za prodaju hrane/pića i karata, koja prima zahtjeve Posjetitelja, procesuira ih, i (ne)zadovoljava, zavisno od mogućnosti (slučaja); osoba zadužena za dobavljanje i dostavljanje hrane/pića, i za kontrolisanje zaliha; osoba zadužena za projekciju, itd...
+- Uposlenici (grupa ljudi koja obavlja različite procese u cilju funkcionisanja sistema): osoba zadužena za prodaju hrane/pića i karata, koja prima zahtjeve Posjetitelja, procesuira ih, i (ne)zadovoljava, zavisno od mogućnosti (slučaja); osoba zadužena za dobavljanje i dostavljanje hrane/pića, i za kontrolisanje zaliha; osoba zadužena za projekciju, itd...
 
-3.  Menadžer (supervizor, onaj koji nadgleda i kontroliše proces), osoba zadužena za praćenje procesa i eventualne optimizacije i popravke na bilo koji način vezane za procese.
+- Menadžer (supervizor, onaj koji nadgleda i kontroliše proces), osoba zadužena za praćenje procesa i eventualne optimizacije i popravke na bilo koji način vezane za procese.
