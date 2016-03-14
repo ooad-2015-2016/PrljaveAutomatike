@@ -1,0 +1,5 @@
+pod root/SkiceFormi postaviti sve skice formi u jpg formatu: (minimum je 2 forme)
+npr pod root/SkiceFormi
+FormaRegistracija.jpg
+FormaStatistikaTemperature.jpg
+FormeKorisnikiEditAdministratora.jpg

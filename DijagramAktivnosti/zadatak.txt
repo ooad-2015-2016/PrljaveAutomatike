@@ -1,0 +1,7 @@
+pod root kreirati folder DijagramiAktivnosti
+pod root/DijagramiAktivnosti postaviti project file, xml export i jpg export (koristiti camel-case nazive)
+napimjer
+pod root/DijagramiAktivnosti
+DijagramRegistracija.vpp
+DijagramRegistracija.xml
+DijagramRegistracija.jpg
