@@ -101,6 +101,9 @@
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OdabirFilma.xaml.cs">
+      <DependentUpon>OdabirFilma.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RegistrujNovogClana.xaml.cs">
       <DependentUpon>RegistrujNovogClana.xaml</DependentUpon>
     </Compile>
@@ -131,6 +134,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OdabirFilma.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
