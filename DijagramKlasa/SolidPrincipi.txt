@@ -1,0 +1,14 @@
+Analiza SOLID principa:
+
+1. PRINCIP POJEDINACNE ODGOVORNOSTI
+Ovaj princip je zadovoljen jer svaka klasa ima tacno jedan zadatak, a time i samo jedan razlog da 
+se izmijeni klasa. 
+2. OTVORENO ZATVOREN PRINCIP
+I ovaj princip je ispunjen jer su klase otvorene za nadogradnju ali ne za modifikaciju.
+3. LISKOV PRINCIP ZAMJENE
+Na klasi posjetitelj vidimo da moze zamijeniti svaki od podtipova (uclanjen i neuclanjen). 
+4. PRINCIP INVERZIJE OVISNOSTI
+Ovaj princip je narusen iz razloga sto nema interfejsa niti apstraktnih klasa. Sve klase kod kojih ima 
+nasljedjivanje se nasljedjuju iz konkretnih klasa. 
+5. PRINCIP IZOLIRANJA INTERFEJSA
+Nema nijedna debela klasa sa desetinama ili stotinama klasa. Dakle, princip je ispunjen. 
