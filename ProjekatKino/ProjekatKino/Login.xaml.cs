@@ -25,31 +25,25 @@ namespace ProjekatKino
         public Login()
         {
             this.InitializeComponent();
+            //inicijalizacija data source
+            var inicijalizacija = new DataSource.DataSourceMenuMD();
         }
 
-        private void textBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        //asinhrona metoda za provjeru prijave korisnika
+        private async void button_LoginClick(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void passwordBox_Copy_PasswordChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void HyperlinkButton_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-
+            var korisnickoIme = usernameBox.Text;
+            var sifra = passwordBox.Password;
+            var korisnik = DataSource.DataSourceMenuMD.ProvjeraKorisnika(korisnickoIme, sifra);
+            if (korisnik != null && korisnik.KorisnikId > 0)
+            {
+                this.Frame.Navigate(typeof(OdabirFilma), korisnik);
+            }
+            else
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješna prijava");
+                await dialog.ShowAsync();
+            }
         }
     }
 }

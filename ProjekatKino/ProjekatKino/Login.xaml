@@ -11,11 +11,11 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <PasswordBox x:Name="passwordBox_Copy" HorizontalAlignment="Left" Height="20" Margin="329,96,0,0" VerticalAlignment="Top" Width="284" PlaceholderText="Šifra" PasswordChanged="passwordBox_Copy_PasswordChanged"/>
-        <Button x:Name="button" Content="Prijavi se" HorizontalAlignment="Left" Height="38" Margin="329,180,0,0" VerticalAlignment="Top" Width="284" Click="button_Click" Background="#FF1DA1F2" Foreground="White" ClickMode="Press" ManipulationMode="None"/>
-        <HyperlinkButton Content="Zaboravili ste šifru?" HorizontalAlignment="Left" Height="36" Margin="469,128,0,0" VerticalAlignment="Top" Width="158" Click="HyperlinkButton_Click_1" ClickMode="Press"/>
-        <Button x:Name="button_Copy" Content="Odustani" HorizontalAlignment="Left" Height="38" Margin="329,230,0,0" VerticalAlignment="Top" Width="284" Click="button_Click" Background="#FF1DA1F2" Foreground="White"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="56" Margin="43,52,0,0" TextWrapping="Wrap" Text="Dobrodošli." VerticalAlignment="Top" Width="226" Foreground="#FF1DA1F2" FontSize="40" SelectionChanged="textBlock_SelectionChanged"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="0" Margin="329,32,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="284" InputScope="Text" PlaceholderText="Korisnièko ime" UseSystemFocusVisuals="True" TabIndex="0" TextChanged="textBox_TextChanged"/>
+        <TextBox x:Name="usernameBox" HorizontalAlignment="Left" Height="0" Margin="329,32,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="284" InputScope="Text" PlaceholderText="Korisničko ime" UseSystemFocusVisuals="True" TabIndex="0"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Height="20" Margin="329,96,0,0" VerticalAlignment="Top" Width="284" PlaceholderText="Šifra"/>
+        <Button x:Name="button_Login" Content="Prijavi se" HorizontalAlignment="Left" Height="38" Margin="329,180,0,0" VerticalAlignment="Top" Width="284" Click="button_LoginClick" Background="#FF1DA1F2" Foreground="White" ClickMode="Press" ManipulationMode="None"/>
+        <!--<HyperlinkButton Content="Zaboravili ste šifru?" HorizontalAlignment="Left" Height="36" Margin="469,128,0,0" VerticalAlignment="Top" Width="158" Click="HyperlinkButton_Click_1" ClickMode="Press"/>-->
+        <!--<Button x:Name="button_Odustani" Content="Odustani" HorizontalAlignment="Left" Height="38" Margin="329,230,0,0" VerticalAlignment="Top" Width="284" Click="button_OdustaniClick" Background="#FF1DA1F2" Foreground="White"/>-->
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="56" Margin="43,52,0,0" TextWrapping="Wrap" Text="Dobrodošli." VerticalAlignment="Top" Width="226" Foreground="#FF1DA1F2" FontSize="40"/>
     </Grid>
 </Page>

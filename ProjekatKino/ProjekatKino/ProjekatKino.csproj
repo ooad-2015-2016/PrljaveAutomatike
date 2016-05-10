@@ -98,9 +98,15 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataSource\DataSourceProjekatKino.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Korisnik.cs" />
+    <Compile Include="Models\UlogaKorisnik.cs" />
+    <Compile Include="Models\MeniStavka.cs" />
+    <Compile Include="Models\UlogaMeniStavka.cs" />
+    <Compile Include="Models\Uloga.cs" />
     <Compile Include="OdabirFilma.xaml.cs">
       <DependentUpon>OdabirFilma.xaml</DependentUpon>
     </Compile>
@@ -111,6 +117,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\MeniStavkeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -150,6 +157,7 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
