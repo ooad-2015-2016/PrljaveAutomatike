@@ -109,6 +109,9 @@
     <Compile Include="Models\MeniStavka.cs" />
     <Compile Include="Models\UlogaMeniStavka.cs" />
     <Compile Include="Models\Uloga.cs" />
+    <Compile Include="nakonodabira.xaml.cs">
+      <DependentUpon>nakonodabira.xaml</DependentUpon>
+    </Compile>
     <Compile Include="OdabirFilma.xaml.cs">
       <DependentUpon>OdabirFilma.xaml</DependentUpon>
     </Compile>
@@ -143,6 +146,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="nakonodabira.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
