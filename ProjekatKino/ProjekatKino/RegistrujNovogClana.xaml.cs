@@ -24,6 +24,7 @@ namespace ProjekatKino
     {
         public RegistrujNovogClana()
         {
+            this.InitializeComponent();
         }
         private void textBlock_Copy_SelectionChanged(object sender, RoutedEventArgs e)
         {

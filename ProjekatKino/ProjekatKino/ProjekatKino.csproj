@@ -102,7 +102,9 @@
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Film.cs" />
     <Compile Include="Models\Korisnik.cs" />
+    <Compile Include="Models\ProgramskiSadrzaj.cs" />
     <Compile Include="Models\UlogaKorisnik.cs" />
     <Compile Include="Models\MeniStavka.cs" />
     <Compile Include="Models\UlogaMeniStavka.cs" />
