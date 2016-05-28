@@ -35,7 +35,7 @@ namespace ProjekatKino
             var korisnickoIme = usernameBox.Text;
             var sifra = passwordBox.Password;
             var korisnik = DataSource.DataSourceMenuMD.ProvjeraKorisnika(korisnickoIme, sifra);
-            if (korisnik != null && korisnik.KorisnikId >=1)
+            if (korisnik != null && korisnik.KorisnikId >=1 && korisnik.KorisnikId!= 2)
             {
                 this.Frame.Navigate(typeof(OdabirFilma), korisnik);
             }
