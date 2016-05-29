@@ -35,5 +35,12 @@ namespace ProjekatKino
         private void checkBox_Checked(object sender, RoutedEventArgs e)
         {
         }
+
+        private void Ponovni_odabir_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(OdabirFilma));
+
+
+        }
     }
 }
