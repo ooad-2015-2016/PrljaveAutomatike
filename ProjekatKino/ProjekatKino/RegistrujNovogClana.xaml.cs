@@ -40,5 +40,16 @@ namespace ProjekatKino
         {
 
         }
+
+        private void Potvrdi_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(RadnikIzbor));
+            //treba dodatni kod koji ce unesene podatke fkt negdje smjestiti
+        }
+
+        private void Ponisti_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(RadnikIzbor));
+        }
     }
 }

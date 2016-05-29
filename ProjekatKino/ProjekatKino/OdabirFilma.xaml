@@ -9,7 +9,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,410,0">
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Odaberite jedan od ponuđenih filmova" VerticalAlignment="Top" Margin="25,10,0,0" />
-        <ListBox HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="300" Margin="25,55,0,0" SelectionChanged="ListBox_SelectionChanged">
+        <ListBox HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="300" Margin="25,55,0,0">
             <ListBoxItem Content="Kum"/>
             <ListBoxItem Content="Kum 2"/>
             <ListBoxItem Content="Kum 3"/>

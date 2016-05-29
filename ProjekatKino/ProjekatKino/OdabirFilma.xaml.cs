@@ -39,12 +39,12 @@ namespace ProjekatKino
 
         private void dugmePotvrdi_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(nakonodabira));
+            this.Frame.Navigate(typeof(NakonOdabira));
         }
 
         private void dugmeOdustani_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Login));
+            this.Frame.Navigate(typeof(RadnikIzbor));
         }
     }
 }

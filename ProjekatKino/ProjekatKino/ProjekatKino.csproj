@@ -109,8 +109,8 @@
     <Compile Include="Models\MeniStavka.cs" />
     <Compile Include="Models\UlogaMeniStavka.cs" />
     <Compile Include="Models\Uloga.cs" />
-    <Compile Include="nakonodabira.xaml.cs">
-      <DependentUpon>nakonodabira.xaml</DependentUpon>
+    <Compile Include="NakonOdabira.xaml.cs">
+      <DependentUpon>NakonOdabira.xaml</DependentUpon>
     </Compile>
     <Compile Include="OdabirFilma.xaml.cs">
       <DependentUpon>OdabirFilma.xaml</DependentUpon>
@@ -152,7 +152,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="nakonodabira.xaml">
+    <Page Include="NakonOdabira.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

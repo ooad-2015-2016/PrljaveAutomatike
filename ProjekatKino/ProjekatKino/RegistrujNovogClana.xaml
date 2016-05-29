@@ -40,8 +40,8 @@
         <CheckBox x:Name="checkBox_Copy3" Content="E-mail" HorizontalAlignment="Left" Height="37" Margin="709,324,0,0" VerticalAlignment="Top" Width="108"/>
         <CheckBox x:Name="checkBox_Copy4" Content="Kućna adresa" HorizontalAlignment="Left" Height="37" Margin="880,324,0,0" VerticalAlignment="Top" Width="108"/>
         <TextBlock x:Name="textBlock1_Copy8" HorizontalAlignment="Left" Height="48" Margin="541,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" FontWeight="Bold" FontSize="18.667" Text="Ostali podaci"/>
-        <Button x:Name="button" Content="Potvrdi" HorizontalAlignment="Left" Height="32" Margin="840,403,0,0" VerticalAlignment="Top" Width="160" Background="#FF1DA1F2" Foreground="White"/>
-        <Button x:Name="button_Copy" Content="Poništi zahtjev" HorizontalAlignment="Left" Height="32" Margin="641,403,0,0" VerticalAlignment="Top" Width="160" Background="#FF1DA1F2" Foreground="White"/>
+        <Button x:Name="Potvrdi" Content="Potvrdi" HorizontalAlignment="Left" Height="32" Margin="840,403,0,0" VerticalAlignment="Top" Width="160" Background="#FF1DA1F2" Foreground="White" Click="Potvrdi_Click" ClickMode="Press" ManipulationMode="None"/>
+        <Button x:Name="Ponisti" Content="Poništi zahtjev" HorizontalAlignment="Left" Height="32" Margin="641,403,0,0" VerticalAlignment="Top" Width="160" Background="#FF1DA1F2" Foreground="White" Click="Ponisti_Click" ClickMode="Press" ManipulationMode="None"/>
 
     </Grid>
 </Page>

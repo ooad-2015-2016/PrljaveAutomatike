@@ -29,19 +29,19 @@ namespace ProjekatKino
 
         private void Odabir_filma_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(OdabirFilma));
+            this.Frame.Navigate(typeof(OdabirFilma));
 
 
         }
         private void Registruj_novog_clana_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(RegistrujNovogClana));
+            this.Frame.Navigate(typeof(RegistrujNovogClana));
 
 
         }
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Login));
+            this.Frame.Navigate(typeof(Login));
 
         }
     }
