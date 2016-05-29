@@ -115,6 +115,9 @@
     <Compile Include="OdabirFilma.xaml.cs">
       <DependentUpon>OdabirFilma.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RadnikIzbor.xaml.cs">
+      <DependentUpon>RadnikIzbor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RegistrujNovogClana.xaml.cs">
       <DependentUpon>RegistrujNovogClana.xaml</DependentUpon>
     </Compile>
@@ -154,6 +157,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="OdabirFilma.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RadnikIzbor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

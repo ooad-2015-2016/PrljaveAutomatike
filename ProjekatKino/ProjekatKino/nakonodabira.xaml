@@ -11,7 +11,7 @@
         <TextBlock x:Name="Cijena" HorizontalAlignment="Left" Height="40" Margin="70,60,0,0" TextWrapping="Wrap" Text="Ukupna cijena" VerticalAlignment="Top" Width="215" SelectionChanged="textBlock_SelectionChanged" RenderTransformOrigin="0.5,0.5" Foreground="#FF1DA1F2" FontSize="18.667"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="40" Margin="70,105,0,0" TextWrapping="Wrap" Text="5 KM" VerticalAlignment="Top" Width="215" IsReadOnly="True" Background="#FF1DA1F2" BorderBrush="#FF1DA1F2"/>
         <Button x:Name="Ponovni_odabir" Content="Ponovni odabir" HorizontalAlignment="Left" Height="50" Margin="70,255,0,0" VerticalAlignment="Top" Width="215" Foreground="#FFF3F3F5" Background="#FF1DA1F2" BorderBrush="#FF1DA1F2" Click="Ponovni_odabir_Click"/>
-        <Button x:Name="button" Content="Racun" HorizontalAlignment="Left" Margin="70,200,0,0" VerticalAlignment="Top" Height="50" Width="215" Foreground="#FFF8F8FB" Background="#FF1DA1F2" BorderBrush="#FF1DA1F2"/>
+        <Button x:Name="button" Content="Racun" HorizontalAlignment="Left" Margin="70,200,0,0" VerticalAlignment="Top" Height="50" Width="215" Foreground="#FFF8F8FB" Background="#FF1DA1F2" BorderBrush="#FF1DA1F2" Click="button_Click"/>
 
     </Grid>
 </Page>

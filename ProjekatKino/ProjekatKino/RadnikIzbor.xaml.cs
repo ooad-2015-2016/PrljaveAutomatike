@@ -20,29 +20,31 @@ namespace ProjekatKino
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class nakonodabira : Page
+    public sealed partial class RadnikIzbor : Page
     {
-        public nakonodabira()
+        public RadnikIzbor()
         {
             this.InitializeComponent();
         }
 
-        private void textBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void checkBox_Checked(object sender, RoutedEventArgs e)
-        {
-        }
-
-        private void Ponovni_odabir_Click(object sender, RoutedEventArgs e)
+        private void Odabir_filma_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(OdabirFilma));
 
 
         }
+        private void Registruj_novog_clana_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(RegistrujNovogClana));
 
-       
+
+        }
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Login));
+
+        }
     }
+
+   
 }

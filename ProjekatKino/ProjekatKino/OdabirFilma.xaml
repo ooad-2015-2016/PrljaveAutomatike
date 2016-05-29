@@ -5,10 +5,10 @@
     xmlns:local="using:ProjekatKino"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Height="795" Width="930">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Odaberite jedan od ponuđenih filmova" VerticalAlignment="Top" Margin="25,35,0,0" />
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,410,0">
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Odaberite jedan od ponuđenih filmova" VerticalAlignment="Top" Margin="25,10,0,0" />
         <ListBox HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="300" Margin="25,55,0,0" SelectionChanged="ListBox_SelectionChanged">
             <ListBoxItem Content="Kum"/>
             <ListBoxItem Content="Kum 2"/>
@@ -17,17 +17,17 @@
             <ListBoxItem Content="Lucy"/>
             <ListBoxItem Content="Intern"/>
         </ListBox>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Odaberite datum gledanja filma" VerticalAlignment="Top" Margin="402,38,0,0" Width="297" />
-        <DatePicker HorizontalAlignment="Left" Margin="402,78,0,0" VerticalAlignment="Top" Width="297"/>
-        <CheckBox Content="Član Kino Kluba" HorizontalAlignment="Left" Margin="576,188,0,0" VerticalAlignment="Top" Width="135"/>
-        <ComboBox HorizontalAlignment="Left" Margin="576,152,0,0" VerticalAlignment="Top" Width="123">
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Odaberite datum gledanja filma" VerticalAlignment="Top" Margin="28,360,0,0" Width="297" />
+        <DatePicker HorizontalAlignment="Left" Margin="25,385,0,0" VerticalAlignment="Top" Width="297"/>
+        <CheckBox Content="Član Kino Kluba" HorizontalAlignment="Left" Margin="22,479,0,0" VerticalAlignment="Top" Width="135"/>
+        <ComboBox HorizontalAlignment="Left" Margin="22,447,0,0" VerticalAlignment="Top" Width="123">
             <ComboBoxItem Content="Gotovina" Height="40" Width="100" IsSelected="True"/>
             <ComboBoxItem Content="Kartica" Height="40" Width="100"/>
         </ComboBox>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Odaberite način plaćanja" VerticalAlignment="Top" Margin="576,129,0,0" Width="167" />
-        <CheckBox x:Name="chkStud" Content="Student" HorizontalAlignment="Left" Margin="399,128,0,0" VerticalAlignment="Top" Checked="chkStud_Checked"/>
-        <CheckBox x:Name="chkPen" Content="Penzioner" HorizontalAlignment="Left" Margin="399,157,0,0" VerticalAlignment="Top" Checked="chkPen_Checked"/>
-        <Button x:Name="dugmeOdustani" Content="Odustani" HorizontalAlignment="Left" Margin="663,323,0,0" VerticalAlignment="Top" Click="dugmeOdustani_Click"/>
-        <Button x:Name="dugmePotvrdi" Content="Potvrdi" HorizontalAlignment="Left" Margin="576,323,0,0" VerticalAlignment="Top" Click="dugmePotvrdi_Click"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Odaberite način plaćanja" VerticalAlignment="Top" Margin="25,422,0,0" Width="167" />
+        <CheckBox x:Name="chkStud" Content="Student" HorizontalAlignment="Left" Margin="22,516,0,0" VerticalAlignment="Top" Checked="chkStud_Checked"/>
+        <CheckBox x:Name="chkPen" Content="Penzioner" HorizontalAlignment="Left" Margin="22,543,0,0" VerticalAlignment="Top" Checked="chkPen_Checked"/>
+        <Button x:Name="dugmeOdustani" Content="Odustani" HorizontalAlignment="Left" Margin="112,580,0,0" VerticalAlignment="Top" Click="dugmeOdustani_Click"/>
+        <Button x:Name="dugmePotvrdi" Content="Potvrdi" HorizontalAlignment="Left" Margin="22,580,0,0" VerticalAlignment="Top" Click="dugmePotvrdi_Click"/>
     </Grid>
 </Page>

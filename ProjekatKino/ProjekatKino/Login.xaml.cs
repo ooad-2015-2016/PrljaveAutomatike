@@ -41,7 +41,7 @@ namespace ProjekatKino
             }
             else if (korisnik != null && korisnik.KorisnikId ==2)
             {
-                this.Frame.Navigate(typeof(nakonodabira), korisnik);
+                this.Frame.Navigate(typeof(RadnikIzbor), korisnik);
             }
             else
             {
