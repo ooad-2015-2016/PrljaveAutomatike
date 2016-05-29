@@ -36,6 +36,15 @@ namespace ProjekatKino
         {
             chkStud.IsChecked = false;
         }
-       
+
+        private void dugmePotvrdi_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(nakonodabira));
+        }
+
+        private void dugmeOdustani_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Login));
+        }
     }
 }

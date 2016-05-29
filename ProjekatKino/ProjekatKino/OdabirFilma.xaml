@@ -9,7 +9,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Odaberite jedan od ponuđenih filmova" VerticalAlignment="Top" Margin="25,35,0,0" />
-        <ListBox HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="300" Margin="25,55,0,0">
+        <ListBox HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="300" Margin="25,55,0,0" SelectionChanged="ListBox_SelectionChanged">
             <ListBoxItem Content="Kum"/>
             <ListBoxItem Content="Kum 2"/>
             <ListBoxItem Content="Kum 3"/>
@@ -27,7 +27,7 @@
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Odaberite način plaćanja" VerticalAlignment="Top" Margin="576,129,0,0" Width="167" />
         <CheckBox x:Name="chkStud" Content="Student" HorizontalAlignment="Left" Margin="399,128,0,0" VerticalAlignment="Top" Checked="chkStud_Checked"/>
         <CheckBox x:Name="chkPen" Content="Penzioner" HorizontalAlignment="Left" Margin="399,157,0,0" VerticalAlignment="Top" Checked="chkPen_Checked"/>
-        <Button x:Name="dugmeOdustani" Content="Odustani" HorizontalAlignment="Left" Margin="663,323,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="dugmePotvrdi" Content="Potvrdi" HorizontalAlignment="Left" Margin="576,323,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="dugmeOdustani" Content="Odustani" HorizontalAlignment="Left" Margin="663,323,0,0" VerticalAlignment="Top" Click="dugmeOdustani_Click"/>
+        <Button x:Name="dugmePotvrdi" Content="Potvrdi" HorizontalAlignment="Left" Margin="576,323,0,0" VerticalAlignment="Top" Click="dugmePotvrdi_Click"/>
     </Grid>
 </Page>
