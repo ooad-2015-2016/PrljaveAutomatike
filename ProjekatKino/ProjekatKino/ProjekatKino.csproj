@@ -102,6 +102,9 @@
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ManagerForma.xaml.cs">
+      <DependentUpon>ManagerForma.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\Film.cs" />
     <Compile Include="Models\Korisnik.cs" />
     <Compile Include="Models\ProgramskiSadrzaj.cs" />
@@ -149,6 +152,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManagerForma.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

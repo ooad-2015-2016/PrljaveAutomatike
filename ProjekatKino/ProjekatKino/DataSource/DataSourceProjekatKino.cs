@@ -89,6 +89,12 @@ namespace ProjekatKino.DataSource
                 KorisnikId = 4,
                 KorisnickoIme = "My_Name_Is_Emir",
                 Sifra = "zajebanasifra",
+            },
+            new Models.Korisnik()
+            {
+                KorisnikId = 5,
+                KorisnickoIme = "manager",
+                Sifra = "patlidzan",
             }
         };
         public static IList<Models.Korisnik> DajSveKorisnike()
