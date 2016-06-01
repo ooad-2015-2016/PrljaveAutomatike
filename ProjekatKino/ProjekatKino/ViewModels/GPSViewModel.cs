@@ -12,7 +12,7 @@ using Windows.UI.Xaml.Controls.Maps;
 
 namespace ProjekatKino.ViewModels
 {
-    class GPSViewModel
+    class GPSViewModel : INotifyPropertyChanged
     {
         //trenutna lokacija koja ce se naci sa geolocation
         private Geopoint trenutnaLokacija;

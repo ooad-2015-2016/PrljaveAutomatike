@@ -26,7 +26,7 @@ namespace ProjekatKino
         {
             this.InitializeComponent();
             //inicijalizacija data source
-            var inicijalizacija = new DataSource.DataSourceMenuMD();
+            var inicijalizacija = new DataSource.DataSourceProjekatKino();
         }
 
         //asinhrona metoda za provjeru prijave korisnika
@@ -34,10 +34,14 @@ namespace ProjekatKino
         {
             var korisnickoIme = usernameBox.Text;
             var sifra = passwordBox.Password;
-            var korisnik = DataSource.DataSourceMenuMD.ProvjeraKorisnika(korisnickoIme, sifra);
+            var korisnik = DataSource.DataSourceProjekatKino.ProvjeraKorisnika(korisnickoIme, sifra);
             if (korisnik != null && korisnik.KorisnikId==5)
             {
                 this.Frame.Navigate(typeof(ManagerForma), korisnik);
+            }
+            else if (korisnik != null && korisnik.KorisnikId ==1)
+            {
+                this.Frame.Navigate(typeof(GPSView), korisnik);
             }
             else  if (korisnik != null && korisnik.KorisnikId >=1)
             {

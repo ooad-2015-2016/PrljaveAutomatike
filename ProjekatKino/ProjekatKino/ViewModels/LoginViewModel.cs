@@ -8,7 +8,6 @@ using ProjekatKino.Models;
 using Windows.UI.Popups;
 using Windows.UI.Xaml.Controls;
 using ProjekatKino.Helper;
-using ProjekatKino.ProjekatKino_XamlTypeInfo;
 using ProjekatKino;
 using System.Windows.Input;
 using Windows.UI.Core;
@@ -27,7 +26,44 @@ namespace ProjekatKino.ViewModels
         public string _username { get; set; }
         public string _password { get; set; }
         public ICommand LoginUposlenik { get; set; }
-        public INavigationService NavigationServis { get; set; }
+        public INavigationService NavigationService { get; set; }
 
+        /////////////////////////////
+
+        public LoginViewModel()
+        {
+            NavigationService = new NavigationService();
+
+            _username = "";
+            _password = "";
+
+            LoginUposlenik = new RelayCommand<object>(loginUposlenik, mozeLiSePrijavitiUposlenik);
+        }
+        public bool mozeLiSePrijavitiUposlenik(object parametar)
+        {
+            return true;
+        }
+        public async void loginUposlenik(object parametar)
+        {
+            var UnosPassBox = parametar as PasswordBox;
+            _password = UnosPassBox.Password;
+            int unos = int.Parse(_username);
+            _korisnik = DataSource.DataSourceProjekatKino.ProvjeraKorisnika(_username, _password);
+
+            if (_username != null && _password != null)
+            {
+                //ici ce else kad se doda klasa menadzer i menadzerviewmodel
+                //if (_korisnik is Menadzer) NavigationServis.Navigate(typeof(MenadzerView), new MenadzerViewModel(this));
+                //else
+
+                //mora se napravit korisnikviewmodel pod hitno!
+                NavigationService.Navigate(typeof(RadnikIzbor), new KorisnikViewModel(this));
+            }
+            else
+            {
+                var dialog = new MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješna prijava");
+                await dialog.ShowAsync();
+            }
+        }
     }
 }
