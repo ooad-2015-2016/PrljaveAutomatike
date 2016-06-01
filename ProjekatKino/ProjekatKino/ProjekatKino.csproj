@@ -99,10 +99,19 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataSource\DataSourceProjekatKino.cs" />
-    <Compile Include="Login.xaml.cs">
+    <Compile Include="Helper\INavigationService.cs" />
+    <Compile Include="Helper\NavigationService.cs" />
+    <Compile Include="Helper\RelayCommand.cs" />
+    <Compile Include="Helper\Rfid.cs" />
+    <Compile Include="ViewModels\GPSViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="Views\GPSView.xaml.cs">
+      <DependentUpon>GPSView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ManagerForma.xaml.cs">
+    <Compile Include="Views\ManagerForma.xaml.cs">
       <DependentUpon>ManagerForma.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Film.cs" />
@@ -112,20 +121,17 @@
     <Compile Include="Models\MeniStavka.cs" />
     <Compile Include="Models\UlogaMeniStavka.cs" />
     <Compile Include="Models\Uloga.cs" />
-    <Compile Include="NakonOdabira.xaml.cs">
+    <Compile Include="Views\NakonOdabira.xaml.cs">
       <DependentUpon>NakonOdabira.xaml</DependentUpon>
     </Compile>
-    <Compile Include="OdabirFilma.xaml.cs">
+    <Compile Include="Views\OdabirFilma.xaml.cs">
       <DependentUpon>OdabirFilma.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RadnikIzbor.xaml.cs">
+    <Compile Include="Views\RadnikIzbor.xaml.cs">
       <DependentUpon>RadnikIzbor.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RegistrujNovogClana.xaml.cs">
+    <Compile Include="Views\RegistrujNovogClana.xaml.cs">
       <DependentUpon>RegistrujNovogClana.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\MeniStavkeViewModel.cs" />
@@ -151,33 +157,33 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Login.xaml">
+    <Page Include="Views\GPSView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ManagerForma.xaml">
+    <Page Include="Views\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="NakonOdabira.xaml">
+    <Page Include="Views\ManagerForma.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="OdabirFilma.xaml">
+    <Page Include="Views\NakonOdabira.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RadnikIzbor.xaml">
+    <Page Include="Views\OdabirFilma.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RegistrujNovogClana.xaml">
+    <Page Include="Views\RadnikIzbor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Views\RegistrujNovogClana.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup />
