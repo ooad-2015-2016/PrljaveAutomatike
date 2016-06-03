@@ -8,7 +8,25 @@ namespace ProjekatKino.Models
 {
     public class ProgramskiSadrzaj
     {
-        public virtual ICollection<Film> filmovi { get; set; }
+        int brojfilmova;
+        List<Film> filmovi;
+
+        public ProgramskiSadrzaj() { }
+        public void DodajFilm(Film film)
+        {
+
+            this.filmovi.Add(film);
+        }
+        public void IzbaciFilm(Film film)
+        {
+            this.filmovi.Remove(film);
+        }
+
+        public List<Film> KreirajProgramskiSadrzaj(List<Film> lista)
+        {
+            return lista;
+        }
 
     }
+
 }

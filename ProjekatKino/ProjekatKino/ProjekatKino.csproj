@@ -103,7 +103,9 @@
     <Compile Include="Helper\NavigationService.cs" />
     <Compile Include="Helper\RelayCommand.cs" />
     <Compile Include="Helper\Rfid.cs" />
+    <Compile Include="Models\KinoSala.cs" />
     <Compile Include="Models\Menadzer.cs" />
+    <Compile Include="Models\Projekcija.cs" />
     <Compile Include="Models\RegistrovaniClan.cs" />
     <Compile Include="ViewModels\GPSViewModel.cs" />
     <Compile Include="ViewModels\KorisnikViewModel.cs" />
