@@ -26,5 +26,13 @@ namespace ProjekatKino.Views
         {
             this.InitializeComponent();
         }
+
+        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            for(int i=1; i < 6; i++)
+            {
+                comboBox.Items.Add(DataSource.DataSourceProjekatKino.DajKorisnikaPoId(i).Ime);
+            }
+        }
     }
 }

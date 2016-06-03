@@ -9,7 +9,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="32" Margin="34,10,0,0" TextWrapping="Wrap" Text="Odaberite uposlenika kojeg želite izbrisati" VerticalAlignment="Top" Width="313"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Height="35" Margin="37,47,0,0" VerticalAlignment="Top" Width="272"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Height="35" Margin="37,47,0,0" VerticalAlignment="Top" Width="272" SelectionChanged="comboBox_SelectionChanged"/>
         <Button x:Name="button" Content="Potvrdi" HorizontalAlignment="Left" Height="35" Margin="207,586,0,0" VerticalAlignment="Top" Width="140" Background="#FF1DA1F2" Foreground="White"/>
         <Button x:Name="button1" Content="Odustani" HorizontalAlignment="Left" Height="35" Margin="10,586,0,0" VerticalAlignment="Top" Width="140" Foreground="White" Background="#FF1DA1F2"/>
 
