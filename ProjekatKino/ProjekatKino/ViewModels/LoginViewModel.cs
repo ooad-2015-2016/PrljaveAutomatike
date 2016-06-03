@@ -54,7 +54,7 @@ namespace ProjekatKino.ViewModels
             {
                 if (_korisnik is Menadzer) NavigationService.Navigate(typeof(ManagerForma), new MenadzerViewModel(this));
                 else
-                    NavigationService.Navigate(typeof(RadnikIzbor), new KorisnikViewModel(this));
+                    NavigationService.Navigate(typeof(Views.DodajUposlenika), new KorisnikViewModel(this));
             }
             else
             {

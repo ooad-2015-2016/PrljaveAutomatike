@@ -25,8 +25,8 @@ namespace ProjekatKino.ViewModels
 
             OdabirFilma = new RelayCommand<object>(odabirFilma, mozeLiOdabrati);
             RegistrujNovogClana = new RelayCommand<object>(registrujNovogClana, mozeLiRegistrovati);
-            DodajUposlenika = new RelayCommand<object>(dodajUposlenika, mozeLiOdabrati);
-            IzbrisiUposlenika = new RelayCommand<object>(izbrisiUposlenika, mozeLiRegistrovati);
+            //DodajUposlenika = new RelayCommand<object>(dodajUposlenika, mozeLiOdabrati);
+           // IzbrisiUposlenika = new RelayCommand<object>(izbrisiUposlenika, mozeLiRegistrovati);
 
             this.Parent = parent;
         }

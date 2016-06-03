@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-679,0">
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="32" Margin="48,62,0,0" TextWrapping="Wrap" Text="Ime" VerticalAlignment="Top" Width="260" FontWeight="Bold"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="48,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" TabIndex="0"/>
         <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Height="32" Margin="284,62,0,0" TextWrapping="Wrap" Text="Prezime" VerticalAlignment="Top" Width="260" FontWeight="Bold" SelectionChanged="textBlock_Copy_SelectionChanged"/>
