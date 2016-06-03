@@ -103,9 +103,11 @@
     <Compile Include="Helper\NavigationService.cs" />
     <Compile Include="Helper\RelayCommand.cs" />
     <Compile Include="Helper\Rfid.cs" />
+    <Compile Include="Models\RegistrovaniClan.cs" />
     <Compile Include="ViewModels\GPSViewModel.cs" />
     <Compile Include="ViewModels\KorisnikViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\RegistracijaViewModel.cs" />
     <Compile Include="Views\GPSView.xaml.cs">
       <DependentUpon>GPSView.xaml</DependentUpon>
     </Compile>
