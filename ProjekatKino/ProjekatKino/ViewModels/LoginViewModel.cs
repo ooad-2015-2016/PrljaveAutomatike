@@ -52,12 +52,9 @@ namespace ProjekatKino.ViewModels
 
             if (_username != null && _password != null)
             {
-                //ici ce else kad se doda klasa menadzer i menadzerviewmodel
-                //if (_korisnik is Menadzer) NavigationServis.Navigate(typeof(MenadzerView), new MenadzerViewModel(this));
-                //else
-
-                //mora se napravit korisnikviewmodel pod hitno!
-                NavigationService.Navigate(typeof(RadnikIzbor), new KorisnikViewModel(this));
+                if (_korisnik is Menadzer) NavigationService.Navigate(typeof(ManagerForma), new MenadzerViewModel(this));
+                else
+                    NavigationService.Navigate(typeof(RadnikIzbor), new KorisnikViewModel(this));
             }
             else
             {

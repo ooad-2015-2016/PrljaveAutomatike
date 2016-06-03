@@ -35,14 +35,12 @@ namespace ProjekatKino.ViewModels
                 var dialog = new MessageDialog("Neispravan format telefona", "Neuspješna prijava");
                 await dialog.ShowAsync();
             }
-
             else if (!Email.Contains("@") || !Email.Contains("."))
             {
 
                 var dialog = new MessageDialog("Email nije ispravan.", "Neuspješna prijava");
                 await dialog.ShowAsync();
             }
-
             else
             {
                 var dialog = new MessageDialog("Prijava uspješno završena.Dobrodošli!", "Uspješna prijava");

@@ -68,30 +68,40 @@ namespace ProjekatKino.DataSource
         {
             new Models.Korisnik()
             {
+                Ime = "Amar",
+                Prezime = "Begovic",
                 KorisnikId = 1,
                 KorisnickoIme = "ama_direktor",
                 Sifra = "assassin",
             },
             new Models.Korisnik()
             {
+                Ime = "Nadja",
+                Prezime = "Kovacevic",
                 KorisnikId = 2,
                 KorisnickoIme = "nadjatimelord",
                 Sifra = "njena_sifra"
             },
             new Models.Korisnik()
             {
+                Ime = "Alma",
+                Prezime = "Dzaferovic",
                 KorisnikId = 3,
                 KorisnickoIme = "alma_princess",
                 Sifra = "sifrica",
             },
             new Models.Korisnik()
             {
+                Ime = "Emir",
+                Prezime = "Alagic",
                 KorisnikId = 4,
                 KorisnickoIme = "My_Name_Is_Emir",
                 Sifra = "zajebanasifra",
             },
             new Models.Korisnik()
             {
+                Ime = "Medo",
+                Prezime = "Brundic",
                 KorisnikId = 5,
                 KorisnickoIme = "manager",
                 Sifra = "patlidzan",
