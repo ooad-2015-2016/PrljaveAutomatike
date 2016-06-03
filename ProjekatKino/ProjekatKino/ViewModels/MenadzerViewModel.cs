@@ -25,8 +25,8 @@ namespace ProjekatKino.ViewModels
 
             OdabirFilma = new RelayCommand<object>(odabirFilma, mozeLiOdabrati);
             RegistrujNovogClana = new RelayCommand<object>(registrujNovogClana, mozeLiRegistrovati);
-            //DodajUposlenika = new RelayCommand<object>(dodajUposlenika, mozeLiOdabrati);
-           // IzbrisiUposlenika = new RelayCommand<object>(izbrisiUposlenika, mozeLiRegistrovati);
+            DodajUposlenika = new RelayCommand<object>(dodajUposlenika, mozeLiDodati);
+            IzbrisiUposlenika = new RelayCommand<object>(izbrisiUposlenika, mozeLiIzbrisati);
 
             this.Parent = parent;
         }
@@ -36,14 +36,21 @@ namespace ProjekatKino.ViewModels
         public bool mozeLiIzbrisati(object parametar) { return true; }
         public void odabirFilma(object parametar)
         {
-            NavigationService.Navigate(typeof(OdabirFilma), new KorisnikViewModel());
+            NavigationService.Navigate(typeof(OdabirFilma), new MenadzerViewModel());
         }
         public void registrujNovogClana(object parametar)
         {
-
-            NavigationService.Navigate(typeof(RegistrujNovogClana), new KorisnikViewModel());
+            NavigationService.Navigate(typeof(RegistrujNovogClana), new MenadzerViewModel());
         }
-        public List<Korisnik> Radnici { get; set; }
+        public void dodajUposlenika(object parametar)
+        {
+            //NavigationService.Navigate(typeof(DodajUposlenika), new MenadzerViewModel());
+        }
+        public void izbrisiUposlenika(object parametar)
+        {
+            //NavigationService.Navigate(typeof(IzbrisiUposlenika), new MenadzerViewModel());
+        }
+        //public List<Korisnik> Radnici { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)

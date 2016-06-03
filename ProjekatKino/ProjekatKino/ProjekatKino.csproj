@@ -105,12 +105,15 @@
     <Compile Include="Helper\Rfid.cs" />
     <Compile Include="Models\KinoSala.cs" />
     <Compile Include="Models\Menadzer.cs" />
+    <Compile Include="Models\PrivremenaBaza.cs" />
     <Compile Include="Models\Projekcija.cs" />
     <Compile Include="Models\RegistrovaniClan.cs" />
+    <Compile Include="ViewModels\DodajUposlenikaViewModel.cs" />
     <Compile Include="ViewModels\GPSViewModel.cs" />
     <Compile Include="ViewModels\KorisnikViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MenadzerViewModel.cs" />
+    <Compile Include="ViewModels\PrivremenaBazaViewModel.cs" />
     <Compile Include="ViewModels\RegistracijaViewModel.cs" />
     <Compile Include="Views\DodajUposlenika.xaml.cs">
       <DependentUpon>DodajUposlenika.xaml</DependentUpon>

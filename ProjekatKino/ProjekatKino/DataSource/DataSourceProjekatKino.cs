@@ -3,60 +3,66 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProjekatKino.Models;
+using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("PrivremenaBaza")]
 
 namespace ProjekatKino.DataSource
 {
     //Klasa koja predstavlja sloj podataka 
     public class DataSourceProjekatKino
     {
+        public DataSourceProjekatKino() { }
+
         #region Film - kreiranje testnih filmova
-        private static List<Models.Film> _filmovi = new List<Models.Film>()
+        private static List<Film> _filmovi = new List<Film>()
         {
-            new Models.Film()
+            new Film()
             {
                 ime_filma = "Kum",
                 trajanje = 180,
                 FilmId = 1,
             },
-            new Models.Film()
+            new Film()
             {
                 ime_filma = "Kum 2",
                 trajanje = 180,
                 FilmId = 2,
             },
-            new Models.Film()
+            new Film()
             {
                 ime_filma = "Kum 3",
                 trajanje = 180,
                 FilmId = 3,
             },
-            new Models.Film()
+            new Film()
             {
                 ime_filma = "The Usual Suspects",
                 trajanje = 120,
                 FilmId = 4,
             },
-            new Models.Film()
+            new Film()
             {
                 ime_filma = "Kamatar",
                 trajanje = 180,
                 FilmId = 5,
             }
         };
-        public static IList<Models.Film> DajSveFilmove()
+        public static List<Film> DajSveFilmove()
         {
             return _filmovi;
         }
-        public static Models.Film DajFilmPoId(int FilmId)
+        public static Film DajFilmPoId(int FilmId)
         {
             return _filmovi.Where(k => k.FilmId.Equals(FilmId)).FirstOrDefault();
         }
-        public static Models.Film ProvjeraFilma(string ime_filma)
+        public static Film ProvjeraFilma(string ime_filma)
         {
-            Models.Film rezultat = new Models.Film();
+            Film rezultat = new Film();
             foreach (var k in DajSveFilmove())
             {
-                if (k.ime_filma == ime_filma && k.trajanje>60)
+                if (k.ime_filma == ime_filma && k.trajanje > 60)
                     rezultat = k;
             }
             return rezultat;
@@ -64,9 +70,9 @@ namespace ProjekatKino.DataSource
         #endregion
 
         #region Korisnik - kreiranje testnih korisnika
-        private static List<Models.Korisnik> _korisnici = new List<Models.Korisnik>()
+        public static List<Korisnik> _korisnici = new List<Korisnik>()
         {
-            new Models.Korisnik()
+            new Korisnik()
             {
                 Ime = "Amar",
                 Prezime = "Begovic",
@@ -74,7 +80,7 @@ namespace ProjekatKino.DataSource
                 KorisnickoIme = "ama_direktor",
                 Sifra = "assassin",
             },
-            new Models.Korisnik()
+            new Korisnik()
             {
                 Ime = "Nadja",
                 Prezime = "Kovacevic",
@@ -82,7 +88,7 @@ namespace ProjekatKino.DataSource
                 KorisnickoIme = "nadjatimelord",
                 Sifra = "njena_sifra"
             },
-            new Models.Korisnik()
+            new Korisnik()
             {
                 Ime = "Alma",
                 Prezime = "Dzaferovic",
@@ -90,7 +96,7 @@ namespace ProjekatKino.DataSource
                 KorisnickoIme = "alma_princess",
                 Sifra = "sifrica",
             },
-            new Models.Korisnik()
+            new Korisnik()
             {
                 Ime = "Emir",
                 Prezime = "Alagic",
@@ -98,7 +104,7 @@ namespace ProjekatKino.DataSource
                 KorisnickoIme = "My_Name_Is_Emir",
                 Sifra = "zajebanasifra",
             },
-            new Models.Korisnik()
+            new Korisnik()
             {
                 Ime = "Medo",
                 Prezime = "Brundic",
@@ -107,17 +113,17 @@ namespace ProjekatKino.DataSource
                 Sifra = "patlidzan",
             }
         };
-        public static IList<Models.Korisnik> DajSveKorisnike()
+        public static List<Korisnik> DajSveKorisnike()
         {
             return _korisnici;
         }
-        public static Models.Korisnik DajKorisnikaPoId(int korisnikId)
+        public static Korisnik DajKorisnikaPoId(int korisnikId)
         {
             return _korisnici.Where(k => k.KorisnikId.Equals(korisnikId)).FirstOrDefault();
         }
-        public static Models.Korisnik ProvjeraKorisnika(string korisnickoIme, string sifra)
+        public static Korisnik ProvjeraKorisnika(string korisnickoIme, string sifra)
         {
-            Models.Korisnik rezultat = new Models.Korisnik();
+            Models.Korisnik rezultat = new Korisnik();
             foreach (var k in DajSveKorisnike())
             {
                 if (k.KorisnickoIme == korisnickoIme && k.Sifra == sifra)
@@ -125,6 +131,11 @@ namespace ProjekatKino.DataSource
             }
             return rezultat;
         }
+        internal static PrivremenaBaza pdb = new PrivremenaBaza();
+        /*public void DodajKorisnika(Models.Korisnik _korisnik)
+        {
+            _korisnici.Add(_korisnik);
+        }*/
         #endregion
     }
 }
