@@ -25,14 +25,28 @@ namespace ProjekatKino.Views
         public IzbrisiUposlenika()
         {
             this.InitializeComponent();
+            foreach(Models.Korisnik korisnik in DataSource.DataSourceProjekatKino._korisnici)
+            {
+                comboBox.Items.Add(korisnik.Ime + " " + korisnik.Prezime);
+            }                
         }
 
-        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            for(int i=1; i < 6; i++)
-            {
-                comboBox.Items.Add(DataSource.DataSourceProjekatKino.DajKorisnikaPoId(i).Ime);
-            }
+            textBlock_Ime.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            textBlock_Prezime.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            textBlock_Podaci.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            textBlock_KorIme.Visibility = Windows.UI.Xaml.Visibility.Visible;
+
+            textBox_Ime.PlaceholderText = DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex].Ime;
+            textBox_Prezime.PlaceholderText = DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex].Prezime;
+            textBox_KorIme.PlaceholderText = DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex].KorisnickoIme;
+
+            textBox_Ime.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            textBox_Prezime.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            textBox_KorIme.Visibility = Windows.UI.Xaml.Visibility.Visible;
         }
+
+
     }
 }
