@@ -115,9 +115,6 @@
     <Compile Include="ViewModels\MenadzerViewModel.cs" />
     <Compile Include="ViewModels\PrivremenaBazaViewModel.cs" />
     <Compile Include="ViewModels\RegistracijaViewModel.cs" />
-    <Compile Include="Views\AutorizacijaMenadzera.xaml.cs">
-      <DependentUpon>AutorizacijaMenadzera.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\DodajUposlenika.xaml.cs">
       <DependentUpon>DodajUposlenika.xaml</DependentUpon>
     </Compile>
@@ -171,10 +168,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Views\AutorizacijaMenadzera.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\DodajUposlenika.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
