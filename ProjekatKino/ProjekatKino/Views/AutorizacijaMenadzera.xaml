@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="ProjekatKino.Views.AutorizacijaMenadzera"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjekatKino.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,1,0,0" MinWidth="360" MinHeight="250">
+        <TextBlock x:Name="textBlockAutorizacija" HorizontalAlignment="Center" Height="23" Margin="128,15,130,0" TextWrapping="Wrap" Text="Autorizacija" VerticalAlignment="Top" Width="102" FontSize="17.333" FontWeight="Bold"/>
+        <TextBox x:Name="usernameBox" Height="0" Margin="0,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="284" InputScope="Text" PlaceholderText="Korisničko ime" UseSystemFocusVisuals="True" TabIndex="0"/>
+        <PasswordBox x:Name="passwordBox" Height="20" Margin="0,108,0,0" VerticalAlignment="Top" Width="284" PlaceholderText="Šifra"/>
+        <Button x:Name="button_Login" Content="Prijavi se" HorizontalAlignment="Center" Height="38" Margin="0,0,0,59" VerticalAlignment="Bottom" Width="284" Click="button_LoginClick" Background="#FF1DA1F2" Foreground="White" ClickMode="Press" ManipulationMode="None"/>
+        <Button x:Name="button_Odustani" Content="Odustani" HorizontalAlignment="Center" Height="38" Margin="0,0,0,10" VerticalAlignment="Bottom" Width="284" Click="button_OdustaniClick" Background="#FF1DA1F2" Foreground="White" ClickMode="Press" ManipulationMode="None"/>
+    </Grid>
+</Page>

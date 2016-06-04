@@ -17,22 +17,23 @@ using Windows.UI.Xaml.Navigation;
 
 namespace ProjekatKino.Views
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+
     public sealed partial class IzbrisiUposlenika : Page
     {
+        bool nekoJeIzabranIzComboBoxa = false;
         public IzbrisiUposlenika()
         {
             this.InitializeComponent();
+            //Ova petelja popunjava combobox sa uposlenicima
             foreach(Models.Korisnik korisnik in DataSource.DataSourceProjekatKino._korisnici)
             {
                 comboBox.Items.Add(korisnik.Ime + " " + korisnik.Prezime);
-            }                
+            }             
         }
-
+        //mora biti async funkcija, ukoliko se neko izabere iz dropdowna
         private async void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            nekoJeIzabranIzComboBoxa = true;
             textBlock_Ime.Visibility = Windows.UI.Xaml.Visibility.Visible;
             textBlock_Prezime.Visibility = Windows.UI.Xaml.Visibility.Visible;
             textBlock_Podaci.Visibility = Windows.UI.Xaml.Visibility.Visible;
@@ -46,7 +47,24 @@ namespace ProjekatKino.Views
             textBox_Prezime.Visibility = Windows.UI.Xaml.Visibility.Visible;
             textBox_KorIme.Visibility = Windows.UI.Xaml.Visibility.Visible;
         }
+        //Dalje treba implementirati da se obrise izabrani korisnik
+        //Izabrani korisnik je DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex]
+        private async void buttonPotvrdi_Click(object sender, RoutedEventArgs e)
+        {
+            if(nekoJeIzabranIzComboBoxa)
+            {
+                this.Frame.Navigate(typeof(Views.AutorizacijaMenadzera), DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex]);
+                //Ovdje trazimo potvrdu menadzera njegovim passwordom
+                //this.Frame.Navigate(typeof(AutorizacijaMenadzera), DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex]);
+                //Ovdje implementirati brisanje korisnika DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex]
 
+            }
+            else
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog("Niste odabrali niti jednog uposlenika!", "Pokušajte ponovo!");
+                await dialog.ShowAsync();
+            }
 
+        }
     }
 }
