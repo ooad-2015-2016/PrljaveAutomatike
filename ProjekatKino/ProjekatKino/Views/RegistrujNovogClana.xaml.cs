@@ -62,9 +62,18 @@ namespace ProjekatKino
         {
             this.Frame.Navigate(typeof(RadnikIzbor));
         }
-        private void Potvrdi_Click(object sender, RoutedEventArgs e)
+        private async void Potvrdi_Click(object sender, RoutedEventArgs e)
         {
-            //ovdje sve sacuvati i vratiti se na izbornik
+            if (textBoxEmail.Text == "" || comboBoxSpol.SelectedIndex < 0)
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog("Niste ispravno popunili podatke!", "Pokušajte ponovo!");
+                await dialog.ShowAsync();
+            }
+            else
+            {
+                //ovdje sve sacuvati i vratiti se na izbornik
+            }
+
         }
 
     }
