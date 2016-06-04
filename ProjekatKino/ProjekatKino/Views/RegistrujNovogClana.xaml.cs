@@ -25,10 +25,18 @@ namespace ProjekatKino
         public RegistrujNovogClana()
         {
             this.InitializeComponent();
+            comboBoxSpol.Items.Add("Muški");
+            comboBoxSpol.Items.Add("Ženski");
         }
 
-        private void Sljedeca_Click(object sender, RoutedEventArgs e)
+        private async void Sljedeca_Click(object sender, RoutedEventArgs e)
         {
+            if (textBoxIme.Text == "" || textBoxPrezime.Text == "" || textBoxJMBG.Text == "" || textBoxAdresa.Text == "" || textBoxGrad.Text == "" || textBoxTelefon.Text == "")
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog("Niste ispravno popunili podatke!", "Pokušajte ponovo!");
+                await dialog.ShowAsync();
+                this.Frame.Navigate(typeof(RegistrujNovogClana));
+            }
             //sakrij
             textBoxIme.Visibility = Visibility.Collapsed;
             textBoxPrezime.Visibility = Visibility.Collapsed;
@@ -38,6 +46,7 @@ namespace ProjekatKino
             textBoxAdresa.Visibility = Visibility.Collapsed;
             textBoxGrad.Visibility = Visibility.Collapsed;
             textBoxTelefon.Visibility = Visibility.Collapsed;
+            Sljedeca.Visibility = Visibility.Collapsed;
             //pokazi
             checkBoxPenzioner.Visibility = Visibility.Visible;
             checkBoxStudent.Visibility = Visibility.Visible;
@@ -45,6 +54,7 @@ namespace ProjekatKino
             textBoxFakultet.Visibility = Visibility.Visible;
             textBoxIndeks.Visibility = Visibility.Visible;
             comboBoxSpol.Visibility = Visibility.Visible;
+            Potvrdi.Visibility = Visibility.Visible;
 
         }
 
@@ -52,7 +62,10 @@ namespace ProjekatKino
         {
             this.Frame.Navigate(typeof(RadnikIzbor));
         }
-
+        private void Potvrdi_Click(object sender, RoutedEventArgs e)
+        {
+            //ovdje sve sacuvati i vratiti se na izbornik
+        }
 
     }
 }
