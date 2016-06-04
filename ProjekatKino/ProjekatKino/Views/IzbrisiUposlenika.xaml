@@ -9,10 +9,10 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="32" Margin="34,10,0,0" TextWrapping="Wrap" Text="Odaberite uposlenika kojeg želite izbrisati" VerticalAlignment="Top" Width="313"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Height="35" Margin="37,47,0,0" VerticalAlignment="Top" Width="272" SelectionChanged="comboBox_SelectionChanged"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Height="35" Margin="37,47,0,0" VerticalAlignment="Top" SelectionChanged="comboBox_SelectionChanged"/>
         <Button x:Name="button" Content="Potvrdi" HorizontalAlignment="Left" Height="35" Margin="207,586,0,0" VerticalAlignment="Top" Width="140" Background="#FF1DA1F2" Foreground="White"/>
         <Button x:Name="button1" Content="Odustani" HorizontalAlignment="Left" Height="35" Margin="10,586,0,0" VerticalAlignment="Top" Width="140" Foreground="White" Background="#FF1DA1F2"/>
-        <TextBlock x:Name="textBlock_Podaci" HorizontalAlignment="Left" Height="24" Margin="34,127,0,0" TextWrapping="Wrap" Text="Podaci o uposleniku" VerticalAlignment="Top" Width="220" SelectionChanged="textBlock1_SelectionChanged" FontWeight="Bold" FontSize="15" Visibility="Collapsed"/>
+        <TextBlock x:Name="textBlock_Podaci" HorizontalAlignment="Left" Height="24" Margin="34,127,0,0" TextWrapping="Wrap" Text="Podaci o uposleniku" VerticalAlignment="Top" Width="220"  FontWeight="Bold" FontSize="15" Visibility="Collapsed"/>
         <TextBlock x:Name="textBlock_Ime" HorizontalAlignment="Left" Height="30" Margin="34,165,0,0" TextWrapping="Wrap" Text="Ime" VerticalAlignment="Top" Width="75" Visibility="Collapsed"/>
         <TextBox x:Name="textBox_Ime" HorizontalAlignment="Left" Height="26" Margin="109,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" IsHitTestVisible="False" IsSpellCheckEnabled="False" IsTabStop="False" IsTextPredictionEnabled="False" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" Visibility="Collapsed" TextAlignment="Right"/>
         <TextBox x:Name="textBox_Prezime" HorizontalAlignment="Left" Height="26" Margin="109,209,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" IsHitTestVisible="False" IsSpellCheckEnabled="False" IsTabStop="False" IsTextPredictionEnabled="False" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" Visibility="Collapsed" TextAlignment="Right"/>
