@@ -53,14 +53,11 @@ namespace ProjekatKino.Views
         {
             if(nekoJeIzabranIzComboBoxa)
             {
-                this.Frame.Navigate(typeof(Views.AutorizacijaMenadzera), DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex]);
-                //Ovdje trazimo potvrdu menadzera njegovim passwordom
-                //this.Frame.Navigate(typeof(AutorizacijaMenadzera), DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex]);
                 //Ovdje implementirati brisanje korisnika DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex]
-
             }
             else
             {
+                //Javljanje greske ako niko nije izabran, a kliknuto je potvrdi
                 var dialog = new Windows.UI.Popups.MessageDialog("Niste odabrali niti jednog uposlenika!", "Pokušajte ponovo!");
                 await dialog.ShowAsync();
             }

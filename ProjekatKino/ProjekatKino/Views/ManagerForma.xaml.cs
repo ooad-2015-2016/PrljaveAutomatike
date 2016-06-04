@@ -48,6 +48,14 @@ namespace ProjekatKino
 
         }
 
-       
+        private void buttonIzbrisiUposlenika_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Views.IzbrisiUposlenika));
+        }
+
+        private void buttonDodajUposlenika_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Views.DodajUposlenika));
+        }
     }
 }

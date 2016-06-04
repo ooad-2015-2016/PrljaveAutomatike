@@ -34,7 +34,7 @@ namespace ProjekatKino.Views
             var korisnik = DataSource.DataSourceProjekatKino.ProvjeraKorisnika(korisnickoIme, sifra);
             if (korisnik != null && korisnik.KorisnikId == 5)
             {
-                //Autorizacija je dobro prosla, obrisi ovog uposlenika, IMPLEMENTIRATI (korisnik je poslan u formu)
+                //Autorizacija je dobro prosla
             }
             if (korisnik != null)
             {

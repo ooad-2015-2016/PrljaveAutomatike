@@ -5,13 +5,13 @@
     xmlns:local="using:ProjekatKino.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"  MinHeight="451" MinWidth="360" Height="Auto">
+    mc:Ignorable="d" MinHeight="451" MinWidth="360" Height="Auto" Width="Auto">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinHeight="451" MinWidth="360">
         <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="40,10,44,0" TextWrapping="Wrap" Text="Odaberite uposlenika kojeg želite izbrisati" MinWidth="275.9619140625" VerticalAlignment="Top"/>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Center" Height="35" Margin="32,47,32,0" VerticalAlignment="Top" SelectionChanged="comboBox_SelectionChanged" MinWidth="272" Width="276"/>
-        <Button x:Name="buttonPotvrdi" Content="Potvrdi" HorizontalAlignment="Center" Margin="188,0,32,32" VerticalAlignment="Bottom" Background="#FF1DA1F2" Foreground="White" MinWidth="140" MinHeight="35" Click="buttonPotvrdi_Click" VerticalContentAlignment="Bottom"/>
-        <Button x:Name="button1" Content="Odustani" HorizontalAlignment="Center" Margin="32,0,188,32" VerticalAlignment="Bottom" Foreground="White" Background="#FF1DA1F2" MinWidth="140" MinHeight="35" VerticalContentAlignment="Bottom"/>
+        <Button x:Name="buttonPotvrdi" Content="Potvrdi" HorizontalAlignment="Center" Margin="188,0,32,10" VerticalAlignment="Bottom" Background="#FF1DA1F2" Foreground="White" MinWidth="140" MinHeight="35" Click="buttonPotvrdi_Click" VerticalContentAlignment="Bottom"/>
+        <Button x:Name="button1" Content="Odustani" HorizontalAlignment="Center" Margin="32,0,188,10" VerticalAlignment="Bottom" Foreground="White" Background="#FF1DA1F2" MinWidth="140" MinHeight="35" VerticalContentAlignment="Bottom"/>
         <TextBlock x:Name="textBlock_Podaci" HorizontalAlignment="Center" Height="24" Margin="32,114,149,0" TextWrapping="Wrap" Text="Podaci o uposleniku" VerticalAlignment="Top"  FontWeight="Bold" FontSize="15" MinWidth="170" Width="158" Visibility="Collapsed"/>
         <TextBlock x:Name="textBlock_Ime" HorizontalAlignment="Center" Height="30" Margin="37,159,130,0" TextWrapping="Wrap" Text="Ime" VerticalAlignment="Top" MinWidth="170" Width="193" Visibility="Collapsed"/>
         <TextBox x:Name="textBox_Ime" HorizontalAlignment="Center" Height="26" Margin="144,154,32,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsHitTestVisible="False" IsSpellCheckEnabled="False" IsTabStop="False" IsTextPredictionEnabled="False" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" TextAlignment="Right" MinWidth="170" Width="173" Visibility="Collapsed"/>
