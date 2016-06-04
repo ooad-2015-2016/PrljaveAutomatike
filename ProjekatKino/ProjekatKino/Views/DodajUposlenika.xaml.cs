@@ -25,22 +25,18 @@ namespace ProjekatKino.Views
         public DodajUposlenika()
         {
             this.InitializeComponent();
-        }
-
-        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
             comboBox.Items.Add("Običan uposlenik");
             comboBox.Items.Add("Menadžer");
         }
 
-        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
 
-        private void textBlock2_SelectionChanged(object sender, RoutedEventArgs e)
+        private void buttonOdustani_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(ManagerForma));
         }
     }
 }

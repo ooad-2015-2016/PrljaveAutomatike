@@ -7,18 +7,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-942,0">
-        <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Height="32" Margin="51,221,0,0" TextWrapping="Wrap" Text="Tip uposlenika" VerticalAlignment="Top" Width="260" FontWeight="Bold"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Height="32" Margin="182,217,0,0" VerticalAlignment="Top" Width="322" SelectionChanged="comboBox_SelectionChanged"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="27" Margin="48,62,0,0" TextWrapping="Wrap" Text="Ime" VerticalAlignment="Top" Width="144" FontWeight="Bold"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="27" Margin="282,60,0,0" TextWrapping="Wrap" Text="Prezime" VerticalAlignment="Top" Width="144" FontWeight="Bold"/>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="47" Margin="48,22,0,0" TextWrapping="Wrap" Text="Osnovni podaci" VerticalAlignment="Top" Width="182" SelectionChanged="textBlock2_SelectionChanged" FontSize="18.667" FontWeight="Bold"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="34" Margin="48,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="32" Margin="282,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222"/>
-        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="37" Margin="48,138,0,0" TextWrapping="Wrap" Text="Korisničko ime" VerticalAlignment="Top" Width="182"/>
-        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Height="22" Margin="284,138,0,0" TextWrapping="Wrap" Text="Lozinka" VerticalAlignment="Top" Width="220"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="32" Margin="48,165,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220"/>
-        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="32" Margin="284,165,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220"/>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Stretch" Height="32" Margin="0,230,0,0" VerticalAlignment="Top" Width="303" SelectionChanged="comboBox_SelectionChanged" PlaceholderText="Tip uposlenika"/>
+        <TextBlock x:Name="textBlockPodaci" Height="28" Margin="0,10,0,0" TextWrapping="Wrap" Text="Podaci o uposleniku" VerticalAlignment="Top" Width="181"  FontSize="18.667" FontWeight="Bold"/>
+        <TextBox x:Name="textBoxKorIme" Height="32" Margin="0,144,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="302" PlaceholderText="Korisničko ime"/>
+        <TextBox x:Name="textBoxIme" Height="31" Margin="0,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="302" PlaceholderText="Ime"/>
+        <TextBox x:Name="textBoxPrezime" Height="0" Margin="0,101,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="302" PlaceholderText="Prezime"/>
+        <TextBox x:Name="textBoxSifra" Height="32" Margin="0,187,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="302" PlaceholderText="Korisničko ime"/>
+        <Button x:Name="buttonPotvrdi" Content="Potvrdi" HorizontalAlignment="Center" Height="35" Margin="201,0,29,10" VerticalAlignment="Bottom" Width="140" Background="#FF1DA1F2" Foreground="White"/>
+        <Button x:Name="buttonOdustani" Content="Odustani" HorizontalAlignment="Center" Height="35" Margin="29,0,191,10" VerticalAlignment="Bottom" Width="140" Background="#FF1DA1F2" Foreground="White" Click="buttonOdustani_Click"/>
 
     </Grid>
 </Page>

@@ -35,7 +35,7 @@ namespace ProjekatKino
             var korisnickoIme = usernameBox.Text;
             var sifra = passwordBox.Password;
             var korisnik = DataSource.DataSourceProjekatKino.ProvjeraKorisnika(korisnickoIme, sifra);
-            if (korisnik != null && korisnik.KorisnikId==5)
+            if (korisnik != null && korisnik.KorisnikId==0)
             {
                 this.Frame.Navigate(typeof(ManagerForma), korisnik);
             }

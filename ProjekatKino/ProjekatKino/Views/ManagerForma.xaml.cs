@@ -57,5 +57,9 @@ namespace ProjekatKino
         {
             this.Frame.Navigate(typeof(Views.DodajUposlenika));
         }
+        private void buttonLogOut_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Login));
+        }
     }
 }

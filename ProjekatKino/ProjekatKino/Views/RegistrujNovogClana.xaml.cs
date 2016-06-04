@@ -26,30 +26,33 @@ namespace ProjekatKino
         {
             this.InitializeComponent();
         }
-        private void textBlock_Copy_SelectionChanged(object sender, RoutedEventArgs e)
+
+        private void Sljedeca_Click(object sender, RoutedEventArgs e)
         {
+            //sakrij
+            textBoxIme.Visibility = Visibility.Collapsed;
+            textBoxPrezime.Visibility = Visibility.Collapsed;
+            datePickerDatum.Visibility = Visibility.Collapsed;
+            textBlockDatum.Visibility = Visibility.Collapsed;
+            textBoxJMBG.Visibility = Visibility.Collapsed;
+            textBoxAdresa.Visibility = Visibility.Collapsed;
+            textBoxGrad.Visibility = Visibility.Collapsed;
+            textBoxTelefon.Visibility = Visibility.Collapsed;
+            //pokazi
+            checkBoxPenzioner.Visibility = Visibility.Visible;
+            checkBoxStudent.Visibility = Visibility.Visible;
+            textBoxEmail.Visibility = Visibility.Visible;
+            textBoxFakultet.Visibility = Visibility.Visible;
+            textBoxIndeks.Visibility = Visibility.Visible;
+            comboBoxSpol.Visibility = Visibility.Visible;
 
-        }
-
-        private void textBlock_Copy1_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void textBox_Copy_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void Potvrdi_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(RadnikIzbor));
-            //treba dodatni kod koji ce unesene podatke fkt negdje smjestiti
         }
 
         private void Ponisti_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(RadnikIzbor));
         }
+
+
     }
 }

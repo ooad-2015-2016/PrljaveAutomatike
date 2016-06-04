@@ -7,41 +7,24 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-679,0">
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="32" Margin="48,62,0,0" TextWrapping="Wrap" Text="Ime" VerticalAlignment="Top" Width="260" FontWeight="Bold"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="48,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" TabIndex="0"/>
-        <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Height="32" Margin="284,62,0,0" TextWrapping="Wrap" Text="Prezime" VerticalAlignment="Top" Width="260" FontWeight="Bold" SelectionChanged="textBlock_Copy_SelectionChanged"/>
-        <TextBox x:Name="textBox_Copy2" HorizontalAlignment="Left" Margin="284,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" TabIndex="1"/>
-        <DatePicker HorizontalAlignment="Left" Margin="48,163,0,0" VerticalAlignment="Top" Width="296" CalendarIdentifier="GregorianCalendar" MonthFormat="{}{month.abbreviated}" TabIndex="2"/>
-        <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Height="32" Margin="48,136,0,0" TextWrapping="Wrap" Text="Datum rođenja" VerticalAlignment="Top" Width="260"/>
-        <TextBox x:Name="textBox1_Copy" HorizontalAlignment="Left" Margin="48,323,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="456" TabIndex="8"/>
-        <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Height="32" Margin="48,296,0,0" TextWrapping="Wrap" Text="JMBG" VerticalAlignment="Top" Width="260"/>
-        <TextBlock x:Name="textBlock1_Copy4" HorizontalAlignment="Left" Height="32" Margin="48,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210">
-        	<Run Text="Adresa"/>
-        	<Run Text=" "/>
-        	<Run Text="prebivališta"/>
-        </TextBlock>
-        <TextBox x:Name="textBox1_Copy3" HorizontalAlignment="Left" Margin="48,246,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" TabIndex="6"/>
-        <TextBox x:Name="textBox1_Copy4" HorizontalAlignment="Left" Margin="284,246,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" TabIndex="7"/>
-        <TextBlock x:Name="textBlock1_Copy5" HorizontalAlignment="Left" Height="32" Margin="284,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Text="Grad prebivališta"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Height="32" Margin="376,163,0,0" VerticalAlignment="Top" Width="128" PlaceholderText="Izaberite..." Foreground="#FFB00D0D" Background="#66FFFFFF" TabIndex="3"/>
-        <TextBlock x:Name="textBlock1_Copy6" HorizontalAlignment="Left" Height="32" Margin="376,136,0,0" TextWrapping="Wrap" Text="Spol" VerticalAlignment="Top" Width="128"/>
-        <TextBlock x:Name="textBlock1_Copy7" HorizontalAlignment="Left" Height="32" Margin="48,25,0,0" TextWrapping="Wrap" Text="Osnovni podaci" VerticalAlignment="Top" Width="260" FontWeight="Bold" FontSize="18.667"/>
-        <CheckBox x:Name="checkBox" Content="Student/ica" HorizontalAlignment="Left" Height="37" Margin="545,89,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Margin="672,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="328" TabIndex="1" IsEnabled="False" PlaceholderText="Naziv fakulteta" TextChanged="textBox_Copy_TextChanged"/>
-        <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" Margin="672,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="328" TabIndex="1" IsEnabled="False" PlaceholderText="Broj indeksa" TextChanged="textBox_Copy_TextChanged"/>
-        <TextBlock x:Name="textBlock1_Copy10" HorizontalAlignment="Left" Height="32" Margin="45,376,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Text="Broj telefona"/>
-        <TextBox x:Name="textBox1_Copy5" HorizontalAlignment="Left" Margin="45,403,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="223" TabIndex="4"/>
-        <TextBox x:Name="textBox1_Copy6" HorizontalAlignment="Left" Margin="284,403,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" TabIndex="5"/>
-        <TextBlock x:Name="textBlock1_Copy11" HorizontalAlignment="Left" Height="32" Margin="284,376,0,0" TextWrapping="Wrap" Text="E-mail adresa" VerticalAlignment="Top" Width="220"/>
-        <CheckBox x:Name="checkBox_Copy1" Content="Penzioner/ka" HorizontalAlignment="Left" Height="37" Margin="545,241,0,0" VerticalAlignment="Top" Width="108"/>
-        <TextBlock x:Name="textBlock1_Copy12" HorizontalAlignment="Left" Height="32" Margin="548,297,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="452" Text="Način primanja informacijama o premijerama i novostima u kinu"/>
-        <CheckBox x:Name="checkBox_Copy2" Content="SMS" HorizontalAlignment="Left" Height="37" Margin="548,324,0,0" VerticalAlignment="Top" Width="108"/>
-        <CheckBox x:Name="checkBox_Copy3" Content="E-mail" HorizontalAlignment="Left" Height="37" Margin="709,324,0,0" VerticalAlignment="Top" Width="108"/>
-        <CheckBox x:Name="checkBox_Copy4" Content="Kućna adresa" HorizontalAlignment="Left" Height="37" Margin="880,324,0,0" VerticalAlignment="Top" Width="108"/>
-        <TextBlock x:Name="textBlock1_Copy8" HorizontalAlignment="Left" Height="48" Margin="541,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" FontWeight="Bold" FontSize="18.667" Text="Ostali podaci"/>
-        <Button x:Name="Potvrdi" Content="Potvrdi" HorizontalAlignment="Left" Height="32" Margin="840,403,0,0" VerticalAlignment="Top" Width="160" Background="#FF1DA1F2" Foreground="White" Click="Potvrdi_Click" ClickMode="Press" ManipulationMode="None"/>
-        <Button x:Name="Ponisti" Content="Poništi zahtjev" HorizontalAlignment="Left" Height="32" Margin="641,403,0,0" VerticalAlignment="Top" Width="160" Background="#FF1DA1F2" Foreground="White" Click="Ponisti_Click" ClickMode="Press" ManipulationMode="None"/>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" HorizontalAlignment="Center" Width="360">
+        <TextBox x:Name="textBoxIme" HorizontalAlignment="Center" Margin="0,48,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" TabIndex="0" PlaceholderText="Ime"/>
+        <TextBox x:Name="textBoxPrezime" HorizontalAlignment="Center" Margin="0,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" TabIndex="1" PlaceholderText="Prezime"/>
+        <DatePicker x:Name="datePickerDatum" HorizontalAlignment="Center" Margin="0,161,0,0" VerticalAlignment="Top" Width="340" CalendarIdentifier="GregorianCalendar" MonthFormat="{}{month.abbreviated}" TabIndex="2"/>
+        <TextBlock x:Name="textBlockDatum" Height="32" Margin="10,133,90,0" TextWrapping="Wrap" Text="Datum rođenja" VerticalAlignment="Top" Width="260"/>
+        <TextBox x:Name="textBoxJMBG" HorizontalAlignment="Center" Margin="0,290,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" TabIndex="8" PlaceholderText="JMBG"/>
+        <TextBox x:Name="textBoxAdresa" HorizontalAlignment="Center" Margin="0,204,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" TabIndex="6" PlaceholderText="Adresa"/>
+        <TextBox x:Name="textBoxGrad" HorizontalAlignment="Center" Margin="0,247,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" TabIndex="7" PlaceholderText="Grad"/>
+        <ComboBox x:Name="comboBoxSpol" HorizontalAlignment="Center" Height="32" Margin="0,48,0,0" VerticalAlignment="Top" Width="340" PlaceholderText="Spol" Foreground="#FFB00D0D" Background="#66FFFFFF" TabIndex="3" Visibility="Collapsed"/>
+        <TextBlock x:Name="textBlockPodaci" HorizontalAlignment="Center" Height="32" Margin="0,10,0,0" TextWrapping="Wrap" Text="Osnovni podaci" VerticalAlignment="Top" Width="149" FontWeight="Bold" FontSize="18.667"/>
+        <CheckBox x:Name="checkBoxStudent" Content="Student/ica" HorizontalAlignment="Left" Height="37" Margin="10,93,0,0" VerticalAlignment="Top" Width="120" Visibility="Collapsed"/>
+        <TextBox x:Name="textBoxFakultet" HorizontalAlignment="Center" Margin="0,144,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" TabIndex="1" IsEnabled="False" PlaceholderText="Naziv fakulteta" Visibility="Collapsed"/>
+        <TextBox x:Name="textBoxIndeks" HorizontalAlignment="Center" Margin="10,187,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" TabIndex="1" IsEnabled="False" PlaceholderText="Broj indeksa" Visibility="Collapsed"/>
+        <TextBox x:Name="textBoxTelefon" HorizontalAlignment="Center" Margin="0,333,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" TabIndex="4" PlaceholderText="Broj telefona"/>
+        <TextBox x:Name="textBoxEmail" HorizontalAlignment="Center" Margin="10,230,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" TabIndex="5" PlaceholderText="e-mail adresa" Visibility="Collapsed"/>
+        <CheckBox x:Name="checkBoxPenzioner" Content="Penzioner/ka" HorizontalAlignment="Left" Height="37" Margin="230,91,0,0" VerticalAlignment="Top" Width="108" Visibility="Collapsed"/>
+        <Button x:Name="Sljedeca" Content="Sljedeća" HorizontalAlignment="Stretch" Height="32" Margin="190,0,10,10" VerticalAlignment="Bottom" Width="160" Background="#FF1DA1F2" Foreground="White" Click="Sljedeca_Click" ClickMode="Press" ManipulationMode="None"/>
+        <Button x:Name="Ponisti" Content="Poništi zahtjev" HorizontalAlignment="Stretch" Height="32" Margin="10,0,190,10" VerticalAlignment="Bottom" Width="160" Background="#FF1DA1F2" Foreground="White" Click="Ponisti_Click" ClickMode="Press" ManipulationMode="None"/>
 
     </Grid>
 </Page>

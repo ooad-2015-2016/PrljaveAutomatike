@@ -69,6 +69,7 @@ namespace ProjekatKino.DataSource
         }
         #endregion
 
+        //KorisnikId je 0 za menadzere
         #region Korisnik - kreiranje testnih korisnika
         public static List<Korisnik> _korisnici = new List<Korisnik>()
         {
@@ -104,11 +105,11 @@ namespace ProjekatKino.DataSource
                 KorisnickoIme = "My_Name_Is_Emir",
                 Sifra = "zajebanasifra",
             },
-            new Korisnik()
+            new Menadzer()
             {
                 Ime = "Medo",
                 Prezime = "Brundic",
-                KorisnikId = 5,
+                KorisnikId = 0,
                 KorisnickoIme = "manager",
                 Sifra = "patlidzan",
             }
@@ -130,6 +131,16 @@ namespace ProjekatKino.DataSource
                     rezultat = k;
             }
             return rezultat;
+        }
+        public static List<Korisnik> DajMenadzere()
+        {
+            List<Korisnik> listaMenadzera =  new List<Korisnik>();
+            foreach(var trenutniKorisnik in DajSveKorisnike())
+            {
+                if (trenutniKorisnik.KorisnikId == 0)
+                    listaMenadzera.Add(trenutniKorisnik);
+            }
+            return listaMenadzera;
         }
         internal static PrivremenaBaza pdb = new PrivremenaBaza();
         /*public void DodajKorisnika(Models.Korisnik _korisnik)

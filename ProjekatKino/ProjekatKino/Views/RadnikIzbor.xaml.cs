@@ -44,6 +44,7 @@ namespace ProjekatKino
             this.Frame.Navigate(typeof(Login));
 
         }
+
     }
 
    
