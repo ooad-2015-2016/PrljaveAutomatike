@@ -31,7 +31,7 @@ namespace ProjekatKino.Helper
             //ucitavanje json konfiguracija radi laksih izmjena
             // rfidConfig = JsonValue.Parse(File.ReadAllText("RfidConfig.json")).GetObject();
             //port bitan cesto ce se mijenjati ovisno o racunaru COM 1 - 4 najcesce a moze i vise
-            // port = rfidConfig.GetNamedString("port");
+            //port = rfidConfig.GetNamedString("port");
             port = "COM9";
         }
 

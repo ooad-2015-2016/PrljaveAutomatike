@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using ProjekatKino.Helper;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -28,10 +29,11 @@ namespace ProjekatKino
             //inicijalizacija data source
             var inicijalizacija = new DataSource.DataSourceProjekatKino();
         }
-
+        Rfid rfid = new Rfid();
         //asinhrona metoda za provjeru prijave korisnika
         private async void button_LoginClick(object sender, RoutedEventArgs e)
         {
+            usernameBox.Text = rfid.CurrentReadString;
             var korisnickoIme = usernameBox.Text;
             var sifra = passwordBox.Password;
             var korisnik = DataSource.DataSourceProjekatKino.ProvjeraKorisnika(korisnickoIme, sifra);
