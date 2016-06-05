@@ -1,0 +1,24 @@
+Upute za koristenje aplikacije
+
+
+Aplikacija je namijenjena uposlenicima kina. Pocetak aplikacije je na Login stranici. Za bilo kakvu aktivnost
+ potrebno je prvo log in sa podacima koje ima svaki uposlenik. 
+
+Login mogu obaviti radnici:
+username: ama_direktor password: assassin
+username: nadjatimelord password: njena_sifra
+username: alma_princess password: sifrica
+username: My_Name_Is_Emir password: sifra
+
+Manager: username: manager password: patlidzan
+
+
+Ukoliko je ulogovan obicni uposlenik, 
+aplikacija ide na izbornik za radnike,koji biraju da li ce obaviti prodaju tj odabir filma (posjetitelj 
+daje informacije o odabranom filmu, vremenu projekcije, moze da uzme i hranu i pice, te ukoliko je student
+ili penzioner ostvaruje odredjeni popust i bira nacin placanja), uclaniti posjetitelja 
+u kino klub (na zahtjev posjetitelja) ili logout. 
+Ukoliko je ulogovani korisnik manager, njegov izbornik se
+ prosiruje na dodavanje, brisanje i izmjenu uposlenika, dodavanje novih kolicina hrane i pica ili mijenjanje 
+programskog sadrzaja i projekcija.
+
