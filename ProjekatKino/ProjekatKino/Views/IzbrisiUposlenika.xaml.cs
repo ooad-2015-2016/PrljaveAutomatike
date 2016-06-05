@@ -25,7 +25,7 @@ namespace ProjekatKino.Views
         {
             this.InitializeComponent();
             //Ova petelja popunjava combobox sa uposlenicima
-            foreach(Models.Korisnik korisnik in DataSource.DataSourceProjekatKino._korisnici)
+            foreach(Models.Korisnik korisnik in DataSource.DataSourceProjekatKino.pdb.Korisnici)
             {
                 comboBox.Items.Add(korisnik.Ime + " " + korisnik.Prezime);
             }             

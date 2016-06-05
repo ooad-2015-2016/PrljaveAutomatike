@@ -30,9 +30,9 @@ namespace ProjekatKino.Views
             //Npr. 5 KM
             //Da bi radilo treba imati odrađenu klasu projekciju i jedan njen primjer u DataSource
             //Treba klasa Namirnica za neki primjer i klasa Racun - sve su public class
-            textBoxUkupnaCijena.Text = DataSource.DataSourceProjekatKino._kupovine.Last().cijenaRacuna.ToString() + " KM";
+            textBoxUkupnaCijena.Text = DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks()-1].cijenaRacuna.ToString() + " KM";
             comboBoxPlacanje.Items.Add("Gotovinsko plaćanje");
-            comboBoxPlacanje.Items.Add("Plaćanje karticom");
+            comboBoxPlacanje.Items.Add("Placanje karticom");
         }
 
         private async void buttonZakljuciRacun_Click(object sender, RoutedEventArgs e)
@@ -45,9 +45,27 @@ namespace ProjekatKino.Views
             }
             else
             {
-                var dialog = new Windows.UI.Popups.MessageDialog("Uspješno izrađen račun!", "Uspješna prodaja!");
-                await dialog.ShowAsync();
                 //OVDJE DODATI PLACANJE AKO JE IZABRANA KARTICA, ONO SA RFID
+                //kartica je izabrana ako je ispunjeno if(DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks()-1].NacinPlacanja == "Plaćanje karticom")
+                //OVDJE JE TEXT BOX KOJI SLUZI ZA KUPLJENJE KODA SA RFID
+                if (DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks()-1].NacinPlacanja == "Placanje karticom")
+                {
+                    textBoxRfid.Visibility = Visibility.Visible;
+                    //ovdje treba staviti da je textBoxRfid.Text = procitanom stringu sa rfid
+                }
+                else
+                {
+                    var dialog = new Windows.UI.Popups.MessageDialog("Uspješno izrađen račun!", "Uspješna prodaja!");
+                    await dialog.ShowAsync();
+                }
+                //svakako prije kraja i uspjesne prodaje se mora povecati broj zauzetih mjesta
+                for(int i = 0; i < DataSource.DataSourceProjekatKino._projekcije.Count(); i++)
+                {
+                    if(DataSource.DataSourceProjekatKino._projekcije[i] == DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks()-1].projekcija)
+                    {
+                        DataSource.DataSourceProjekatKino._projekcije[i].Zauzetost++;
+                    }
+                }
                 this.Frame.Navigate(typeof(RadnikIzbor));
             }
         }
@@ -55,7 +73,7 @@ namespace ProjekatKino.Views
         private void buttonPonistiRacun_Click(object sender, RoutedEventArgs e)
         {
             //Ovdje se vracamo nazad na odabir filma
-            DataSource.DataSourceProjekatKino._kupovine.Remove(DataSource.DataSourceProjekatKino._kupovine.Last());
+            DataSource.DataSourceProjekatKino._kupovine.Remove(DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks()-1]);
             this.Frame.Navigate(typeof(OdabirFilma));
         }
 
@@ -69,7 +87,7 @@ namespace ProjekatKino.Views
         private void comboBoxPlacanje_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             odabranoPlacanje = true;
-            DataSource.DataSourceProjekatKino._kupovine.Last().NacinPlacanja = comboBoxPlacanje.SelectedItem.ToString();
+            DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks()-1].NacinPlacanja = comboBoxPlacanje.SelectedItem.ToString();
         }
     }
 }

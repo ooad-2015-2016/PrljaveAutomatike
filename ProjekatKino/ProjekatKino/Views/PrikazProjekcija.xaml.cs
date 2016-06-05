@@ -28,7 +28,7 @@ namespace ProjekatKino.Views
             this.InitializeComponent();
             foreach(var trenutna in DataSource.DataSourceProjekatKino._projekcije)
             {
-                if (trenutna.FilmProjekcije == DataSource.DataSourceProjekatKino._kupovine.Last().filmKupovine)
+                if (trenutna.FilmProjekcije == DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks()-1].filmKupovine && trenutna.ImaLiSlobodno)
                     comboBox.Items.Add(trenutna.VrijemeOdrzavanja);
             }
         }
@@ -37,8 +37,14 @@ namespace ProjekatKino.Views
         {
             if (izabranaProjekcija)
             {
-                DataSource.DataSourceProjekatKino._kupovine.Last().projekcija = DataSource.DataSourceProjekatKino._projekcije[comboBox.SelectedIndex];
-                DataSource.DataSourceProjekatKino._kupovine.Last().cijenaRacuna += DataSource.DataSourceProjekatKino._projekcije[comboBox.SelectedIndex].CijenaProjekcije;
+                foreach (var trenutna in DataSource.DataSourceProjekatKino._projekcije)
+                {
+                    if (trenutna.FilmProjekcije == DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks() - 1].filmKupovine && trenutna.ImaLiSlobodno)
+                    {
+                        DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks() - 1].projekcija = trenutna;
+                        DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks() - 1].cijenaRacuna = trenutna.CijenaProjekcije;
+                    }
+                }
                 this.Frame.Navigate(typeof(PrikazRacuna));
             }
             else

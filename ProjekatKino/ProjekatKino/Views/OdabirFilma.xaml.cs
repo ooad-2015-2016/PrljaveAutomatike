@@ -44,8 +44,8 @@ namespace ProjekatKino
             else
             {
                 DataSource.DataSourceProjekatKino._kupovine.Add(new Models.Kupovina());
-                DataSource.DataSourceProjekatKino._kupovine.Last().datumKupovine = DateTime.Today;
-                DataSource.DataSourceProjekatKino._kupovine.Last().filmKupovine = DataSource.DataSourceProjekatKino._filmovi[comboBoxFilmovi.SelectedIndex];
+                DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks()-1].datumKupovine = DateTime.Today;
+                DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks()-1].filmKupovine = DataSource.DataSourceProjekatKino._filmovi[comboBoxFilmovi.SelectedIndex];
                 bool pronadjen = false;
                 if(textBoxJMBG.IsEnabled && textBoxJMBG.Text.Length != 13)
                 {
@@ -54,7 +54,8 @@ namespace ProjekatKino
                 }
                 if(!textBoxJMBG.IsEnabled)
                 {
-                    DataSource.DataSourceProjekatKino._kupovine.Last().posjetitelj = null;
+                    DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks()-1].posjetitelj = null;
+                    DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks()-1].TipPosjetitelja = tipPosjetitelja.Neuclanjen;
                     this.Frame.Navigate(typeof(Views.PrikazProjekcija));
                 }
                 if (textBoxJMBG.IsEnabled && textBoxJMBG.Text.Length == 13)
@@ -63,7 +64,7 @@ namespace ProjekatKino
                     {
                         if (trenutni.JMBG == textBoxJMBG.Text)
                         {
-                            DataSource.DataSourceProjekatKino._kupovine.Last().posjetitelj = trenutni;
+                            DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks()-1].posjetitelj = trenutni;
                             pronadjen = true;
                             break;
                         }
@@ -75,6 +76,7 @@ namespace ProjekatKino
                     }
                     else
                     {
+                        DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks()-1].TipPosjetitelja = tipPosjetitelja.Uclanjen;
                         this.Frame.Navigate(typeof(Views.PrikazProjekcija));
                     }
                 }

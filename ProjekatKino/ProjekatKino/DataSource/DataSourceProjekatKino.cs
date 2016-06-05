@@ -242,6 +242,10 @@ namespace ProjekatKino.DataSource
             }
             return Zaradjeno;
         }
+        internal static int trenutniIndeks()
+        {
+            return _kupovine.Count();
+        }
         #endregion
 
         #region Projekcije - kreiranje testnih projekcija
@@ -255,6 +259,42 @@ namespace ProjekatKino.DataSource
                 Kapacitet = _sale[0].BrojMjesta,
                 VrijemeOdrzavanja = DateTime.Today,
                 FilmProjekcije = _filmovi[1]
+            },
+            new Projekcija()
+            {
+                CijenaProjekcije = 9,
+                Sala = _sale[0],
+                Zauzetost = 0,
+                Kapacitet = _sale[0].BrojMjesta,
+                VrijemeOdrzavanja = DateTime.Today,
+                FilmProjekcije = _filmovi[0]
+            },
+            new Projekcija()
+            {
+                CijenaProjekcije = 8,
+                Sala = _sale[0],
+                Zauzetost = 0,
+                Kapacitet = _sale[0].BrojMjesta,
+                VrijemeOdrzavanja = DateTime.Today,
+                FilmProjekcije = _filmovi[2]
+            },
+            new Projekcija()
+            {
+                CijenaProjekcije = 5,
+                Sala = _sale[0],
+                Zauzetost = 0,
+                Kapacitet = _sale[0].BrojMjesta,
+                VrijemeOdrzavanja = DateTime.Today,
+                FilmProjekcije = _filmovi[3]
+            },
+            new Projekcija()
+            {
+                CijenaProjekcije = 5,
+                Sala = _sale[0],
+                Zauzetost = 0,
+                Kapacitet = _sale[0].BrojMjesta,
+                VrijemeOdrzavanja = DateTime.Today,
+                FilmProjekcije = _filmovi[4]
             }
         };
         internal static List<Projekcija> DajSveProjekcije()
