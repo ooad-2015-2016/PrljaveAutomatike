@@ -31,6 +31,16 @@ namespace ProjekatKino.Models
         {
             Korisnici.Remove(_korisnik);
         }
+        public Korisnik ProvjeraKorisnika(string korisnickoIme, string sifra)
+        {
+            Korisnik rezultat = new Korisnik();
+            foreach (var k in Korisnici)
+            {
+                if (k.KorisnickoIme == korisnickoIme && k.Sifra == sifra)
+                    rezultat = k;
+            }
+            return rezultat;
+        }
         public List<Film> DajSveFilmove()
         {
             return Filmovi;

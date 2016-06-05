@@ -87,6 +87,17 @@ namespace ProjekatKino.DataSource
             return _menadzeri;
         }
 
+        internal static Menadzer ProvjeraMenadzera(string korisnickoIme, string sifra)
+        {
+            Menadzer rezultat = new Menadzer();
+            foreach (var k in DajSveMenadzere())
+            {
+                if (k.KorisnickoIme == korisnickoIme && k.Sifra == sifra)
+                    rezultat = k;
+            }
+            return rezultat;
+        }
+
         #endregion
 
         #region Korisnik - kreiranje testnih korisnika
