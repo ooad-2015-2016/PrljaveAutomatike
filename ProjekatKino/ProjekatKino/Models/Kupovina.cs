@@ -11,7 +11,6 @@ namespace ProjekatKino.Models
         public Film filmKupovine { get; set; }
         public Models.RegistrovaniClan posjetitelj { get; set; }
         public Models.Projekcija projekcija { get; set; }
-        public List<Models.Namirnica> namirnice { get; set; }
         public double cijenaRacuna { get; set; }
         public DateTime datumKupovine { get; set; }
         public tipPosjetitelja TipPosjetitelja { get; set; }

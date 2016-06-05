@@ -60,14 +60,12 @@ namespace ProjekatKino.Views
         private void buttonDodaj1_Click(object sender, RoutedEventArgs e)
         {
             kolicinaHrane = Convert.ToInt32(textBoxKolicinaHrane.Text);
-            DataSource.DataSourceProjekatKino._kupovine.Last().namirnice.Add(DataSource.DataSourceProjekatKino.DajNamirnicePoTipu(tipNamirnice.Hrana)[comboBoxHrana.SelectedIndex]);
             DataSource.DataSourceProjekatKino._kupovine.Last().cijenaRacuna += kolicinaHrane * DataSource.DataSourceProjekatKino.DajNamirnicePoTipu(tipNamirnice.Hrana)[comboBoxHrana.SelectedIndex].CijenaNamirnice;
         }
 
         private void buttonDodaj2_Click(object sender, RoutedEventArgs e)
         {
             kolicinaPica = Convert.ToInt32(textBoxKolicinaPica.Text);
-            DataSource.DataSourceProjekatKino._kupovine.Last().namirnice.Add(DataSource.DataSourceProjekatKino.DajNamirnicePoTipu(tipNamirnice.Pice)[comboBoxPice.SelectedIndex]);
             DataSource.DataSourceProjekatKino._kupovine.Last().cijenaRacuna += kolicinaPica * DataSource.DataSourceProjekatKino.DajNamirnicePoTipu(tipNamirnice.Pice)[comboBoxPice.SelectedIndex].CijenaNamirnice;
         }
 
