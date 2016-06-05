@@ -39,9 +39,9 @@ namespace ProjekatKino.Views
             textBlock_Podaci.Visibility = Windows.UI.Xaml.Visibility.Visible;
             textBlock_KorIme.Visibility = Windows.UI.Xaml.Visibility.Visible;
 
-            textBox_Ime.PlaceholderText = DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex].Ime;
-            textBox_Prezime.PlaceholderText = DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex].Prezime;
-            textBox_KorIme.PlaceholderText = DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex].KorisnickoIme;
+            textBox_Ime.Text = DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex].Ime;
+            textBox_Prezime.Text = DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex].Prezime;
+            textBox_KorIme.Text = DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex].KorisnickoIme;
 
             textBox_Ime.Visibility = Windows.UI.Xaml.Visibility.Visible;
             textBox_Prezime.Visibility = Windows.UI.Xaml.Visibility.Visible;
