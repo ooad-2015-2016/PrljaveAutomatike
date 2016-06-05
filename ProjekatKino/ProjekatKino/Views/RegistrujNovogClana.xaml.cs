@@ -64,6 +64,7 @@ namespace ProjekatKino
         }
         private async void Potvrdi_Click(object sender, RoutedEventArgs e)
         {
+            int ID = 0;
             if (textBoxEmail.Text == "" || comboBoxSpol.SelectedIndex < 0)
             {
                 var dialog = new Windows.UI.Popups.MessageDialog("Niste ispravno popunili podatke!", "Pokušajte ponovo!");
@@ -71,7 +72,11 @@ namespace ProjekatKino
             }
             else
             {
-                //ovdje sve sacuvati i vratiti se na izbornik
+                ///spasavanje korisnika
+                ID = DataSource.DataSourceProjekatKino.pdb.RegistrovaniClanovi.Count() + 1;
+                DataSource.DataSourceProjekatKino.pdb.RegistrovaniClanovi.Add(new Models.RegistrovaniClan { Ime = textBoxIme.Text, Prezime = textBoxPrezime.Text, GradPrebivalista=textBoxGrad.Text, AdresaPrebivalista=textBoxAdresa.Text, Email=textBoxEmail.Text, Jmbg = textBoxJMBG.Text,BrojTelefona=textBoxTelefon.Text, Fakultet=textBoxFakultet.Text,Indeks=textBoxIndeks.Text, ID = ID });
+
+                Frame.Navigate(typeof(RadnikIzbor));
             }
         }
 

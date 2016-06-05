@@ -39,22 +39,23 @@ namespace ProjekatKino.Views
             textBlock_Podaci.Visibility = Windows.UI.Xaml.Visibility.Visible;
             textBlock_KorIme.Visibility = Windows.UI.Xaml.Visibility.Visible;
 
-            textBox_Ime.Text = DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex].Ime;
-            textBox_Prezime.Text = DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex].Prezime;
-            textBox_KorIme.Text = DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex].KorisnickoIme;
+            textBox_Ime.Text = DataSource.DataSourceProjekatKino.pdb.Korisnici[comboBox.SelectedIndex].Ime;
+            textBox_Prezime.Text = DataSource.DataSourceProjekatKino.pdb.Korisnici[comboBox.SelectedIndex].Prezime;
+            textBox_KorIme.Text = DataSource.DataSourceProjekatKino.pdb.Korisnici[comboBox.SelectedIndex].KorisnickoIme;
+
+            
 
             textBox_Ime.Visibility = Windows.UI.Xaml.Visibility.Visible;
             textBox_Prezime.Visibility = Windows.UI.Xaml.Visibility.Visible;
             textBox_KorIme.Visibility = Windows.UI.Xaml.Visibility.Visible;
         }
         //Dalje treba implementirati da se obrise izabrani korisnik
-        //Izabrani korisnik je DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex]
         private async void buttonPotvrdi_Click(object sender, RoutedEventArgs e)
         {
             if(nekoJeIzabranIzComboBoxa)
             {
                 //Ovdje implementirati brisanje korisnika DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex]
-                DataSource.DataSourceProjekatKino._korisnici.Remove(DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex]);
+                DataSource.DataSourceProjekatKino.pdb.Korisnici.Remove(DataSource.DataSourceProjekatKino.pdb.Korisnici[comboBox.SelectedIndex]);
                 this.Frame.Navigate(typeof(ManagerForma));
             }
             else

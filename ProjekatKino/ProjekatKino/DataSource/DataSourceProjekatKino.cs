@@ -69,7 +69,7 @@ namespace ProjekatKino.DataSource
         }
         #endregion
 
-        #region Menadzer - kreiranje testnih korisnika
+        #region Menadzer - kreiranje testnih menadzera
 
         internal static List<Menadzer> _menadzeri = new List<Menadzer>()
         {
@@ -95,12 +95,45 @@ namespace ProjekatKino.DataSource
             return _menadzeri;
         }
 
-        internal static Menadzer ProvjeraMenadzera(string korisnickoIme, string sifra)
+        #endregion
+
+        #region RegistrovaniClanovi - kreiranje testnih clanova
+
+        internal static List<RegistrovaniClan> _clanovi = new List<RegistrovaniClan>()
         {
-            Menadzer rezultat = new Menadzer();
-            foreach (var k in DajSveMenadzere())
+            new RegistrovaniClan()
             {
-                if (k.KorisnickoIme == korisnickoIme && k.Sifra == sifra)
+                Ime = "Ilijaz",
+                Prezime = "Brundic",
+                ID = 1,
+                AdresaPrebivalista = "nekaadresa",
+                GradPrebivalista = "Sarajevo",
+                Email= "ama@gmail.com",
+                BrojTelefona = "061123123"
+            },
+            new RegistrovaniClan()
+            {
+                Ime = "Dreko",
+                Prezime = "Pipa",
+                ID = 2,
+                AdresaPrebivalista = "nekaadresa2",
+                GradPrebivalista = "Hadzici",
+                Email= "ama2@gmail.com",
+                BrojTelefona = "061123567"
+            }
+        };
+
+        internal static List<RegistrovaniClan> DajSveRegistrovaneClanove()
+        {
+            return _clanovi;
+        }
+
+        internal static RegistrovaniClan ProvjeraRegistrovanihClanova(string ime, string prezime)
+        {
+            RegistrovaniClan rezultat = new RegistrovaniClan();
+            foreach (var k in DajSveRegistrovaneClanove())
+            {
+                if (k.Ime == ime && k.Prezime == prezime)
                     rezultat = k;
             }
             return rezultat;

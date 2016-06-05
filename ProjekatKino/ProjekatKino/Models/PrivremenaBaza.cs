@@ -13,12 +13,13 @@ namespace ProjekatKino.Models
         public List<Korisnik> Korisnici;
         public List<Film> Filmovi;
         public List<Menadzer> Menadzeri;
+        public List<RegistrovaniClan> RegistrovaniClanovi;
         public PrivremenaBaza()
         {
             Korisnici = DataSourceProjekatKino.DajSveKorisnike();
             Menadzeri = DataSourceProjekatKino.DajSveMenadzere();
             Filmovi = DataSourceProjekatKino.DajSveFilmove();
-            //Clanovi = DataSourceProjekatKino.DajSveClanove(); treba dodat registrovane clanove u datasource
+            RegistrovaniClanovi = DataSourceProjekatKino.DajSveRegistrovaneClanove(); //treba dodat registrovane clanove u datasource
         }
         public List<Korisnik> DajSveKorisnike()
         {
@@ -42,29 +43,23 @@ namespace ProjekatKino.Models
             }
             return rezultat;
         }
+        public Korisnik ProvjeraKorisnikaPoImenu(string ime, string prezime, string username)
+        {
+            Korisnik rezultat = new Korisnik();
+            foreach (var k in Korisnici)
+            {
+                if (k.Ime == ime && k.Prezime == prezime && k.KorisnickoIme == username)
+                    rezultat = k;
+            }
+            return rezultat;
+        }
         public List<Film> DajSveFilmove()
         {
             return Filmovi;
         }
-        public void DodajFilm(Film _film)
-        {
-            Filmovi.Add(_film);
-        }
-        public void ObrisiFilm(Film _film)
-        {
-            Filmovi.Remove(_film);
-        }
         public List<Menadzer> DajSveMenadzere()
         {
             return Menadzeri;
-        }
-        public void DodajMenadzera(Menadzer _menadzer)
-        {
-            Menadzeri.Add(_menadzer);
-        }
-        public void ObrisiMenadzera(Menadzer _menadzer)
-        {
-            Menadzeri.Remove(_menadzer);
         }
         public Menadzer ProvjeraMenadzera(string korisnickoIme, string sifra)
         {
@@ -72,6 +67,20 @@ namespace ProjekatKino.Models
             foreach (var k in Menadzeri)
             {
                 if (k.KorisnickoIme == korisnickoIme && k.Sifra == sifra)
+                    rezultat = k;
+            }
+            return rezultat;
+        }
+        public List<RegistrovaniClan> DajSveRegistrovaneClanove()
+        {
+            return RegistrovaniClanovi;
+        }
+        public RegistrovaniClan ProvjeraRegistrovanihClanova(string ime, string prezime)
+        {
+            RegistrovaniClan rezultat = new RegistrovaniClan();
+            foreach (var k in RegistrovaniClanovi)
+            {
+                if (k.Ime == ime && k.Prezime == prezime)
                     rezultat = k;
             }
             return rezultat;

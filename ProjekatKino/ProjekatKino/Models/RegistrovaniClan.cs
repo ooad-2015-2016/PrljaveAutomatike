@@ -14,16 +14,18 @@ namespace ProjekatKino.Models
         public string GradPrebivalista { get; set; }
         public string BrojTelefona { get; set; }
         public string Email { get; set; }
-
+        public int ID { get; set; }
+        public string Jmbg { get; set; }
+        public string Fakultet { get; set; }
+        public string Indeks { get; set; }
 
         public RegistrovaniClan() { }
-        public RegistrovaniClan(string Ime, string Prezime, string Telefon, string Adresa, string Grad, string Email)
+        public RegistrovaniClan(string Ime, string Prezime, string Adresa, string Grad, string Email, int ID)
         {
             this.Ime = Ime;
             this.Prezime = Prezime;
-            this.BrojTelefona = Telefon;
             this.AdresaPrebivalista = Adresa;
-            this.GradPrebivalista = Adresa;
+            this.GradPrebivalista = Grad;
             this.Email = Email;
         }
     }
