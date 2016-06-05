@@ -122,7 +122,7 @@ namespace ProjekatKino.DataSource
                 Prezime = "Alagic",
                 KorisnikId = 4,
                 KorisnickoIme = "My_Name_Is_Emir",
-                Sifra = "zajebanasifra",
+                Sifra = "sifra",
             }
         };
         internal static List<Korisnik> DajSveKorisnike()

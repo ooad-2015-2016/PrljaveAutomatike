@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ProjekatKino.Models
 {
-    class KinoSala
+    public class KinoSala
     {
-        int BrojMjesta { get; set; }
-        string NazivSale { get; set; }
+        public int BrojMjesta { get; set; }
+        public string NazivSale { get; set; }
     }
 }

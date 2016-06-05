@@ -6,12 +6,20 @@ using System.Threading.Tasks;
 
 namespace ProjekatKino.Models
 {
-    class Projekcija
+    public class Projekcija
     {
-        KinoSala Sala { get; set; }
-        int zauzetost { get; set; }
-        int kapacitet { get; set; }
-        DateTime VrijemeOdrzavanja { get; set; }
-        bool ImaLiSlobodno { get; set; }
+        public KinoSala sala { get; set; }
+        public int zauzetost { get; set; }
+        public int kapacitet { get; set; }
+        public DateTime VrijemeOdrzavanja { get; set; }
+        public int cijenaProjekcije { get; set; }
+        public bool ImaLiSlobodno
+        {
+            get
+            {
+                if (zauzetost < kapacitet) return true;
+                return false;
+            }
+        }
     }
 }
