@@ -12,6 +12,7 @@
         <TextBox x:Name="textBoxUkupnaCijena" Height="47" Margin="10,53,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" TextAlignment="Right" FontSize="24" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" HorizontalContentAlignment="Right" IsHitTestVisible="False" IsSpellCheckEnabled="False" IsTabStop="False" IsTextPredictionEnabled="False"/>
         <Button x:Name="buttonZakljuciRacun" Content="Zaključi račun" HorizontalAlignment="Stretch" Height="37" Margin="181,0,10,10" VerticalAlignment="Bottom" Width="167" Background="#FF1DA1F2" Foreground="White" Click="buttonZakljuciRacun_Click"/>
         <Button x:Name="buttonPonistiRacun" Content="Poništi račun" HorizontalAlignment="Stretch" Height="37" Margin="10,0,183,10" VerticalAlignment="Bottom" Width="167" Background="#FF1DA1F2" Foreground="White" Click="buttonPonistiRacun_Click"/>
+        <Button x:Name="buttonDodajHranuIPice" Content="Dodaj hranu i/ili piće" HorizontalAlignment="Stretch" Height="37" Margin="10,114,10,0" VerticalAlignment="Top" Background="#FF1DA1F2" Foreground="White" Click="buttonDodajHranuIPice_Click"/>
 
     </Grid>
 </Page>

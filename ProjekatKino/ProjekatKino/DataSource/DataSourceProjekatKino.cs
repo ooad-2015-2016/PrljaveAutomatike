@@ -146,6 +146,50 @@ namespace ProjekatKino.DataSource
         }
         #endregion
 
+        #region Namirnica - kreiranje testnih namirnica
+        internal static List<Namirnica> _namirnice = new List<Namirnica>()
+        {
+            new Namirnica()
+            {
+                TipNamirnice = tipNamirnice.Hrana,
+                ImeNamirnice = "Čipi čips",
+                CijenaNamirnice = 2.5,
+            },
+            new Namirnica()
+            {
+                TipNamirnice = tipNamirnice.Hrana,
+                ImeNamirnice = "Kokice",
+                CijenaNamirnice = 1.5,
+            },
+            new Namirnica()
+            {
+                TipNamirnice = tipNamirnice.Pice,
+                ImeNamirnice = "Coca Cola",
+                CijenaNamirnice = 1.5,
+            },
+            new Namirnica()
+            {
+                TipNamirnice = tipNamirnice.Pice,
+                ImeNamirnice = "Fanta",
+                CijenaNamirnice = 1.5,
+            }
+
+        };
+        internal static List<Namirnica> DajSveNamirnice()
+        {
+            return _namirnice;
+        }
+        internal static List<Namirnica> DajNamirnicePoTipu(tipNamirnice Tip)
+        {
+            List<Namirnica> rezultat = new List<Namirnica>();
+            foreach(var trenutna in DajSveNamirnice())
+            {
+                if (trenutna.TipNamirnice == Tip)
+                    rezultat.Add(trenutna);
+            }
+            return rezultat;
+        }
+        #endregion
 
         internal static PrivremenaBaza pdb = new PrivremenaBaza();
     }

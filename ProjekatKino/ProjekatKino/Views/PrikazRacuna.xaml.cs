@@ -45,5 +45,11 @@ namespace ProjekatKino.Views
             //Ovdje se vracamo nazad na odabir filma
             this.Frame.Navigate(typeof(OdabirFilma));
         }
+
+        private void buttonDodajHranuIPice_Click(object sender, RoutedEventArgs e)
+        {
+            //Ovdje preusmjeravamo na ponudu hrane i pica
+            //this.Frame.Navigate(typeof(Views.OdabirNamirnica));
+        }
     }
 }

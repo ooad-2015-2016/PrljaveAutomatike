@@ -8,16 +8,16 @@ namespace ProjekatKino.Models
 {
     public class Projekcija
     {
-        public KinoSala sala { get; set; }
-        public int zauzetost { get; set; }
-        public int kapacitet { get; set; }
+        public KinoSala Sala { get; set; }
+        public int Zauzetost { get; set; }
+        public int Kapacitet { get; set; }
         public DateTime VrijemeOdrzavanja { get; set; }
-        public int cijenaProjekcije { get; set; }
+        public int CijenaProjekcije { get; set; }
         public bool ImaLiSlobodno
         {
             get
             {
-                if (zauzetost < kapacitet) return true;
+                if (Zauzetost < Kapacitet) return true;
                 return false;
             }
         }
