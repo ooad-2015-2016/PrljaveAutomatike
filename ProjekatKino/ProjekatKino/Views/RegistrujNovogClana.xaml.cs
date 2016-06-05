@@ -73,8 +73,17 @@ namespace ProjekatKino
             {
                 //ovdje sve sacuvati i vratiti se na izbornik
             }
-
         }
 
+        private void checkBoxStudent_Checked(object sender, RoutedEventArgs e)
+        {
+                textBoxFakultet.IsEnabled = true;
+                textBoxIndeks.IsEnabled = true;
+        }
+        private void checkBoxStudent_Unchecked(object sender, RoutedEventArgs e)
+        {
+            textBoxFakultet.IsEnabled = false;
+            textBoxIndeks.IsEnabled = false;
+        }
     }
 }

@@ -45,7 +45,7 @@ namespace ProjekatKino
             }
             else
             {
-                this.Frame.Navigate(typeof(NakonOdabira));
+                this.Frame.Navigate(typeof(Views.PrikazRacuna));
             }
         }
 
@@ -64,7 +64,7 @@ namespace ProjekatKino
             textBlockFilmId.Visibility = Visibility.Visible;
             textBlockTrajanje.Visibility = Visibility.Visible;
             textBoxImeFilma.Text = DataSource.DataSourceProjekatKino._filmovi[comboBoxFilmovi.SelectedIndex].ime_filma;
-            textBoxTrajanje.Text = DataSource.DataSourceProjekatKino._filmovi[comboBoxFilmovi.SelectedIndex].trajanje.ToString();
+            textBoxTrajanje.Text = DataSource.DataSourceProjekatKino._filmovi[comboBoxFilmovi.SelectedIndex].trajanje.ToString() + " min";
             textBoxFilmId.Text = DataSource.DataSourceProjekatKino._filmovi[comboBoxFilmovi.SelectedIndex].FilmId.ToString();
             textBoxFilmId.Visibility = Visibility.Visible;
             textBoxImeFilma.Visibility = Visibility.Visible;

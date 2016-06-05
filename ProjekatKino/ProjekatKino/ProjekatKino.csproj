@@ -133,11 +133,11 @@
     <Compile Include="Models\Film.cs" />
     <Compile Include="Models\Korisnik.cs" />
     <Compile Include="Models\ProgramskiSadrzaj.cs" />
-    <Compile Include="Views\NakonOdabira.xaml.cs">
-      <DependentUpon>NakonOdabira.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\OdabirFilma.xaml.cs">
       <DependentUpon>OdabirFilma.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PrikazRacuna.xaml.cs">
+      <DependentUpon>PrikazRacuna.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\RadnikIzbor.xaml.cs">
       <DependentUpon>RadnikIzbor.xaml</DependentUpon>
@@ -188,11 +188,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\NakonOdabira.xaml">
+    <Page Include="Views\OdabirFilma.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\OdabirFilma.xaml">
+    <Page Include="Views\PrikazRacuna.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

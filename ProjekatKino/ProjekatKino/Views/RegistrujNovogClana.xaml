@@ -17,7 +17,7 @@
         <TextBox x:Name="textBoxGrad" HorizontalAlignment="Center" Margin="0,247,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" TabIndex="4" PlaceholderText="Grad"/>
         <ComboBox x:Name="comboBoxSpol" HorizontalAlignment="Center" Height="32" Margin="0,48,0,0" VerticalAlignment="Top" Width="340" PlaceholderText="Spol" Foreground="Black" Background="#66FFFFFF" TabIndex="3" Visibility="Collapsed"/>
         <TextBlock x:Name="textBlockPodaci" HorizontalAlignment="Center" Height="32" Margin="0,10,0,0" TextWrapping="Wrap" Text="Osnovni podaci" VerticalAlignment="Top" Width="149" FontWeight="Bold" FontSize="18.667"/>
-        <CheckBox x:Name="checkBoxStudent" Content="Student/ica" HorizontalAlignment="Left" Height="37" Margin="10,93,0,0" VerticalAlignment="Top" Width="120" Visibility="Collapsed"/>
+        <CheckBox x:Name="checkBoxStudent" Content="Student/ica" HorizontalAlignment="Left" Height="37" Margin="10,93,0,0" VerticalAlignment="Top" Width="120" Checked="checkBoxStudent_Checked" Unchecked="checkBoxStudent_Unchecked" Visibility="Collapsed"/>
         <TextBox x:Name="textBoxFakultet" HorizontalAlignment="Center" Margin="0,144,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" TabIndex="1" IsEnabled="False" PlaceholderText="Naziv fakulteta" Visibility="Collapsed"/>
         <TextBox x:Name="textBoxIndeks" HorizontalAlignment="Center" Margin="10,187,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" TabIndex="1" IsEnabled="False" PlaceholderText="Broj indeksa" Visibility="Collapsed"/>
         <TextBox x:Name="textBoxTelefon" HorizontalAlignment="Center" Margin="0,333,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" TabIndex="6" PlaceholderText="Broj telefona"/>

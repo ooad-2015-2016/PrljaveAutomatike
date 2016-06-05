@@ -9,7 +9,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock x:Name="textBlockOdaberite" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Odaberite jedan od ponuđenih filmova" VerticalAlignment="Top" Margin="0,10,0,0" />
-        <TextBlock x:Name="textBlockDatum" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Odaberite datum gledanja filma" VerticalAlignment="Top" Margin="10,246,0,0" Width="297" Visibility="Collapsed" />
+        <TextBlock x:Name="textBlockDatum" TextWrapping="Wrap" Text="Odaberite datum gledanja filma" VerticalAlignment="Top" Margin="32,246,32,0" TextAlignment="Center" Visibility="Collapsed" />
         <DatePicker x:Name="datePicketDatum" HorizontalAlignment="Stretch" Margin="10,271,10,0" VerticalAlignment="Top" Width="340" Visibility="Collapsed"/>
         <ComboBox x:Name="comboBoxPlacanje" HorizontalAlignment="Stretch" Margin="10,333,10,0" VerticalAlignment="Top" Visibility="Collapsed">
             <ComboBoxItem Content="Gotovina" Height="40" Width="100" IsSelected="True"/>
@@ -21,9 +21,9 @@
         <TextBlock x:Name="textBlockImeFilma" HorizontalAlignment="Left" Height="29" Margin="10,127,0,0" TextWrapping="Wrap" Text="Ime filma" VerticalAlignment="Top" Width="130" Visibility="Collapsed"/>
         <TextBlock x:Name="textBlockTrajanje" HorizontalAlignment="Left" Height="29" Margin="10,167,0,0" TextWrapping="Wrap" Text="Trajanje filma" VerticalAlignment="Top" Width="130" Visibility="Collapsed"/>
         <TextBlock x:Name="textBlockFilmId" HorizontalAlignment="Left" Height="29" Margin="10,210,0,0" TextWrapping="Wrap" Text="Film ID" VerticalAlignment="Top" Width="130" Visibility="Collapsed"/>
-        <TextBox x:Name="textBoxImeFilma" Height="24" Margin="140,124,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" Visibility="Collapsed"/>
-        <TextBox x:Name="textBoxTrajanje" Height="24" Margin="140,164,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" Visibility="Collapsed"/>
-        <TextBox x:Name="textBoxFilmId" Height="24" Margin="140,204,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" Visibility="Collapsed"/>
+        <TextBox x:Name="textBoxImeFilma" Height="24" Margin="140,124,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" Visibility="Collapsed" TextAlignment="Right" IsHitTestVisible="False" IsSpellCheckEnabled="False" IsTabStop="False" IsTextPredictionEnabled="False"/>
+        <TextBox x:Name="textBoxTrajanje" Height="24" Margin="140,164,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" Visibility="Collapsed" TextAlignment="Right" IsHitTestVisible="False" IsSpellCheckEnabled="False" IsTabStop="False" IsTextPredictionEnabled="False"/>
+        <TextBox x:Name="textBoxFilmId" Height="24" Margin="140,204,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" Visibility="Collapsed" TextAlignment="Right" IsHitTestVisible="False" IsSpellCheckEnabled="False" IsTabStop="False" IsTextPredictionEnabled="False"/>
         <Button x:Name="buttonPotvrdi" Content="Potvrdi" HorizontalAlignment="Stretch" Height="37" Margin="182,0,10,10" VerticalAlignment="Bottom" Background="#FF1DA1F2" Foreground="White" Click="buttonPotvrdi_Click" Width="168"/>
         <Button x:Name="buttonOdustani" Content="Odustani" HorizontalAlignment="Stretch" Height="37" Margin="10,0,183,10" VerticalAlignment="Bottom" Background="#FF1DA1F2" Foreground="White" Click="buttonOdustani_Click" Width="167"/>
         <CheckBox x:Name="checkBoxStudent" Content="Student/ica" HorizontalAlignment="Left" Margin="10,395,0,0" VerticalAlignment="Top" Width="135" Visibility="Collapsed"/>

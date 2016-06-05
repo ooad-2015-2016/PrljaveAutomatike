@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="ProjekatKino.Views.PrikazRacuna"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjekatKino.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="textBlock" Height="25" Margin="0,10,0,0" TextWrapping="Wrap" Text="Račun" VerticalAlignment="Top" Width="56" FontSize="18.667" FontWeight="Bold"/>
+        <TextBox x:Name="textBoxUkupnaCijena" Height="47" Margin="10,53,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" TextAlignment="Right" FontSize="24" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" HorizontalContentAlignment="Right" IsHitTestVisible="False" IsSpellCheckEnabled="False" IsTabStop="False" IsTextPredictionEnabled="False"/>
+        <Button x:Name="buttonZakljuciRacun" Content="Zaključi račun" HorizontalAlignment="Stretch" Height="37" Margin="181,0,10,10" VerticalAlignment="Bottom" Width="167" Background="#FF1DA1F2" Foreground="White" Click="buttonZakljuciRacun_Click"/>
+        <Button x:Name="buttonPonistiRacun" Content="Poništi račun" HorizontalAlignment="Stretch" Height="37" Margin="10,0,183,10" VerticalAlignment="Bottom" Width="167" Background="#FF1DA1F2" Foreground="White" Click="buttonPonistiRacun_Click"/>
+
+    </Grid>
+</Page>
