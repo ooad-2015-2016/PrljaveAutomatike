@@ -5,29 +5,29 @@
     xmlns:local="using:ProjekatKino"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Height="795" Width="930">
+    mc:Ignorable="d" Height="Auto" Width="Auto">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,410,0">
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Odaberite jedan od ponuđenih filmova" VerticalAlignment="Top" Margin="25,10,0,0" />
-        <ListBox HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="300" Margin="25,55,0,0">
-            <ListBoxItem Content="Kum"/>
-            <ListBoxItem Content="Kum 2"/>
-            <ListBoxItem Content="Kum 3"/>
-            <ListBoxItem Content="Star Wars: Epizoda VII"/>
-            <ListBoxItem Content="Lucy"/>
-            <ListBoxItem Content="Intern"/>
-        </ListBox>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Odaberite datum gledanja filma" VerticalAlignment="Top" Margin="28,360,0,0" Width="297" />
-        <DatePicker HorizontalAlignment="Left" Margin="25,385,0,0" VerticalAlignment="Top" Width="297"/>
-        <CheckBox Content="Član Kino Kluba" HorizontalAlignment="Left" Margin="22,479,0,0" VerticalAlignment="Top" Width="135"/>
-        <ComboBox HorizontalAlignment="Left" Margin="22,447,0,0" VerticalAlignment="Top" Width="123">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="textBlockOdaberite" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Odaberite jedan od ponuđenih filmova" VerticalAlignment="Top" Margin="0,10,0,0" />
+        <TextBlock x:Name="textBlockDatum" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Odaberite datum gledanja filma" VerticalAlignment="Top" Margin="10,246,0,0" Width="297" Visibility="Collapsed" />
+        <DatePicker x:Name="datePicketDatum" HorizontalAlignment="Stretch" Margin="10,271,10,0" VerticalAlignment="Top" Width="340" Visibility="Collapsed"/>
+        <ComboBox x:Name="comboBoxPlacanje" HorizontalAlignment="Stretch" Margin="10,333,10,0" VerticalAlignment="Top" Visibility="Collapsed">
             <ComboBoxItem Content="Gotovina" Height="40" Width="100" IsSelected="True"/>
             <ComboBoxItem Content="Kartica" Height="40" Width="100"/>
         </ComboBox>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Odaberite način plaćanja" VerticalAlignment="Top" Margin="25,422,0,0" Width="167" />
-        <CheckBox x:Name="chkStud" Content="Student" HorizontalAlignment="Left" Margin="22,516,0,0" VerticalAlignment="Top" Checked="chkStud_Checked"/>
-        <CheckBox x:Name="chkPen" Content="Penzioner" HorizontalAlignment="Left" Margin="22,543,0,0" VerticalAlignment="Top" Checked="chkPen_Checked"/>
-        <Button x:Name="dugmeOdustani" Content="Odustani" HorizontalAlignment="Left" Margin="112,580,0,0" VerticalAlignment="Top" Click="dugmeOdustani_Click"/>
-        <Button x:Name="dugmePotvrdi" Content="Potvrdi" HorizontalAlignment="Left" Margin="22,580,0,0" VerticalAlignment="Top" Click="dugmePotvrdi_Click"/>
+        <TextBlock x:Name="textBlockPlacanje" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Odaberite način plaćanja" VerticalAlignment="Top" Margin="10,308,0,0" Width="167" Visibility="Collapsed" />
+        <ComboBox x:Name="comboBoxFilmovi" HorizontalAlignment="Stretch" Height="38" Margin="10,44,10,0" VerticalAlignment="Top" SelectionChanged="comboBoxFilmovi_SelectionChanged"/>
+        <TextBlock x:Name="textBlockPodaci" TextWrapping="Wrap" Text="Podaci o filmu" VerticalAlignment="Top" Margin="0,102,0,0" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed" />
+        <TextBlock x:Name="textBlockImeFilma" HorizontalAlignment="Left" Height="29" Margin="10,127,0,0" TextWrapping="Wrap" Text="Ime filma" VerticalAlignment="Top" Width="130" Visibility="Collapsed"/>
+        <TextBlock x:Name="textBlockTrajanje" HorizontalAlignment="Left" Height="29" Margin="10,167,0,0" TextWrapping="Wrap" Text="Trajanje filma" VerticalAlignment="Top" Width="130" Visibility="Collapsed"/>
+        <TextBlock x:Name="textBlockFilmId" HorizontalAlignment="Left" Height="29" Margin="10,210,0,0" TextWrapping="Wrap" Text="Film ID" VerticalAlignment="Top" Width="130" Visibility="Collapsed"/>
+        <TextBox x:Name="textBoxImeFilma" Height="24" Margin="140,124,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" Visibility="Collapsed"/>
+        <TextBox x:Name="textBoxTrajanje" Height="24" Margin="140,164,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" Visibility="Collapsed"/>
+        <TextBox x:Name="textBoxFilmId" Height="24" Margin="140,204,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" Visibility="Collapsed"/>
+        <Button x:Name="buttonPotvrdi" Content="Potvrdi" HorizontalAlignment="Stretch" Height="37" Margin="182,0,10,10" VerticalAlignment="Bottom" Background="#FF1DA1F2" Foreground="White" Click="buttonPotvrdi_Click" Width="168"/>
+        <Button x:Name="buttonOdustani" Content="Odustani" HorizontalAlignment="Stretch" Height="37" Margin="10,0,183,10" VerticalAlignment="Bottom" Background="#FF1DA1F2" Foreground="White" Click="buttonOdustani_Click" Width="167"/>
+        <CheckBox x:Name="checkBoxStudent" Content="Student/ica" HorizontalAlignment="Left" Margin="10,395,0,0" VerticalAlignment="Top" Width="135" Visibility="Collapsed"/>
+        <CheckBox x:Name="checkBoxPenzioner" Content="Penzioner/ka" HorizontalAlignment="Left" Margin="10,425,0,0" VerticalAlignment="Top" Width="135" Visibility="Collapsed"/>
+        <CheckBox x:Name="checkBoxClan" Content="Član Kino Kluba" HorizontalAlignment="Left" Margin="10,455,0,0" VerticalAlignment="Top" Width="135" Visibility="Collapsed"/>
     </Grid>
 </Page>

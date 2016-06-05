@@ -10,9 +10,8 @@ namespace ProjekatKino.Models
     {
         KinoSala Sala { get; set; }
         int zauzetost { get; set; }
+        int kapacitet { get; set; }
         DateTime VrijemeOdrzavanja { get; set; }
         bool ImaLiSlobodno { get; set; }
-
-
     }
 }

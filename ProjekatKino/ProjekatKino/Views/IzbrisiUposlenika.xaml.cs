@@ -54,6 +54,8 @@ namespace ProjekatKino.Views
             if(nekoJeIzabranIzComboBoxa)
             {
                 //Ovdje implementirati brisanje korisnika DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex]
+                DataSource.DataSourceProjekatKino._korisnici.Remove(DataSource.DataSourceProjekatKino._korisnici[comboBox.SelectedIndex]);
+                this.Frame.Navigate(typeof(ManagerForma));
             }
             else
             {
