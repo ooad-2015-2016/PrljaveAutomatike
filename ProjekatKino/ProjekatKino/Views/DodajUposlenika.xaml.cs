@@ -22,6 +22,7 @@ namespace ProjekatKino.Views
     /// </summary>
     public sealed partial class DodajUposlenika : Page
     {
+        bool popunjenoIspravno = false;
         public DodajUposlenika()
         {
             this.InitializeComponent();
@@ -37,6 +38,30 @@ namespace ProjekatKino.Views
         private void buttonOdustani_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(ManagerForma));
+        }
+
+        private async void buttonPotvrdi_Click(object sender, RoutedEventArgs e)
+        {
+            if(textBoxIme.Text != "" && textBoxPrezime.Text != "" && textBoxKorIme.Text != "" && textBoxSifra.Text != "" && (comboBox.SelectedIndex > -1))
+            {
+                //ovdje implementirati sacuvavanje uposlenika
+                int ID = 0;
+                if(comboBox.SelectedItem.ToString() != "Menadžer")
+                {
+                    ID = DataSource.DataSourceProjekatKino._korisnici.Count() + 1;
+                }
+
+                DataSource.DataSourceProjekatKino._korisnici.Add(new Models.Korisnik { Ime = textBoxIme.Text, Prezime = textBoxPrezime.Text, KorisnickoIme = textBoxKorIme.Text, Sifra = textBoxSifra.Text, KorisnikId = ID });
+                var dialog = new Windows.UI.Popups.MessageDialog("Uspjesno ste registrovali novog uposlenika!", "Uspjesna registracija!");
+                await dialog.ShowAsync();
+                this.Frame.Navigate(typeof(ManagerForma));
+
+            }
+            else
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog("Niste ispravno unijeli podatke o uposleniku!", "Pokušajte ponovo!");
+                await dialog.ShowAsync();
+            }
         }
     }
 }
