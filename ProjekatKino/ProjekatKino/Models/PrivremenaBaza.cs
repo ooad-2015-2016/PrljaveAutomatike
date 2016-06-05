@@ -16,6 +16,7 @@ namespace ProjekatKino.Models
         public PrivremenaBaza()
         {
             Korisnici = DataSourceProjekatKino.DajSveKorisnike();
+            Menadzeri = DataSourceProjekatKino.DajSveMenadzere();
             Filmovi = DataSourceProjekatKino.DajSveFilmove();
             //Clanovi = DataSourceProjekatKino.DajSveClanove(); treba dodat registrovane clanove u datasource
         }
@@ -64,6 +65,16 @@ namespace ProjekatKino.Models
         public void ObrisiMenadzera(Menadzer _menadzer)
         {
             Menadzeri.Remove(_menadzer);
+        }
+        public Menadzer ProvjeraMenadzera(string korisnickoIme, string sifra)
+        {
+            Menadzer rezultat = new Menadzer();
+            foreach (var k in Menadzeri)
+            {
+                if (k.KorisnickoIme == korisnickoIme && k.Sifra == sifra)
+                    rezultat = k;
+            }
+            return rezultat;
         }
     }
 }

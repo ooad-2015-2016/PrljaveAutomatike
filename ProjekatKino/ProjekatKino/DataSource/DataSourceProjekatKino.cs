@@ -77,8 +77,16 @@ namespace ProjekatKino.DataSource
             {
                 Ime = "Medo",
                 Prezime = "Brundic",
-                KorisnikId = 0,
+                KorisnikId = 86,
                 KorisnickoIme = "manager",
+                Sifra = "patlidzan",
+            },
+            new Menadzer()
+            {
+                Ime = "Hamo",
+                Prezime = "Pipa",
+                KorisnikId = 87,
+                KorisnickoIme = "manager2",
                 Sifra = "patlidzan",
             }
         };

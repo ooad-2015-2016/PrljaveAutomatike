@@ -22,7 +22,6 @@ namespace ProjekatKino.Views
     /// </summary>
     public sealed partial class DodajUposlenika : Page
     {
-        bool popunjenoIspravno = false;
         public DodajUposlenika()
         {
             this.InitializeComponent();
@@ -48,10 +47,15 @@ namespace ProjekatKino.Views
                 int ID = 0;
                 if(comboBox.SelectedItem.ToString() != "Menadžer")
                 {
-                    ID = DataSource.DataSourceProjekatKino._korisnici.Count() + 1;
+                    ID = DataSource.DataSourceProjekatKino.pdb.Korisnici.Count() + 1;
+                    DataSource.DataSourceProjekatKino.pdb.Korisnici.Add(new Models.Korisnik { Ime = textBoxIme.Text, Prezime = textBoxPrezime.Text, KorisnickoIme = textBoxKorIme.Text, Sifra = textBoxSifra.Text, KorisnikId = ID });
                 }
+                else if(comboBox.SelectedItem.ToString() == "Menadžer")
+                {
+                    ID = DataSource.DataSourceProjekatKino.pdb.Menadzeri.Count() + 1;
+                    DataSource.DataSourceProjekatKino.pdb.Menadzeri.Add(new Models.Menadzer { Ime = textBoxIme.Text, Prezime = textBoxPrezime.Text, KorisnickoIme = textBoxKorIme.Text, Sifra = textBoxSifra.Text, KorisnikId = ID });
 
-                DataSource.DataSourceProjekatKino._korisnici.Add(new Models.Korisnik { Ime = textBoxIme.Text, Prezime = textBoxPrezime.Text, KorisnickoIme = textBoxKorIme.Text, Sifra = textBoxSifra.Text, KorisnikId = ID });
+                }
                 var dialog = new Windows.UI.Popups.MessageDialog("Uspjesno ste registrovali novog uposlenika!", "Uspjesna registracija!");
                 await dialog.ShowAsync();
                 this.Frame.Navigate(typeof(ManagerForma));
@@ -59,7 +63,7 @@ namespace ProjekatKino.Views
             }
             else
             {
-                var dialog = new Windows.UI.Popups.MessageDialog("Niste ispravno unijeli podatke o uposleniku!", "Pokušajte ponovo!");
+                var dialog = new Windows.UI.Popups.MessageDialog("Niste ispravno unijeli podatke o uposleniku ili ste zaboravili odabrati tip uposlenika", "Pokušajte ponovo!");
                 await dialog.ShowAsync();
             }
         }

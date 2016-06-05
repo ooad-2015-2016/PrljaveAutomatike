@@ -33,23 +33,24 @@ namespace ProjekatKino
         //asinhrona metoda za provjeru prijave korisnika
         private async void button_LoginClick(object sender, RoutedEventArgs e)
         {
-            usernameBox.Text = rfid.CurrentReadString;
+            //usernameBox.Text = rfid.CurrentReadString;
             var korisnickoIme = usernameBox.Text;
             var sifra = passwordBox.Password;
-            var korisnik = DataSource.DataSourceProjekatKino.ProvjeraKorisnika(korisnickoIme, sifra);
-            if (korisnik != null && korisnik.KorisnikId==0)
-            {
-                this.Frame.Navigate(typeof(ManagerForma), korisnik);
-            }
-            else if (korisnik != null && korisnik.KorisnikId ==1)
+            var korisnik = DataSource.DataSourceProjekatKino.pdb.ProvjeraKorisnika(korisnickoIme, sifra);
+            var menadzer = DataSource.DataSourceProjekatKino.pdb.ProvjeraMenadzera(korisnickoIme, sifra);
+
+            if (korisnik != null && korisnik.KorisnikId ==1)
             {
                 this.Frame.Navigate(typeof(GPSView), korisnik);
             }
-            else  if (korisnik != null && korisnik.KorisnikId >=1)
+            else if (korisnik != null && korisnik.KorisnikId >=1)
             {
                 this.Frame.Navigate(typeof(RadnikIzbor), korisnik);
             }
-         
+            else if (menadzer != null && menadzer.KorisnikId >= 1)
+            {
+                this.Frame.Navigate(typeof(ManagerForma), menadzer);
+            }
             else
             {
                 var dialog = new Windows.UI.Popups.MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješna prijava");
