@@ -8,13 +8,19 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ComboBox x:Name="comboBoxHrana" HorizontalAlignment="Left" Height="30" Margin="10,91,0,0" VerticalAlignment="Top" Width="340"/>
+        <ComboBox x:Name="comboBoxHrana" HorizontalAlignment="Center" Height="30" Margin="0,91,0,0" VerticalAlignment="Top" Width="340" SelectionChanged="comboBoxHrana_SelectionChanged"/>
         <TextBlock x:Name="textBlockOdabir" Height="25" Margin="0,10,0,0" TextWrapping="Wrap" Text="Odaberite namirnice" VerticalAlignment="Top" Width="196" TextAlignment="Center" FontWeight="Bold" FontSize="18.667"/>
-        <TextBox x:Name="textBoxKolicinaHrana" Height="30" Margin="10,135,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText=""/>
-        <TextBlock x:Name="textBlockHrana" HorizontalAlignment="Left" Height="24" Margin="10,65,0,0" TextWrapping="Wrap" Text="Hrana" VerticalAlignment="Top" Width="156"/>
-        <ComboBox x:Name="comboBoxPice" HorizontalAlignment="Left" Height="30" Margin="10,230,0,0" VerticalAlignment="Top" Width="340"/>
-        <TextBox x:Name="textBoxKolicinaPice" Height="30" Margin="10,274,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText=""/>
-        <TextBlock x:Name="textBlockPice" HorizontalAlignment="Left" Height="24" Margin="10,204,0,0" TextWrapping="Wrap" Text="Hrana" VerticalAlignment="Top" Width="156"/>
+        <TextBox x:Name="textBoxKolicinaHrane" Height="30" Margin="187,135,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="" Width="163" TextChanged="textBoxKolicinaHrane_TextChanged"/>
+        <TextBlock x:Name="textBlockHrana" HorizontalAlignment="Center" Height="24" Margin="10,64,194,0" TextWrapping="Wrap" Text="Hrana" VerticalAlignment="Top" Width="156"/>
+        <ComboBox x:Name="comboBoxPice" HorizontalAlignment="Center" Height="30" Margin="0,254,0,0" VerticalAlignment="Top" Width="340" SelectionChanged="comboBoxPice_SelectionChanged"/>
+        <TextBlock x:Name="textBlockPice" HorizontalAlignment="Center" Height="24" Margin="10,230,194,0" TextWrapping="Wrap" Text="Piće" VerticalAlignment="Top" Width="156"/>
+        <Button x:Name="buttonPotvrdi" Content="Potvrdi" HorizontalAlignment="Stretch" Height="37" Margin="182,0,11,10" VerticalAlignment="Bottom" Width="167" Background="#FF1DA1F2" Foreground="White" Click="buttonPotvrdi_Click"/>
+        <Button x:Name="buttonOdustani" Content="Odustani" HorizontalAlignment="Stretch" Height="37" Margin="10,0,183,10" VerticalAlignment="Bottom" Width="167" Background="#FF1DA1F2" Foreground="White" Click="buttonOdustani_Click"/>
+        <TextBox x:Name="textBoxCijenaHrane" Height="30" Margin="10,135,187,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="" Width="163"/>
+        <TextBox x:Name="textBoxKolicinaPica" Height="30" Margin="187,298,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="" Width="163" TextChanged="textBoxKolicinaPica_TextChanged"/>
+        <TextBox x:Name="textBoxCijenaPica" Height="30" Margin="10,298,187,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="" Width="163"/>
+        <Button x:Name="buttonDodaj1" Content="Dodaj" HorizontalAlignment="Stretch" Height="37" Margin="97,184,96,0" VerticalAlignment="Top" Width="167" Background="#FF1DA1F2" Foreground="White" Click="buttonDodaj1_Click" Visibility="Collapsed"/>
+        <Button x:Name="buttonDodaj2" Content="Dodaj" HorizontalAlignment="Stretch" Height="37" Margin="97,347,96,0" VerticalAlignment="Top" Width="167" Background="#FF1DA1F2" Foreground="White" Click="buttonDodaj2_Click" Visibility="Collapsed"/>
 
     </Grid>
 </Page>

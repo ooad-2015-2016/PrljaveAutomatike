@@ -97,50 +97,6 @@ namespace ProjekatKino.DataSource
 
         #endregion
 
-        #region RegistrovaniClanovi - kreiranje testnih clanova
-
-        internal static List<RegistrovaniClan> _clanovi = new List<RegistrovaniClan>()
-        {
-            new RegistrovaniClan()
-            {
-                Ime = "Ilijaz",
-                Prezime = "Brundic",
-                ID = 1,
-                AdresaPrebivalista = "nekaadresa",
-                GradPrebivalista = "Sarajevo",
-                Email= "ama@gmail.com",
-                BrojTelefona = "061123123"
-            },
-            new RegistrovaniClan()
-            {
-                Ime = "Dreko",
-                Prezime = "Pipa",
-                ID = 2,
-                AdresaPrebivalista = "nekaadresa2",
-                GradPrebivalista = "Hadzici",
-                Email= "ama2@gmail.com",
-                BrojTelefona = "061123567"
-            }
-        };
-
-        internal static List<RegistrovaniClan> DajSveRegistrovaneClanove()
-        {
-            return _clanovi;
-        }
-
-        internal static RegistrovaniClan ProvjeraRegistrovanihClanova(string ime, string prezime)
-        {
-            RegistrovaniClan rezultat = new RegistrovaniClan();
-            foreach (var k in DajSveRegistrovaneClanove())
-            {
-                if (k.Ime == ime && k.Prezime == prezime)
-                    rezultat = k;
-            }
-            return rezultat;
-        }
-
-        #endregion
-
         #region Korisnik - kreiranje testnih korisnika
         internal static List<Korisnik> _korisnici = new List<Korisnik>()
         {
@@ -234,7 +190,7 @@ namespace ProjekatKino.DataSource
         internal static List<Namirnica> DajNamirnicePoTipu(tipNamirnice Tip)
         {
             List<Namirnica> rezultat = new List<Namirnica>();
-            foreach(var trenutna in DajSveNamirnice())
+            foreach (var trenutna in DajSveNamirnice())
             {
                 if (trenutna.TipNamirnice == Tip)
                     rezultat.Add(trenutna);
@@ -243,6 +199,88 @@ namespace ProjekatKino.DataSource
         }
         #endregion
 
+        #region Kino Sale - kreiranje testnih sala
+        internal static List<KinoSala> _sale = new List<KinoSala>()
+        {
+            new KinoSala()
+            {
+                BrojMjesta = 150,
+                NazivSale = "S1"
+            }
+        };
+        public static List<KinoSala> DajSveSale()
+        {
+            return _sale;
+        }
+        #endregion
+
+        #region Kupovina - formiranje kupovina
+        internal static List<Kupovina> _kupovine = new List<Kupovina>()
+        {
+        };
+        internal static List<Kupovina> DajSveKupovine()
+        {
+            return _kupovine;
+        }
+        internal static List<Kupovina> DajKupovineRegistrovanihClanova()
+        {
+            List<Kupovina> rezultat = new List<Kupovina>();
+            foreach (var trenutna in DajSveKupovine())
+            {
+                if (trenutna.TipPosjetitelja == tipPosjetitelja.Uclanjen)
+                    rezultat.Add(trenutna);
+            }
+            return rezultat;
+        }
+        internal static double UkupnoZaradjenoNaDan(DateTime vrijeme)
+        {
+            double Zaradjeno = 0;
+            foreach (var trenutna in DajSveKupovine())
+            {
+                if (trenutna.datumKupovine == vrijeme)
+                    Zaradjeno += trenutna.cijenaRacuna;
+            }
+            return Zaradjeno;
+        }
+        #endregion
+
+        #region Projekcije - kreiranje testnih projekcija
+        internal static List<Projekcija> _projekcije = new List<Projekcija>()
+        {
+            new Projekcija()
+            {
+                CijenaProjekcije = 7,
+                Sala = _sale[0],
+                Zauzetost = 0,
+                Kapacitet = _sale[0].BrojMjesta,
+                VrijemeOdrzavanja = DateTime.Today,
+                FilmProjekcije = _filmovi[1]
+            }
+        };
+        internal static List<Projekcija> DajSveProjekcije()
+        {
+            return _projekcije;
+        }
+        #endregion
+        #region Posjetitelji - kreiranje testnih posjetitelja
+        internal static List<RegistrovaniClan> _registrovaniClanovi = new List<RegistrovaniClan>()
+        {
+            new RegistrovaniClan("Meho", "Mehic", "Adresa Adresa", "Sarajevo", "mail", 12, "1234567891234", "061021931"),
+        };
+        internal static List<RegistrovaniClan> DajSveRegistrovaneClanove()
+        {
+            return _registrovaniClanovi;
+        }
+        internal static RegistrovaniClan DajClanaSaJMBG(string JMBG)
+        {
+            foreach (var trenutni in DajSveRegistrovaneClanove())
+            {
+                if (trenutni.JMBG == JMBG)
+                    return trenutni;
+            }
+            return null;
+        }
+        #endregion
         internal static PrivremenaBaza pdb = new PrivremenaBaza();
     }
 }

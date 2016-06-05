@@ -39,11 +39,11 @@ namespace ProjekatKino
             var korisnik = DataSource.DataSourceProjekatKino.pdb.ProvjeraKorisnika(korisnickoIme, sifra);
             var menadzer = DataSource.DataSourceProjekatKino.pdb.ProvjeraMenadzera(korisnickoIme, sifra);
 
-            if (korisnik != null && korisnik.KorisnikId ==1)
+            if (korisnik != null && korisnik.KorisnikId == 1)
             {
                 this.Frame.Navigate(typeof(GPSView), korisnik);
             }
-            else if (korisnik != null && korisnik.KorisnikId >=1)
+            else if (korisnik != null && korisnik.KorisnikId >= 1)
             {
                 this.Frame.Navigate(typeof(RadnikIzbor), korisnik);
             }

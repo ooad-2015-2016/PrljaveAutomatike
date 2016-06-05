@@ -26,12 +26,10 @@ namespace ProjekatKino
         public OdabirFilma()
         {
             this.InitializeComponent();
-            foreach(var trenutni in DataSource.DataSourceProjekatKino._filmovi)
+            foreach (var trenutni in DataSource.DataSourceProjekatKino._filmovi)
             {
                 comboBoxFilmovi.Items.Add(trenutni.ime_filma);
             }
-            comboBoxPlacanje.Items.Add("Karticom");
-            comboBoxPlacanje.Items.Add("Gotovinom");
         }
 
 
@@ -45,10 +43,56 @@ namespace ProjekatKino
             }
             else
             {
-                this.Frame.Navigate(typeof(Views.PrikazRacuna));
+                DataSource.DataSourceProjekatKino._kupovine.Add(new Models.Kupovina());
+                DataSource.DataSourceProjekatKino._kupovine.Last().datumKupovine = DateTime.Today;
+                DataSource.DataSourceProjekatKino._kupovine.Last().filmKupovine = DataSource.DataSourceProjekatKino._filmovi[comboBoxFilmovi.SelectedIndex];
+                bool pronadjen = false;
+                if(textBoxJMBG.IsEnabled && textBoxJMBG.Text.Length != 13)
+                {
+                    var dialog = new Windows.UI.Popups.MessageDialog("Niste unijeli tačan JMBG!", "Pokušajte ponovo!");
+                    await dialog.ShowAsync();
+                }
+                if(!textBoxJMBG.IsEnabled)
+                {
+                    DataSource.DataSourceProjekatKino._kupovine.Last().posjetitelj = null;
+                    this.Frame.Navigate(typeof(Views.PrikazProjekcija));
+                }
+                if (textBoxJMBG.IsEnabled && textBoxJMBG.Text.Length == 13)
+                {
+                    foreach(var trenutni in DataSource.DataSourceProjekatKino._registrovaniClanovi)
+                    {
+                        if (trenutni.JMBG == textBoxJMBG.Text)
+                        {
+                            DataSource.DataSourceProjekatKino._kupovine.Last().posjetitelj = trenutni;
+                            pronadjen = true;
+                            break;
+                        }
+                    }
+                    if(!pronadjen)
+                    {
+                        var dialog = new Windows.UI.Popups.MessageDialog("Ne postoji clan sa unesenim JMBG!", "Pokušajte ponovo!");
+                        await dialog.ShowAsync();
+                    }
+                    else
+                    {
+                        this.Frame.Navigate(typeof(Views.PrikazProjekcija));
+                    }
+                }
+
+                    
             }
         }
 
+        private void checkBoxClan_Checked(object sender, RoutedEventArgs e)
+        {
+            textBoxJMBG.IsEnabled = true;
+            textBoxJMBG.Visibility = Visibility.Visible;
+        }
+        private void checkBoxClan_Unchecked(object sender, RoutedEventArgs e)
+        {
+            textBoxJMBG.IsEnabled = false;
+            textBoxJMBG.Visibility = Visibility.Collapsed;
+        }
         private void buttonOdustani_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(RadnikIzbor));
@@ -71,9 +115,7 @@ namespace ProjekatKino
             textBoxTrajanje.Visibility = Visibility.Visible;
             textBlockDatum.Visibility = Visibility.Visible;
             textBlockOdaberite.Visibility = Visibility.Visible;
-            textBlockPlacanje.Visibility = Visibility.Visible;
             datePicketDatum.Visibility = Visibility.Visible;
-            comboBoxPlacanje.Visibility = Visibility.Visible;
             checkBoxPenzioner.Visibility = Visibility.Visible;
             checkBoxStudent.Visibility = Visibility.Visible;
             checkBoxClan.Visibility = Visibility.Visible;

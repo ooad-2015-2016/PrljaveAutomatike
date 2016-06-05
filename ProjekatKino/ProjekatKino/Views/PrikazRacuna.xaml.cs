@@ -22,6 +22,7 @@ namespace ProjekatKino.Views
     /// </summary>
     public sealed partial class PrikazRacuna : Page
     {
+        bool odabranoPlacanje = false;
         public PrikazRacuna()
         {
             this.InitializeComponent();
@@ -29,27 +30,46 @@ namespace ProjekatKino.Views
             //Npr. 5 KM
             //Da bi radilo treba imati odrađenu klasu projekciju i jedan njen primjer u DataSource
             //Treba klasa Namirnica za neki primjer i klasa Racun - sve su public class
-            textBoxUkupnaCijena.Text = "5" + " KM";
+            textBoxUkupnaCijena.Text = DataSource.DataSourceProjekatKino._kupovine.Last().cijenaRacuna.ToString() + " KM";
+            comboBoxPlacanje.Items.Add("Gotovinsko plaćanje");
+            comboBoxPlacanje.Items.Add("Plaćanje karticom");
         }
 
         private async void buttonZakljuciRacun_Click(object sender, RoutedEventArgs e)
         {
             //Ovdje dodati sta god treba za zakljucivanje racuna
-            var dialog = new Windows.UI.Popups.MessageDialog("Uspješno izrađen račun!", "Uspješna prodaja!");
-            await dialog.ShowAsync();
-            this.Frame.Navigate(typeof(RadnikIzbor));
+            if (!odabranoPlacanje)
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog("Niste odabrali način plaćanja!", "Pogreška!");
+                await dialog.ShowAsync();
+            }
+            else
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog("Uspješno izrađen račun!", "Uspješna prodaja!");
+                await dialog.ShowAsync();
+                //OVDJE DODATI PLACANJE AKO JE IZABRANA KARTICA, ONO SA RFID
+                this.Frame.Navigate(typeof(RadnikIzbor));
+            }
         }
 
         private void buttonPonistiRacun_Click(object sender, RoutedEventArgs e)
         {
             //Ovdje se vracamo nazad na odabir filma
+            DataSource.DataSourceProjekatKino._kupovine.Remove(DataSource.DataSourceProjekatKino._kupovine.Last());
             this.Frame.Navigate(typeof(OdabirFilma));
         }
 
         private void buttonDodajHranuIPice_Click(object sender, RoutedEventArgs e)
         {
+            this.Frame.Navigate(typeof(Views.OdabirNamirnica));
             //Ovdje preusmjeravamo na ponudu hrane i pica
             //this.Frame.Navigate(typeof(Views.OdabirNamirnica));
+        }
+
+        private void comboBoxPlacanje_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            odabranoPlacanje = true;
+            DataSource.DataSourceProjekatKino._kupovine.Last().NacinPlacanja = comboBoxPlacanje.SelectedItem.ToString();
         }
     }
 }

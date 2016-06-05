@@ -8,6 +8,7 @@ namespace ProjekatKino.Models
 {
     public class Projekcija
     {
+        public Film FilmProjekcije { get; set; }
         public KinoSala Sala { get; set; }
         public int Zauzetost { get; set; }
         public int Kapacitet { get; set; }

@@ -41,16 +41,16 @@ namespace ProjekatKino.Views
 
         private async void buttonPotvrdi_Click(object sender, RoutedEventArgs e)
         {
-            if(textBoxIme.Text != "" && textBoxPrezime.Text != "" && textBoxKorIme.Text != "" && textBoxSifra.Text != "" && (comboBox.SelectedIndex > -1))
+            if (textBoxIme.Text != "" && textBoxPrezime.Text != "" && textBoxKorIme.Text != "" && textBoxSifra.Text != "" && (comboBox.SelectedIndex > -1))
             {
                 //ovdje implementirati sacuvavanje uposlenika
                 int ID = 0;
-                if(comboBox.SelectedItem.ToString() != "Menadžer")
+                if (comboBox.SelectedItem.ToString() != "Menadžer")
                 {
                     ID = DataSource.DataSourceProjekatKino.pdb.Korisnici.Count() + 1;
                     DataSource.DataSourceProjekatKino.pdb.Korisnici.Add(new Models.Korisnik { Ime = textBoxIme.Text, Prezime = textBoxPrezime.Text, KorisnickoIme = textBoxKorIme.Text, Sifra = textBoxSifra.Text, KorisnikId = ID });
                 }
-                else if(comboBox.SelectedItem.ToString() == "Menadžer")
+                else if (comboBox.SelectedItem.ToString() == "Menadžer")
                 {
                     ID = DataSource.DataSourceProjekatKino.pdb.Menadzeri.Count() + 1;
                     DataSource.DataSourceProjekatKino.pdb.Menadzeri.Add(new Models.Menadzer { Ime = textBoxIme.Text, Prezime = textBoxPrezime.Text, KorisnickoIme = textBoxKorIme.Text, Sifra = textBoxSifra.Text, KorisnikId = ID });

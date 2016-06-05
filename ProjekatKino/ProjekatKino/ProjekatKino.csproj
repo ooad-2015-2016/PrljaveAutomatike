@@ -104,8 +104,10 @@
     <Compile Include="Helper\RelayCommand.cs" />
     <Compile Include="Helper\Rfid.cs" />
     <Compile Include="Models\KinoSala.cs" />
+    <Compile Include="Models\Kupovina.cs" />
     <Compile Include="Models\Menadzer.cs" />
     <Compile Include="Models\Namirnica.cs" />
+    <Compile Include="Models\Posjetitelj.cs" />
     <Compile Include="Models\PrivremenaBaza.cs" />
     <Compile Include="Models\Projekcija.cs" />
     <Compile Include="Models\RegistrovaniClan.cs" />
@@ -139,6 +141,9 @@
     </Compile>
     <Compile Include="Views\OdabirNamirnica.xaml.cs">
       <DependentUpon>OdabirNamirnica.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PrikazProjekcija.xaml.cs">
+      <DependentUpon>PrikazProjekcija.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PrikazRacuna.xaml.cs">
       <DependentUpon>PrikazRacuna.xaml</DependentUpon>
@@ -197,6 +202,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\OdabirNamirnica.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PrikazProjekcija.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
