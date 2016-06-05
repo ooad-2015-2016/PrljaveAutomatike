@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using ProjekatKino.Models;
 using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("PrivremenaBaza")]
+//[assembly: InternalsVisibleTo("PrivremenaBaza")]
 
 namespace ProjekatKino.DataSource
 {
@@ -16,7 +16,7 @@ namespace ProjekatKino.DataSource
         public DataSourceProjekatKino() { }
 
         #region Film - kreiranje testnih filmova
-        private static List<Film> _filmovi = new List<Film>()
+        internal static List<Film> _filmovi = new List<Film>()
         {
             new Film()
             {
@@ -69,9 +69,28 @@ namespace ProjekatKino.DataSource
         }
         #endregion
 
-        //KorisnikId je 0 za menadzere
+        #region Menadzer - kreiranje testnih korisnika
+
+        internal static List<Menadzer> _menadzeri = new List<Menadzer>()
+        {
+            new Menadzer()
+            {
+                Ime = "Medo",
+                Prezime = "Brundic",
+                KorisnikId = 0,
+                KorisnickoIme = "manager",
+                Sifra = "patlidzan",
+            }
+        };
+        internal static List<Menadzer> DajSveMenadzere()
+        {
+            return _menadzeri;
+        }
+
+        #endregion
+
         #region Korisnik - kreiranje testnih korisnika
-        public static List<Korisnik> _korisnici = new List<Korisnik>()
+        internal static List<Korisnik> _korisnici = new List<Korisnik>()
         {
             new Korisnik()
             {
@@ -104,27 +123,20 @@ namespace ProjekatKino.DataSource
                 KorisnikId = 4,
                 KorisnickoIme = "My_Name_Is_Emir",
                 Sifra = "zajebanasifra",
-            },
-            new Menadzer()
-            {
-                Ime = "Medo",
-                Prezime = "Brundic",
-                KorisnikId = 0,
-                KorisnickoIme = "manager",
-                Sifra = "patlidzan",
             }
         };
-        public static List<Korisnik> DajSveKorisnike()
+        internal static List<Korisnik> DajSveKorisnike()
         {
             return _korisnici;
         }
-        public static Korisnik DajKorisnikaPoId(int korisnikId)
+        internal static Korisnik DajKorisnikaPoId(int korisnikId)
         {
             return _korisnici.Where(k => k.KorisnikId.Equals(korisnikId)).FirstOrDefault();
         }
+        //nece trebat vise provjera ovdje
         public static Korisnik ProvjeraKorisnika(string korisnickoIme, string sifra)
         {
-            Models.Korisnik rezultat = new Korisnik();
+            Korisnik rezultat = new Korisnik();
             foreach (var k in DajSveKorisnike())
             {
                 if (k.KorisnickoIme == korisnickoIme && k.Sifra == sifra)
@@ -132,21 +144,8 @@ namespace ProjekatKino.DataSource
             }
             return rezultat;
         }
-        public static List<Korisnik> DajMenadzere()
-        {
-            List<Korisnik> listaMenadzera =  new List<Korisnik>();
-            foreach(var trenutniKorisnik in DajSveKorisnike())
-            {
-                if (trenutniKorisnik.KorisnikId == 0)
-                    listaMenadzera.Add(trenutniKorisnik);
-            }
-            return listaMenadzera;
-        }
-        internal static PrivremenaBaza pdb = new PrivremenaBaza();
-        /*public void DodajKorisnika(Models.Korisnik _korisnik)
-        {
-            _korisnici.Add(_korisnik);
-        }*/
         #endregion
+
+        internal static PrivremenaBaza pdb = new PrivremenaBaza();
     }
 }

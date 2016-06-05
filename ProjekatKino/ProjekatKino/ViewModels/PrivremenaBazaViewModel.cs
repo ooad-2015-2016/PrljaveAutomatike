@@ -13,7 +13,9 @@ namespace ProjekatKino.ViewModels
     /// </summary>
     class PrivremenaBazaViewModel
     {
-        private static List<Korisnik> _korisnici;
+        public List<Korisnik> _korisnici;
+        public List<Film> _filmovi;
+        public List<Menadzer> _menadzeri;
         public PrivremenaBazaViewModel() { }
         public List<Korisnik> DajSveKorisnike()
         {
@@ -28,5 +30,11 @@ namespace ProjekatKino.ViewModels
             _korisnici.Add(novi);
             DataSource.DataSourceProjekatKino.pdb.Korisnici = _korisnici;
         }
+        public void ObrisiUposlenika(Korisnik novi)
+        {
+            _korisnici.Remove(novi);
+            DataSource.DataSourceProjekatKino.pdb.Korisnici = _korisnici;
+        }
+
     }
 }

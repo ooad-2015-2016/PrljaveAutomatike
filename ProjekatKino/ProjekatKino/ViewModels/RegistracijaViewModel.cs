@@ -32,7 +32,7 @@ namespace ProjekatKino.ViewModels
             else if (BrojTelefona.Length < 6)
             {
 
-                var dialog = new MessageDialog("Neispravan format telefona", "Neuspješna prijava");
+                var dialog = new MessageDialog("Neispravan format telefona.", "Neuspješna prijava");
                 await dialog.ShowAsync();
             }
             else if (!Email.Contains("@") || !Email.Contains("."))
@@ -43,7 +43,7 @@ namespace ProjekatKino.ViewModels
             }
             else
             {
-                var dialog = new MessageDialog("Prijava uspješno završena.Dobrodošli!", "Uspješna prijava");
+                var dialog = new MessageDialog("Prijava uspješno završena.", "Uspješna prijava");
                 await dialog.ShowAsync();
             }
         }

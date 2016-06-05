@@ -8,25 +8,25 @@ namespace ProjekatKino.Models
 {
     public class ProgramskiSadrzaj
     {
-        int brojfilmova;
-        List<Film> filmovi;
+        private List<Film> filmovi;
 
         public ProgramskiSadrzaj() { }
         public void DodajFilm(Film film)
         {
-
-            this.filmovi.Add(film);
+            filmovi.Add(film);
         }
         public void IzbaciFilm(Film film)
         {
-            this.filmovi.Remove(film);
+            filmovi.Remove(film);
         }
-
-        public List<Film> KreirajProgramskiSadrzaj(List<Film> lista)
+        public ProgramskiSadrzaj(List<Film> lista)
         {
-            return lista;
+            int i = 0;
+            foreach (Film film in lista)
+            {
+                DodajFilm(lista[i]);
+                i++;
+            }
         }
-
     }
-
 }

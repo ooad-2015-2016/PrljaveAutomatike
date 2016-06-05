@@ -21,7 +21,7 @@ namespace ProjekatKino.ViewModels
             novi.KorisnickoIme = username;
             novi.Sifra = password;
             novi.KorisnikId = korisnikID;
-            DataSourceProjekatKino.pdb.Korisnici.Add(novi);
+            DataSourceProjekatKino.pdb.DajSveKorisnike().Add(novi);
         }
 
         //////////////////////////////////////////////////
