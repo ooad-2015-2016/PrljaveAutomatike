@@ -73,3 +73,17 @@ Izvještaj se podnosi menadžeru i vlasniku kina.
 - Uposlenici (grupa ljudi koja obavlja različite procese u cilju funkcionisanja sistema): osoba zadužena za prodaju hrane/pića i karata, koja prima zahtjeve Posjetitelja, procesuira ih, i (ne)zadovoljava, zavisno od mogućnosti (slučaja); osoba zadužena za dobavljanje i dostavljanje hrane/pića, i za kontrolisanje zaliha; osoba zadužena za projekciju, itd...
 
 - Menadžer (supervizor, onaj koji nadgleda i kontroliše proces), osoba zadužena za praćenje procesa i eventualne optimizacije i popravke na bilo koji način vezane za procese.
+
+##Dodatne informacije o aplikaciji
+
+1. Eksterni uredjaj: RFID citac: 
+https://github.com/ooad-2015-2016/PrljaveAutomatike/blob/master/ProjekatKino/ProjekatKino/Helper/Rfid.cs
+
+2. Mobilna funkcionalnost: GPS
+https://github.com/ooad-2015-2016/PrljaveAutomatike/blob/master/ProjekatKino/ProjekatKino/Views/GPSView.xaml.cs
+
+3. Help: 
+https://github.com/ooad-2015-2016/PrljaveAutomatike/blob/master/HELP.txt
+
+4. Izvjestaj o radu:
+
