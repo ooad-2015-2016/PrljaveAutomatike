@@ -262,7 +262,7 @@ namespace ProjekatKino.DataSource
                 Sala = _sale[1],
                 Zauzetost = 0,
                 Kapacitet = _sale[0].BrojMjesta,
-                VrijemeOdrzavanja = DateTime.Today,
+                VrijemeOdrzavanja = DateTime.Today.AddDays(1),
                 FilmProjekcije = _filmovi[1]
             },
             new Projekcija()
@@ -271,7 +271,7 @@ namespace ProjekatKino.DataSource
                 Sala = _sale[0],
                 Zauzetost = 0,
                 Kapacitet = _sale[0].BrojMjesta,
-                VrijemeOdrzavanja = DateTime.Today,
+                VrijemeOdrzavanja = DateTime.Today.AddHours(6),
                 FilmProjekcije = _filmovi[0]
             },
             new Projekcija()
@@ -280,7 +280,7 @@ namespace ProjekatKino.DataSource
                 Sala = _sale[1],
                 Zauzetost = 0,
                 Kapacitet = _sale[0].BrojMjesta,
-                VrijemeOdrzavanja = DateTime.Today,
+                VrijemeOdrzavanja = DateTime.Today.AddHours(4.5),
                 FilmProjekcije = _filmovi[2]
             },
             new Projekcija()
@@ -289,7 +289,7 @@ namespace ProjekatKino.DataSource
                 Sala = _sale[0],
                 Zauzetost = 0,
                 Kapacitet = _sale[0].BrojMjesta,
-                VrijemeOdrzavanja = DateTime.Today,
+                VrijemeOdrzavanja = DateTime.Today.AddMinutes(30),
                 FilmProjekcije = _filmovi[3]
             },
             new Projekcija()
@@ -307,6 +307,7 @@ namespace ProjekatKino.DataSource
             return _projekcije;
         }
         #endregion
+
         #region Posjetitelji - kreiranje testnih posjetitelja
         internal static List<RegistrovaniClan> _registrovaniClanovi = new List<RegistrovaniClan>()
         {
@@ -326,6 +327,7 @@ namespace ProjekatKino.DataSource
             return null;
         }
         #endregion
+
         internal static PrivremenaBaza pdb = new PrivremenaBaza();
     }
 }
