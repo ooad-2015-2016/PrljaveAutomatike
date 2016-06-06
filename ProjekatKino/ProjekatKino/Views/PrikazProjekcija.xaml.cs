@@ -62,6 +62,17 @@ namespace ProjekatKino.Views
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             izabranaProjekcija = true;
+            textBlockCijena.Visibility = Visibility.Visible;
+            textBlockFilm.Visibility = Visibility.Visible;
+            textBlockSala.Visibility = Visibility.Visible;
+            textBlock_Podaci.Visibility = Visibility.Visible;
+            textBoxCijena.Visibility = Visibility.Visible;
+            textBoxFilm.Visibility = Visibility.Visible;
+            textBoxSala.Visibility = Visibility.Visible;
+            textBoxCijena.Text = DataSource.DataSourceProjekatKino._projekcije[comboBox.SelectedIndex].CijenaProjekcije.ToString();
+            textBoxFilm.Text = DataSource.DataSourceProjekatKino._projekcije[comboBox.SelectedIndex].FilmProjekcije.ime_filma;
+            textBoxSala.Text = DataSource.DataSourceProjekatKino._projekcije[comboBox.SelectedIndex].Sala.NazivSale;
+
         }
     }
 }

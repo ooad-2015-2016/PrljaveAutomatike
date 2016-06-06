@@ -115,9 +115,7 @@ namespace ProjekatKino
             textBoxFilmId.Visibility = Visibility.Visible;
             textBoxImeFilma.Visibility = Visibility.Visible;
             textBoxTrajanje.Visibility = Visibility.Visible;
-            textBlockDatum.Visibility = Visibility.Visible;
             textBlockOdaberite.Visibility = Visibility.Visible;
-            datePicketDatum.Visibility = Visibility.Visible;
             checkBoxPenzioner.Visibility = Visibility.Visible;
             checkBoxStudent.Visibility = Visibility.Visible;
             checkBoxClan.Visibility = Visibility.Visible;

@@ -75,7 +75,8 @@ namespace ProjekatKino
                 ///spasavanje korisnika
                 ID = DataSource.DataSourceProjekatKino.pdb.RegistrovaniClanovi.Count() + 1;
                 DataSource.DataSourceProjekatKino.pdb.RegistrovaniClanovi.Add(new Models.RegistrovaniClan { Ime = textBoxIme.Text, Prezime = textBoxPrezime.Text, GradPrebivalista=textBoxGrad.Text, AdresaPrebivalista=textBoxAdresa.Text, Email=textBoxEmail.Text, JMBG = textBoxJMBG.Text,BrojTelefona=textBoxTelefon.Text, Fakultet=textBoxFakultet.Text,Indeks=textBoxIndeks.Text, ID = ID });
-
+                var dialog = new Windows.UI.Popups.MessageDialog("Uspješno ste dodali člana!", "Uspješno!");
+                await dialog.ShowAsync();
                 Frame.Navigate(typeof(RadnikIzbor));
             }
         }

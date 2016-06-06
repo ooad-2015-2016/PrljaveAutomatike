@@ -9,8 +9,6 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock x:Name="textBlockOdaberite" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Odaberite jedan od ponuđenih filmova" VerticalAlignment="Top" Margin="0,10,0,0" />
-        <TextBlock x:Name="textBlockDatum" TextWrapping="Wrap" Text="Odaberite datum gledanja filma" VerticalAlignment="Top" Margin="32,246,32,0" TextAlignment="Center" Visibility="Collapsed" />
-        <DatePicker x:Name="datePicketDatum" HorizontalAlignment="Stretch" Margin="10,271,10,0" VerticalAlignment="Top" Width="340" Visibility="Collapsed"/>
         <ComboBox x:Name="comboBoxFilmovi" HorizontalAlignment="Stretch" Height="38" Margin="10,44,10,0" VerticalAlignment="Top" SelectionChanged="comboBoxFilmovi_SelectionChanged" Width="340"/>
         <TextBlock x:Name="textBlockPodaci" TextWrapping="Wrap" Text="Podaci o filmu" VerticalAlignment="Top" Margin="0,102,0,0" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed" />
         <TextBlock x:Name="textBlockImeFilma" HorizontalAlignment="Left" Height="29" Margin="10,127,0,0" TextWrapping="Wrap" Text="Ime filma" VerticalAlignment="Top" Width="130" Visibility="Collapsed"/>
@@ -21,9 +19,9 @@
         <TextBox x:Name="textBoxFilmId" Height="24" Margin="140,204,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" TextAlignment="Right" IsHitTestVisible="False" IsSpellCheckEnabled="False" IsTabStop="False" IsTextPredictionEnabled="False" Visibility="Collapsed"/>
         <Button x:Name="buttonPotvrdi" Content="Potvrdi" HorizontalAlignment="Stretch" Height="37" Margin="182,0,10,10" VerticalAlignment="Bottom" Background="#FF1DA1F2" Foreground="White" Click="buttonPotvrdi_Click" Width="168"/>
         <Button x:Name="buttonOdustani" Content="Odustani" HorizontalAlignment="Stretch" Height="37" Margin="10,0,183,10" VerticalAlignment="Bottom" Background="#FF1DA1F2" Foreground="White" Click="buttonOdustani_Click" Width="167"/>
-        <CheckBox x:Name="checkBoxStudent" Content="Student/ica" HorizontalAlignment="Left" Margin="10,395,0,0" VerticalAlignment="Top" Width="135" Visibility="Collapsed"/>
-        <CheckBox x:Name="checkBoxPenzioner" Content="Penzioner/ka" HorizontalAlignment="Left" Margin="10,425,0,0" VerticalAlignment="Top" Width="135" Visibility="Collapsed"/>
-        <CheckBox x:Name="checkBoxClan" Content="Član Kino Kluba" HorizontalAlignment="Left" Margin="10,455,0,0" VerticalAlignment="Top" Width="135" Checked="checkBoxClan_Checked" Unchecked="checkBoxClan_Unchecked" Visibility="Collapsed"/>
-        <TextBox x:Name="textBoxJMBG" Height="24" Margin="150,455,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" TextAlignment="Right" IsSpellCheckEnabled="True" PlaceholderText="JMBG" Visibility="Collapsed" IsEnabled="False"/>
+        <CheckBox x:Name="checkBoxStudent" Content="Student/ica" HorizontalAlignment="Center" Margin="10,254,215,0" VerticalAlignment="Top" Width="135" Visibility="Collapsed"/>
+        <CheckBox x:Name="checkBoxPenzioner" Content="Penzioner/ka" HorizontalAlignment="Center" Margin="10,284,215,0" VerticalAlignment="Top" Width="135" Visibility="Collapsed"/>
+        <CheckBox x:Name="checkBoxClan" Content="Član Kino Kluba" HorizontalAlignment="Center" Margin="10,314,215,0" VerticalAlignment="Top" Width="135" Checked="checkBoxClan_Checked" Unchecked="checkBoxClan_Unchecked" Visibility="Collapsed"/>
+        <TextBox x:Name="textBoxJMBG" Height="24" Margin="167,314,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" TextAlignment="Right" IsSpellCheckEnabled="True" PlaceholderText="JMBG" IsEnabled="False" HorizontalAlignment="Center" Width="183" Visibility="Collapsed"/>
     </Grid>
 </Page>
