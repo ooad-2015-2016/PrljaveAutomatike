@@ -18,7 +18,6 @@ namespace ProjekatKino.Models
 
 
         public int ID { get; set; }
-        public string Jmbg { get; set; }
         public string Fakultet { get; set; }
         public string Indeks { get; set; }
 

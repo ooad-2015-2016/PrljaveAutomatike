@@ -74,7 +74,7 @@ namespace ProjekatKino
             {
                 ///spasavanje korisnika
                 ID = DataSource.DataSourceProjekatKino.pdb.RegistrovaniClanovi.Count() + 1;
-                DataSource.DataSourceProjekatKino.pdb.RegistrovaniClanovi.Add(new Models.RegistrovaniClan { Ime = textBoxIme.Text, Prezime = textBoxPrezime.Text, GradPrebivalista=textBoxGrad.Text, AdresaPrebivalista=textBoxAdresa.Text, Email=textBoxEmail.Text, Jmbg = textBoxJMBG.Text,BrojTelefona=textBoxTelefon.Text, Fakultet=textBoxFakultet.Text,Indeks=textBoxIndeks.Text, ID = ID });
+                DataSource.DataSourceProjekatKino.pdb.RegistrovaniClanovi.Add(new Models.RegistrovaniClan { Ime = textBoxIme.Text, Prezime = textBoxPrezime.Text, GradPrebivalista=textBoxGrad.Text, AdresaPrebivalista=textBoxAdresa.Text, Email=textBoxEmail.Text, JMBG = textBoxJMBG.Text,BrojTelefona=textBoxTelefon.Text, Fakultet=textBoxFakultet.Text,Indeks=textBoxIndeks.Text, ID = ID });
 
                 Frame.Navigate(typeof(RadnikIzbor));
             }
