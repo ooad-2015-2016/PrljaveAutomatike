@@ -8,7 +8,7 @@
     mc:Ignorable="d" MinHeight="451" MinWidth="360" Height="Auto" Width="Auto">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinHeight="451" MinWidth="360">
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="40,10,44,0" TextWrapping="Wrap" Text="Odaberite uposlenika kojeg želite izbrisati" MinWidth="275.9619140625" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="40,10,44,0" TextWrapping="Wrap" Text="Odaberite uposlenika kojeg želite izbrisati" MinWidth="275.9619140625" VerticalAlignment="Top" TextAlignment="Center"/>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Center" Height="35" Margin="32,47,32,0" VerticalAlignment="Top" SelectionChanged="comboBox_SelectionChanged" MinWidth="272" Width="276"/>
         <Button x:Name="buttonPotvrdi" Content="Potvrdi" HorizontalAlignment="Center" Margin="188,0,32,10" VerticalAlignment="Bottom" Background="#FF1DA1F2" Foreground="White" MinWidth="140" MinHeight="35" Click="buttonPotvrdi_Click" VerticalContentAlignment="Bottom"/>
         <Button x:Name="button1" Content="Odustani" HorizontalAlignment="Center" Margin="32,0,188,10" VerticalAlignment="Bottom" Foreground="White" Background="#FF1DA1F2" MinWidth="140" MinHeight="35" VerticalContentAlignment="Bottom" Click="button1_Click"/>

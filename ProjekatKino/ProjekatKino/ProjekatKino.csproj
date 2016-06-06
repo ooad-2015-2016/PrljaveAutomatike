@@ -118,8 +118,14 @@
     <Compile Include="ViewModels\MenadzerViewModel.cs" />
     <Compile Include="ViewModels\PrivremenaBazaViewModel.cs" />
     <Compile Include="ViewModels\RegistracijaViewModel.cs" />
+    <Compile Include="Views\BrisanjeFilma.xaml.cs">
+      <DependentUpon>BrisanjeFilma.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DodajNamirnice.xaml.cs">
       <DependentUpon>DodajNamirnice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DodajProjekciju.xaml.cs">
+      <DependentUpon>DodajProjekciju.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\DodajUposlenika.xaml.cs">
       <DependentUpon>DodajUposlenika.xaml</DependentUpon>
@@ -133,8 +139,14 @@
     <Compile Include="Views\IzbrisiNamirnice.xaml.cs">
       <DependentUpon>IzbrisiNamirnice.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\IzbrisiProjekciju.xaml.cs">
+      <DependentUpon>IzbrisiProjekciju.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\IzbrisiUposlenika.xaml.cs">
       <DependentUpon>IzbrisiUposlenika.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IzmjenaClana.xaml.cs">
+      <DependentUpon>IzmjenaClana.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
@@ -186,7 +198,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Views\BrisanjeFilma.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\DodajNamirnice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DodajProjekciju.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -206,7 +226,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\IzbrisiProjekciju.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\IzbrisiUposlenika.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\IzmjenaClana.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -30,22 +30,16 @@ namespace ProjekatKino
         private void Osnovni_Izbornik_Click(System.Object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(RadnikIzbor));
-
-        }
-
-        private void IzmjenaProjekcije_Click(System.Object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void Dodavanje_filma_Click(System.Object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(Views.DodavanjeFilma));
         }
 
         private void Izmjena_clana_Click(System.Object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(Views.IzmjenaClana));
         }
 
         private void buttonIzbrisiUposlenika_Click(object sender, RoutedEventArgs e)
@@ -72,9 +66,19 @@ namespace ProjekatKino
             this.Frame.Navigate(typeof(Views.IzbrisiNamirnice));
         }
 
-        private void Dodavanje_Filma_Click_1(object sender, RoutedEventArgs e)
+        private void BrisanjeFilma_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Views.DodavanjeFilma));
+            this.Frame.Navigate(typeof(Views.BrisanjeFilma));
+        }
+
+        private void Izbrisi_projekciju_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Views.IzbrisiProjekciju));
+        }
+
+        private void Dodaj_projekciju_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Views.DodajProjekciju));
         }
     }
 }

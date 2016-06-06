@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="ProjekatKino.Views.IzmjenaClana"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjekatKino.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="Odaberite člana kojeg želite izmijeniti" MinWidth="275.9619140625" VerticalAlignment="Top" TextAlignment="Center" Width="274"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Center" Height="35" Margin="42,47,42,0" VerticalAlignment="Top" SelectionChanged="comboBox_SelectionChanged" MinWidth="272" Width="276" TabIndex="0"/>
+        <Button x:Name="buttonPotvrdi" Content="Potvrdi" HorizontalAlignment="Center" Margin="188,0,32,10" VerticalAlignment="Bottom" Background="#FF1DA1F2" Foreground="White" MinWidth="140" MinHeight="35" Click="buttonPotvrdi_Click" VerticalContentAlignment="Bottom" TabIndex="8"/>
+        <Button x:Name="button1" Content="Odustani" HorizontalAlignment="Center" Margin="32,0,188,10" VerticalAlignment="Bottom" Foreground="White" Background="#FF1DA1F2" MinWidth="140" MinHeight="35" VerticalContentAlignment="Bottom" Click="button1_Click" TabIndex="9"/>
+        <TextBlock x:Name="textBlock_Ime" HorizontalAlignment="Center" Height="30" Margin="37,159,130,0" TextWrapping="Wrap" Text="Ime" VerticalAlignment="Top" MinWidth="170" Width="193" Visibility="Collapsed"/>
+        <TextBox x:Name="textBox_Ime" HorizontalAlignment="Center" Height="26" Margin="149.5,154,37.5,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsSpellCheckEnabled="True" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" TextAlignment="Right" MinWidth="170" Width="173" TabIndex="1" Visibility="Collapsed"/>
+        <TextBox x:Name="textBox_Prezime" HorizontalAlignment="Center" Height="26" Margin="150,195,37,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsSpellCheckEnabled="True" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" TextAlignment="Right" MinWidth="170" Width="173" TabIndex="2" Visibility="Collapsed"/>
+        <TextBlock x:Name="textBlock_Prezime" HorizontalAlignment="Center" Height="30" Margin="37,200,140,0" TextWrapping="Wrap" Text="Prezime" VerticalAlignment="Top" MinWidth="170" Width="183" Visibility="Collapsed"/>
+        <TextBlock x:Name="textBlockAdresa" HorizontalAlignment="Center" Height="30" Margin="37,243,118,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Adresa" MinWidth="170" Width="205" Visibility="Collapsed"/>
+        <TextBox x:Name="textBox_Adresa" HorizontalAlignment="Center" Height="26" Margin="150,240,37,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsSpellCheckEnabled="True" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" TextAlignment="Right" MinWidth="170" Width="173" TabIndex="3" Visibility="Collapsed"/>
+        <TextBlock x:Name="textBlockGrad" HorizontalAlignment="Center" Height="30" Margin="37,287,118,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Grad" MinWidth="170" Width="205" Visibility="Collapsed"/>
+        <TextBox x:Name="textBox_Grad" HorizontalAlignment="Center" Height="26" Margin="150,284,37,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsSpellCheckEnabled="True" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" TextAlignment="Right" MinWidth="170" Width="173" TabIndex="4" Visibility="Collapsed"/>
+        <TextBlock x:Name="textBlockTel" HorizontalAlignment="Center" Height="30" Margin="37,331,118,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Broj telefona" MinWidth="170" Width="205" Visibility="Collapsed"/>
+        <TextBox x:Name="textBox_Tel" HorizontalAlignment="Center" Height="26" Margin="150,328,37,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsSpellCheckEnabled="True" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" TextAlignment="Right" MinWidth="170" Width="173" TabIndex="5" Visibility="Collapsed"/>
+        <TextBlock x:Name="textBlockEmail" HorizontalAlignment="Center" Height="30" Margin="37,374,118,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="e - mail" MinWidth="170" Width="205" Visibility="Collapsed"/>
+        <TextBox x:Name="textBox_Email" HorizontalAlignment="Center" Height="26" Margin="150,371,37,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsSpellCheckEnabled="True" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" TextAlignment="Right" MinWidth="170" Width="173" TabIndex="6" Visibility="Collapsed"/>
+        <TextBlock x:Name="textBlockJmbg" HorizontalAlignment="Center" Height="30" Margin="37,418,118,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="JMBG" MinWidth="170" Width="205" Visibility="Collapsed"/>
+        <TextBox x:Name="textBox_Jmbg" HorizontalAlignment="Center" Height="26" Margin="150,415,37,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsSpellCheckEnabled="True" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" TextAlignment="Right" MinWidth="170" Width="173" TabIndex="7" Visibility="Collapsed"/>
+
+    </Grid>
+</Page>

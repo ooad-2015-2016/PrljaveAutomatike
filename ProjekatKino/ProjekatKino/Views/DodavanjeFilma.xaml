@@ -8,7 +8,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:Name="textBlockPodaci" Height="28" Margin="89.5,10,89.5,0" TextWrapping="Wrap" Text="Podaci o filmu" VerticalAlignment="Top" Width="181"  FontSize="18.667" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlockPodaci" Height="28" Margin="89.5,10,89.5,0" TextWrapping="Wrap" Text="Podaci o filmu" VerticalAlignment="Top" Width="181"  FontSize="18.667" FontWeight="Bold" TextAlignment="Center"/>
         <TextBox x:Name="textBoxIme" Height="31" Margin="29,58,29,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="302" PlaceholderText="Naziv filma" TabIndex="0"/>
         <TextBox x:Name="textBoxTrajanje" Height="0" Margin="29,101,29,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="302" PlaceholderText="Trajanje filma" TabIndex="1"/>
         <Button x:Name="buttonPotvrdi" Content="Potvrdi" HorizontalAlignment="Center" Height="35" Margin="196,0,24,10" VerticalAlignment="Bottom" Width="140" Background="#FF1DA1F2" Foreground="White" TabIndex="3" Click="buttonPotvrdi_Click"/>

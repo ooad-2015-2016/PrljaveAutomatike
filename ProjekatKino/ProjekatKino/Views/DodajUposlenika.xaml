@@ -9,7 +9,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ComboBox x:Name="comboBox" HorizontalAlignment="Stretch" Height="32" Margin="0,230,0,0" VerticalAlignment="Top" Width="303" SelectionChanged="comboBox_SelectionChanged" PlaceholderText="Tip uposlenika" TabIndex="4"/>
-        <TextBlock x:Name="textBlockPodaci" Height="28" Margin="0,10,0,0" TextWrapping="Wrap" Text="Podaci o uposleniku" VerticalAlignment="Top" Width="181"  FontSize="18.667" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlockPodaci" Height="28" Margin="0,10,0,0" TextWrapping="Wrap" Text="Podaci o uposleniku" VerticalAlignment="Top" Width="181"  FontSize="18.667" FontWeight="Bold" TextAlignment="Center"/>
         <TextBox x:Name="textBoxKorIme" Height="32" Margin="0,144,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="302" PlaceholderText="Korisničko ime" TabIndex="2"/>
         <TextBox x:Name="textBoxIme" Height="31" Margin="0,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="302" PlaceholderText="Ime" TabIndex="0"/>
         <TextBox x:Name="textBoxPrezime" Height="0" Margin="0,101,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="302" PlaceholderText="Prezime" TabIndex="1"/>

@@ -206,6 +206,11 @@ namespace ProjekatKino.DataSource
             {
                 BrojMjesta = 150,
                 NazivSale = "S1"
+            },
+            new KinoSala()
+            {
+                BrojMjesta = 100,
+                NazivSale = "S2"
             }
         };
         public static List<KinoSala> DajSveSale()
@@ -254,7 +259,7 @@ namespace ProjekatKino.DataSource
             new Projekcija()
             {
                 CijenaProjekcije = 7,
-                Sala = _sale[0],
+                Sala = _sale[1],
                 Zauzetost = 0,
                 Kapacitet = _sale[0].BrojMjesta,
                 VrijemeOdrzavanja = DateTime.Today,
@@ -272,7 +277,7 @@ namespace ProjekatKino.DataSource
             new Projekcija()
             {
                 CijenaProjekcije = 8,
-                Sala = _sale[0],
+                Sala = _sale[1],
                 Zauzetost = 0,
                 Kapacitet = _sale[0].BrojMjesta,
                 VrijemeOdrzavanja = DateTime.Today,
@@ -290,7 +295,7 @@ namespace ProjekatKino.DataSource
             new Projekcija()
             {
                 CijenaProjekcije = 5,
-                Sala = _sale[0],
+                Sala = _sale[1],
                 Zauzetost = 0,
                 Kapacitet = _sale[0].BrojMjesta,
                 VrijemeOdrzavanja = DateTime.Today,

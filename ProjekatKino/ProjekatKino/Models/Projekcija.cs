@@ -13,7 +13,7 @@ namespace ProjekatKino.Models
         public int Zauzetost { get; set; }
         public int Kapacitet { get; set; }
         public DateTime VrijemeOdrzavanja { get; set; }
-        public int CijenaProjekcije { get; set; }
+        public double CijenaProjekcije { get; set; }
         public bool ImaLiSlobodno
         {
             get
@@ -21,6 +21,16 @@ namespace ProjekatKino.Models
                 if (Zauzetost < Kapacitet) return true;
                 return false;
             }
+        }
+        public Projekcija () { }
+        public Projekcija (Film FilmProjekcije, KinoSala Sala, DateTime VrijemeOdrzavanja, double cijena)
+        {
+            this.FilmProjekcije = FilmProjekcije;
+            this.Sala = Sala;
+            this.Zauzetost = 0;
+            this.Kapacitet = Sala.BrojMjesta;
+            this.VrijemeOdrzavanja = VrijemeOdrzavanja;
+            this.CijenaProjekcije = cijena;
         }
     }
 }
