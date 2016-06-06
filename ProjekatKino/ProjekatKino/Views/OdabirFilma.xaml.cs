@@ -30,6 +30,8 @@ namespace ProjekatKino
             {
                 comboBoxFilmovi.Items.Add(trenutni.ime_filma);
             }
+
+            DataSource.DataSourceProjekatKino._kupovine.Add(new Models.Kupovina());
         }
 
 
@@ -43,45 +45,43 @@ namespace ProjekatKino
             }
             else
             {
-                DataSource.DataSourceProjekatKino._kupovine.Add(new Models.Kupovina());
-                DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks()-1].datumKupovine = DateTime.Today;
-                DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks()-1].filmKupovine = DataSource.DataSourceProjekatKino._filmovi[comboBoxFilmovi.SelectedIndex];
+                DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks() - 1].datumKupovine = DateTime.Today;
                 bool pronadjen = false;
-                if(textBoxJMBG.IsEnabled && textBoxJMBG.Text.Length != 13)
+                if (textBoxJMBG.IsEnabled && textBoxJMBG.Text.Length != 13)
                 {
                     var dialog = new Windows.UI.Popups.MessageDialog("Niste unijeli tačan JMBG!", "Pokušajte ponovo!");
                     await dialog.ShowAsync();
                 }
-                if(!textBoxJMBG.IsEnabled)
+                if (!textBoxJMBG.IsEnabled)
                 {
-                    DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks()-1].posjetitelj = null;
-                    DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks()-1].TipPosjetitelja = tipPosjetitelja.Neuclanjen;
+                    DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks() - 1].posjetitelj = null;
+                    DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks() - 1].TipPosjetitelja = tipPosjetitelja.Neuclanjen;
                     this.Frame.Navigate(typeof(Views.PrikazProjekcija));
                 }
                 if (textBoxJMBG.IsEnabled && textBoxJMBG.Text.Length == 13)
                 {
-                    foreach(var trenutni in DataSource.DataSourceProjekatKino._registrovaniClanovi)
+                    foreach (var trenutni in DataSource.DataSourceProjekatKino._registrovaniClanovi)
                     {
                         if (trenutni.JMBG == textBoxJMBG.Text)
                         {
-                            DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks()-1].posjetitelj = trenutni;
+                            DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks() - 1].posjetitelj = trenutni;
                             pronadjen = true;
                             break;
                         }
                     }
-                    if(!pronadjen)
+                    if (!pronadjen)
                     {
                         var dialog = new Windows.UI.Popups.MessageDialog("Ne postoji clan sa unesenim JMBG!", "Pokušajte ponovo!");
                         await dialog.ShowAsync();
                     }
                     else
                     {
-                        DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks()-1].TipPosjetitelja = tipPosjetitelja.Uclanjen;
+                        DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks() - 1].TipPosjetitelja = tipPosjetitelja.Uclanjen;
                         this.Frame.Navigate(typeof(Views.PrikazProjekcija));
                     }
                 }
 
-                    
+
             }
         }
 
@@ -97,6 +97,7 @@ namespace ProjekatKino
         }
         private void buttonOdustani_Click(object sender, RoutedEventArgs e)
         {
+            DataSource.DataSourceProjekatKino._kupovine.Remove(DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks() - 1]);
             this.Frame.Navigate(typeof(RadnikIzbor));
         }
 
@@ -120,6 +121,7 @@ namespace ProjekatKino
             checkBoxStudent.Visibility = Visibility.Visible;
             checkBoxClan.Visibility = Visibility.Visible;
             textBlockTrajanje.Visibility = Visibility.Visible;
+            DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks() - 1].filmKupovine = DataSource.DataSourceProjekatKino._filmovi[comboBoxFilmovi.SelectedIndex];
         }
     }
 }

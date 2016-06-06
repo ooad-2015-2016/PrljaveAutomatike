@@ -39,10 +39,16 @@ namespace ProjekatKino.Views
             {
                 foreach (var trenutna in DataSource.DataSourceProjekatKino._projekcije)
                 {
-                    if (trenutna.FilmProjekcije == DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks() - 1].filmKupovine && trenutna.ImaLiSlobodno)
+                    int i = 0;
+                    if (trenutna.FilmProjekcije == DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks() - 1].filmKupovine)
                     {
-                        DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks() - 1].projekcija = trenutna;
-                        DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks() - 1].cijenaRacuna = trenutna.CijenaProjekcije;
+                        if (i == comboBox.SelectedIndex)
+                        {
+                            DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks() - 1].projekcija = trenutna;
+                            DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks() - 1].cijenaRacuna = trenutna.CijenaProjekcije;
+                            break;
+                        }
+                        i++;
                     }
                 }
                 this.Frame.Navigate(typeof(PrikazRacuna));
@@ -66,13 +72,24 @@ namespace ProjekatKino.Views
             textBlockFilm.Visibility = Visibility.Visible;
             textBlockSala.Visibility = Visibility.Visible;
             textBlock_Podaci.Visibility = Visibility.Visible;
+            foreach (var trenutna in DataSource.DataSourceProjekatKino._projekcije)
+            {
+                int i = 0;
+                if (trenutna.FilmProjekcije == DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks() - 1].filmKupovine)
+                {
+                    if (i == comboBox.SelectedIndex)
+                    {
+                        textBoxCijena.Text = trenutna.CijenaProjekcije.ToString();
+                        textBoxFilm.Text = trenutna.FilmProjekcije.ime_filma;
+                        textBoxSala.Text = trenutna.Sala.NazivSale;
+                        break;
+                    }
+                    i++;
+                }
+            }
             textBoxCijena.Visibility = Visibility.Visible;
             textBoxFilm.Visibility = Visibility.Visible;
             textBoxSala.Visibility = Visibility.Visible;
-            textBoxCijena.Text = DataSource.DataSourceProjekatKino._projekcije[comboBox.SelectedIndex].CijenaProjekcije.ToString();
-            textBoxFilm.Text = DataSource.DataSourceProjekatKino._projekcije[comboBox.SelectedIndex].FilmProjekcije.ime_filma;
-            textBoxSala.Text = DataSource.DataSourceProjekatKino._projekcije[comboBox.SelectedIndex].Sala.NazivSale;
-
         }
     }
 }
