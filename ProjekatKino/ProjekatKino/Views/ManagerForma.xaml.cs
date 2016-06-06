@@ -61,5 +61,20 @@ namespace ProjekatKino
         {
             this.Frame.Navigate(typeof(Login));
         }
+
+        private void buttonDodajNamirnice_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Views.DodajNamirnice));
+        }
+
+        private void buttonIzbrisiNamirnice_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Views.IzbrisiNamirnice));
+        }
+
+        private void Dodavanje_Filma_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Views.DodavanjeFilma));
+        }
     }
 }

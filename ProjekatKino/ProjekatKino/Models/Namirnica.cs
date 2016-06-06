@@ -14,5 +14,11 @@ namespace ProjekatKino.Models
         public string ImeNamirnice { get; set; }
         public double CijenaNamirnice { get; set; }
         public Namirnica() { }
+        public Namirnica(string ImeNamirnice, double CijenaNamirnice, tipNamirnice TipNamirnice)
+        {
+            this.ImeNamirnice = ImeNamirnice;
+            this.CijenaNamirnice = CijenaNamirnice;
+            this.TipNamirnice = TipNamirnice;
+        }
     }
 }
