@@ -86,4 +86,7 @@ https://github.com/ooad-2015-2016/PrljaveAutomatike/blob/master/ProjekatKino/Pro
 https://github.com/ooad-2015-2016/PrljaveAutomatike/blob/master/HELP.txt
 
 4. Izvjestaj o radu:
+https://github.com/ooad-2015-2016/PrljaveAutomatike/blob/master/PrljaveAutomatike_IzvjestajRada.docx
 
+5. Video koji pokazuje kako aplikacija radi:
+https://www.youtube.com/watch?v=vTWAr9xqHKQ
