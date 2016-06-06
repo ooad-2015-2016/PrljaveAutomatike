@@ -15,6 +15,14 @@ namespace ProjekatKino.DataSource
     {
         public DataSourceProjekatKino() { }
 
+        #region Ko je trenutno logovan
+        internal static tipKorisnika trenutnoLogovan = tipKorisnika.ObicanUposlenik;
+        internal static tipKorisnika DajTipTrenutnoLogovanog()
+        {
+            return trenutnoLogovan;
+        }
+        #endregion
+
         #region Film - kreiranje testnih filmova
         internal static List<Film> _filmovi = new List<Film>()
         {

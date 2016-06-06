@@ -25,6 +25,8 @@ namespace ProjekatKino
         public RadnikIzbor()
         {
             this.InitializeComponent();
+            if (DataSource.DataSourceProjekatKino.DajTipTrenutnoLogovanog() == tipKorisnika.Menadzer)
+                buttonPovratak.Visibility = Visibility.Visible;
         }
 
         private void Odabir_filma_Click(object sender, RoutedEventArgs e)
@@ -45,6 +47,10 @@ namespace ProjekatKino
 
         }
 
+        private void Povratak_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ManagerForma));
+        }
     }
 
    

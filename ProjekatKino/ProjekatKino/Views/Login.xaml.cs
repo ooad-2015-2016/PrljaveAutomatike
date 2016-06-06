@@ -41,10 +41,12 @@ namespace ProjekatKino
 
             if (korisnik != null && korisnik.KorisnikId >= 1)
             {
+                DataSource.DataSourceProjekatKino.trenutnoLogovan = tipKorisnika.ObicanUposlenik;
                 this.Frame.Navigate(typeof(RadnikIzbor), korisnik);
             }
             else if (menadzer != null && menadzer.KorisnikId >= 1)
             {
+                DataSource.DataSourceProjekatKino.trenutnoLogovan = tipKorisnika.Menadzer;
                 this.Frame.Navigate(typeof(ManagerForma), menadzer);
             }
             else
