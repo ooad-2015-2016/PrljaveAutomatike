@@ -15,7 +15,7 @@
         <Button x:Name="buttonDodajHranuIPice" Content="Dodaj hranu i/ili piće" HorizontalAlignment="Stretch" Height="37" Margin="10,114,10,0" VerticalAlignment="Top" Background="#FF1DA1F2" Foreground="White" Click="buttonDodajHranuIPice_Click" Width="340"/>
         <ComboBox x:Name="comboBoxPlacanje" HorizontalAlignment="Center" Height="35" Margin="0,199,0,0" VerticalAlignment="Top" Width="339" SelectionChanged="comboBoxPlacanje_SelectionChanged"/>
         <TextBlock x:Name="textBlockPlacanje" HorizontalAlignment="Center" Height="22" Margin="0,172,0,0" TextWrapping="Wrap" Text="Način plaćanja" VerticalAlignment="Top" Width="197" TextAlignment="Center"/>
-        <TextBox x:Name="textBoxRfid" HorizontalAlignment="Center" Height="13" Margin="0,290,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" PlaceholderText="RFID Čitač" Visibility="Collapsed"/>
+        <TextBox x:Name="textBoxRfid" HorizontalAlignment="Center" Height="13" Margin="0,290,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" PlaceholderText="Broj kartice"/>
 
     </Grid>
 </Page>

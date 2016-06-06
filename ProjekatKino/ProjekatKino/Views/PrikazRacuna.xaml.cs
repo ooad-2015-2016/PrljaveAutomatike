@@ -23,6 +23,7 @@ namespace ProjekatKino.Views
     public sealed partial class PrikazRacuna : Page
     {
         bool odabranoPlacanje = false;
+        string kartica = "";
         public PrikazRacuna()
         {
             this.InitializeComponent();
@@ -50,8 +51,10 @@ namespace ProjekatKino.Views
                 //OVDJE JE TEXT BOX KOJI SLUZI ZA KUPLJENJE KODA SA RFID
                 if (DataSource.DataSourceProjekatKino._kupovine[DataSource.DataSourceProjekatKino.trenutniIndeks()-1].NacinPlacanja == "Placanje karticom")
                 {
-                    textBoxRfid.Visibility = Visibility.Visible;
+                    kartica = textBoxRfid.Text;
                     //ovdje treba staviti da je textBoxRfid.Text = procitanom stringu sa rfid
+                    var dialog = new Windows.UI.Popups.MessageDialog("Uspješno izrađen račun!", "Uspješna prodaja!");
+                    await dialog.ShowAsync();
                 }
                 else
                 {
