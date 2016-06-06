@@ -57,5 +57,10 @@ namespace ProjekatKino
                 await dialog.ShowAsync();
             }
         }
+        //OVDJE TE SALJE NA GPS VIEW
+        private void buttonGPS_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(GPSView));
+        }
     }
 }
