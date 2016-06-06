@@ -32,6 +32,11 @@ namespace ProjekatKino
 
             this.DataContext = new GPSViewModel(mapa);
         }
+
+        private void buttonLogin_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Login));
+        }
     }
 }
 
